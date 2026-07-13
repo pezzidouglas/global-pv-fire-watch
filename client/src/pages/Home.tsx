@@ -76,7 +76,7 @@ type ResearchSource = {
   sourceClass: string;
   sourceTitle: string;
   sourceUrl: string;
-  windowRelation: "within-window" | "overlaps-window" | "historical-benchmark";
+  windowRelation: "within-window" | "overlaps-window" | "historical-benchmark" | "context-benchmark" | string;
   caveat: string;
   yearly: Record<string, number> | null;
 };

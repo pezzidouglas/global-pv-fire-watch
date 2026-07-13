@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { buildDailyFeedPayload, safeReason, snapshotPayload } from "./dailyFeed";
 import { normalizePublicHttpUrl, parsePublicIndex } from "../shared/public-index";
 import fallbackReports from "../shared/data/indexed-reports.json";
@@ -112,5 +112,70 @@ describe("shared typed data module", () => {
     expect(data.pendingCandidateCount).toBeGreaterThanOrEqual(0);
     expect(data.eventGroups.recordToEvent).toBeTypeOf("object");
     expect(data.researchSources.some((s) => s.jurisdiction.includes("England"))).toBe(true);
+  });
+});
+
+describe("scheduled daily-refresh handler", () => {
+  it("rejects non-cron callers with 403", async () => {
+    const { dailyRefreshHandler } = await import("./scheduledRefresh");
+    const { sdk } = await import("./_core/sdk");
+    const spy = vi.spyOn(sdk, "authenticateRequest").mockResolvedValue({
+      id: 1, openId: "u_real", name: "User", email: null, loginMethod: null,
+      role: "user", createdAt: new Date(), updatedAt: new Date(), lastSignedIn: new Date(),
+    } as never);
+    let statusCode = 0;
+    let body: unknown = null;
+    const res = {
+      status(code: number) { statusCode = code; return this; },
+      json(payload: unknown) { body = payload; },
+    };
+    await dailyRefreshHandler({ originalUrl: "/api/scheduled/daily-refresh", headers: {} } as never, res as never);
+    expect(statusCode).toBe(403);
+    expect(body).toEqual({ error: "cron-only" });
+    spy.mockRestore();
+  });
+});
+
+describe("scheduled daily-refresh handler success path", () => {
+  it("runs the daily check for cron callers and returns the summary payload", async () => {
+    const { dailyRefreshHandler } = await import("./scheduledRefresh");
+    const { sdk } = await import("./_core/sdk");
+    const dailyFeed = await import("./dailyFeed");
+    const fakePayload = {
+      overallStatus: "healthy",
+      lastAttemptAt: "2026-07-13T04:17:00.000Z",
+      lastSuccessfulCheckAt: "2026-07-13T04:17:00.000Z",
+      lastValidatedSnapshotAt: "2026-07-01T00:00:00.000Z",
+      lastContentChangeAt: "2026-07-01T00:00:00.000Z",
+      contentDiffersFromSnapshot: false,
+      indexedReports: [{ id: "r1" }, { id: "r2" }],
+      pendingCandidateCount: 0,
+      sourceMode: "daily-live-check",
+      degradedReason: null,
+    };
+    const authSpy = vi.spyOn(sdk, "authenticateRequest").mockResolvedValue({
+      id: -1, openId: "cron_abc", name: "Manus Scheduled Task", email: null,
+      loginMethod: null, role: "user", createdAt: new Date(), updatedAt: new Date(),
+      lastSignedIn: new Date(), isCron: true, taskUid: "task-123",
+    } as never);
+    const runSpy = vi.spyOn(dailyFeed, "runDailyCheck").mockResolvedValue(fakePayload as never);
+    let statusCode = 200;
+    let body: Record<string, unknown> = {};
+    const res = {
+      status(code: number) { statusCode = code; return this; },
+      json(payload: Record<string, unknown>) { body = payload; },
+    };
+    await dailyRefreshHandler({ originalUrl: "/api/scheduled/daily-refresh", headers: {} } as never, res as never);
+    expect(runSpy).toHaveBeenCalledTimes(1);
+    expect(statusCode).toBe(200);
+    expect(body).toMatchObject({
+      ok: true,
+      overallStatus: "healthy",
+      sourceMode: "daily-live-check",
+      reportCount: 2,
+      checkedAt: "2026-07-13T04:17:00.000Z",
+    });
+    authSpy.mockRestore();
+    runSpy.mockRestore();
   });
 });

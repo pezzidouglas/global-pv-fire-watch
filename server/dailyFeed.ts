@@ -1,4 +1,7 @@
+import { desc } from "drizzle-orm";
 import type { Express, Request, Response } from "express";
+import { dailyChecks } from "../drizzle/schema";
+import { getDb } from "./db";
 import fallbackCandidates from "../shared/data/candidates.json";
 import fallbackReports from "../shared/data/indexed-reports.json";
 import reviewedIncidents from "../shared/data/incidents.json";
@@ -13,6 +16,7 @@ import {
 
 const SAFE_SHRINK_RATIO = 0.9;
 const CACHE_TTL_MS = 60 * 60 * 1000; // re-check the live source at most hourly per instance
+const PERSISTED_TTL_MS = 26 * 60 * 60 * 1000; // trust the scheduled daily check for a full day (+2h grace)
 
 type FeedPayload = {
   overallStatus: "healthy" | "degraded" | "failed";
@@ -28,6 +32,52 @@ type FeedPayload = {
 };
 
 let cached: { payload: FeedPayload; at: number } | null = null;
+
+/** Persist a check result so status survives serverless cold starts. */
+async function persistCheck(payload: FeedPayload): Promise<void> {
+  try {
+    const db = await getDb();
+    if (!db) return;
+    await db.insert(dailyChecks).values({
+      overallStatus: payload.overallStatus,
+      sourceMode: payload.sourceMode,
+      degradedReason: payload.degradedReason,
+      reportCount: payload.indexedReports.length,
+      payloadJson: JSON.stringify(payload),
+    });
+  } catch (error) {
+    console.warn("[daily-feed] failed to persist check:", error);
+  }
+}
+
+/** Load the most recent persisted check, if any and reasonably fresh. */
+async function loadLatestCheck(maxAgeMs: number): Promise<FeedPayload | null> {
+  try {
+    const db = await getDb();
+    if (!db) return null;
+    const rows = await db.select().from(dailyChecks).orderBy(desc(dailyChecks.id)).limit(1);
+    const row = rows[0];
+    if (!row) return null;
+    if (Date.now() - new Date(row.checkedAt).getTime() > maxAgeMs) return null;
+    return JSON.parse(row.payloadJson) as FeedPayload;
+  } catch (error) {
+    console.warn("[daily-feed] failed to load persisted check:", error);
+    return null;
+  }
+}
+
+/**
+ * Run the daily live-source check and persist the result.
+ * Used by the scheduled Heartbeat handler and reusable elsewhere.
+ */
+export async function runDailyCheck(fetchImpl: typeof fetch = fetch): Promise<FeedPayload> {
+  const payload = await buildDailyFeedPayload(fetchImpl);
+  await persistCheck(payload);
+  if (payload.overallStatus === "healthy") {
+    cached = { payload, at: Date.now() };
+  }
+  return payload;
+}
 
 export function safeReason(error: unknown) {
   const message = error instanceof Error ? error.message : "source-unavailable";
@@ -110,9 +160,30 @@ export function registerDailyFeedRoute(app: Express) {
       res.json(cached.payload);
       return;
     }
-    const payload = await buildDailyFeedPayload();
+    // Warm start from the scheduled daily check persisted in the database,
+    // so cold serverless instances serve the cron-refreshed state instantly.
+    // Healthy results are trusted for the full daily cadence; degraded results
+    // are served briefly while a fresh live re-check happens on the next miss.
+    const persisted = await loadLatestCheck(PERSISTED_TTL_MS);
+    if (persisted) {
+      const persistedAt = new Date(persisted.lastAttemptAt).getTime();
+      const isHealthy = persisted.overallStatus === "healthy";
+      const degradedStillFresh = !isHealthy && Date.now() - persistedAt < CACHE_TTL_MS;
+      if (isHealthy || degradedStillFresh) {
+        if (isHealthy) cached = { payload: persisted, at: Date.now() };
+        res.setHeader(
+          "cache-control",
+          isHealthy
+            ? "public, max-age=0, s-maxage=3600, stale-while-revalidate=1800"
+            : "public, max-age=0, s-maxage=900, stale-while-revalidate=900",
+        );
+        res.setHeader("x-content-type-options", "nosniff");
+        res.json(persisted);
+        return;
+      }
+    }
+    const payload = await runDailyCheck();
     if (payload.overallStatus === "healthy") {
-      cached = { payload, at: Date.now() };
       res.setHeader("cache-control", "public, max-age=0, s-maxage=3600, stale-while-revalidate=1800");
     } else {
       res.setHeader("cache-control", "public, max-age=0, s-maxage=900, stale-while-revalidate=900");

@@ -11,7 +11,18 @@
     "sourceUrl": "https://www.gov.uk/government/statistics/number-of-fires-in-england-with-solar-panel-or-photovoltaic-panel-mentioned-in-the-additional-information-free-text",
     "windowRelation": "within-window",
     "caveat": "A PV term may describe presence rather than ignition. Free-text search is neither complete nor proof of causation.",
-    "yearly": {"2016": 30, "2017": 31, "2018": 27, "2019": 26, "2020": 39, "2021": 64, "2022": 43, "2023": 68, "2024": 81, "2025": 59}
+    "yearly": {
+      "2016": 30,
+      "2017": 31,
+      "2018": 27,
+      "2019": 26,
+      "2020": 39,
+      "2021": 64,
+      "2022": 43,
+      "2023": 68,
+      "2024": 81,
+      "2025": 59
+    }
   },
   {
     "id": "uk-qbe-foi-2022-2024",
@@ -25,7 +36,11 @@
     "sourceUrl": "https://qbeeurope.com/news-and-events/press-releases/uk-fire-services-tackle-a-solar-panel-fire-every-two-days/",
     "windowRelation": "within-window",
     "caveat": "Overlaps England IRS data and must not be added to it. QBE reports 107 incidents in 2022, 128 in 2023 and 171 in 2024.",
-    "yearly": {"2022": 107, "2023": 128, "2024": 171}
+    "yearly": {
+      "2022": 107,
+      "2023": 128,
+      "2024": 171
+    }
   },
   {
     "id": "netherlands-tno-2022-2023",
@@ -53,7 +68,11 @@
     "sourceUrl": "https://www.energysafe.vic.gov.au/sites/default/files/2022-12/Consultation_DC_Isolators_Sep2021.pdf",
     "windowRelation": "within-window",
     "caveat": "Annual figures were 22 in 2018, 56 in 2019 and 139 in 2020. Association does not necessarily mean PV ignition.",
-    "yearly": {"2018": 22, "2019": 56, "2020": 139}
+    "yearly": {
+      "2018": 22,
+      "2019": 56,
+      "2020": 139
+    }
   },
   {
     "id": "victoria-cfa-2015-2020",
@@ -137,7 +156,12 @@
     "sourceUrl": "https://s3.documentcloud.org/documents/6306645/Gov-Uscourts-654765-2019-1-0.pdf",
     "windowRelation": "overlaps-window",
     "caveat": "These are allegations from settled litigation, not seven independent official cause determinations. One 2012 incident falls outside the current window; the six newer locations are also represented as reported case records and must not be double-counted.",
-    "yearly": {"2012": 1, "2016": 1, "2017": 1, "2018": 4}
+    "yearly": {
+      "2012": 1,
+      "2016": 1,
+      "2017": 1,
+      "2018": 4
+    }
   },
   {
     "id": "north-america-amazon-solar-2020-2021",
@@ -179,6 +203,48 @@
     "sourceUrl": "https://www.energy.gov/cmei/systems/guide-fire-safety-solar-systems",
     "windowRelation": "within-window",
     "caveat": "DOE states that the U.S. Fire Administration does not track the number of fires caused by rooftop PV systems. It also distinguishes PV-origin fires from ordinary building fires that later involve a PV-covered roof.",
+    "yearly": null
+  },
+  {
+    "id": "italy-cnvvf-2015-2024",
+    "jurisdiction": "Italy",
+    "period": "2015–2024",
+    "count": null,
+    "confirmedPvOrigin": null,
+    "metric": "PV-panel fire incidents in the national fire brigade statistical database; roughly 5–13 fires per GW installed annually",
+    "sourceClass": "Official national incident statistics",
+    "sourceTitle": "CNVVF statistical database, analysed in Rus et al. 2025 (J. Phys.: Conf. Ser. 3121 012050)",
+    "sourceUrl": "https://iopscience.iop.org/article/10.1088/1742-6596/3121/1/012050",
+    "windowRelation": "within-window",
+    "caveat": "A dedicated “Photovoltaic Panels” category exists since 2014. Counts reflect incidents where PV modules were involved in the fire, not proof that PV caused it. Earlier surveys recorded roughly 2,500 PV-related incidents across ~550,000 systems for 2002–2015.",
+    "yearly": null
+  },
+  {
+    "id": "slovenia-urszr-2023-2024",
+    "jurisdiction": "Slovenia",
+    "period": "May 2023–Jul 2024",
+    "count": null,
+    "confirmedPvOrigin": null,
+    "metric": "PV-related fire deployments reported to the 112 emergency system; roughly 37 fires per GW installed annually",
+    "sourceClass": "Official national incident statistics",
+    "sourceTitle": "URSZR incident reporting, analysed in Rus et al. 2025 (J. Phys.: Conf. Ser. 3121 012050)",
+    "sourceUrl": "https://iopscience.iop.org/article/10.1088/1742-6596/3121/1/012050",
+    "windowRelation": "within-window",
+    "caveat": "A PV-related category was only added to the reporting form in mid-2023, so the observation window is short and annual figures are extrapolated. Inclusion criteria may capture fires where a PV system was present but not the ignition source.",
+    "yearly": null
+  },
+  {
+    "id": "international-benchmark-29-per-gw",
+    "jurisdiction": "International (AU, DE, IT, US)",
+    "period": "Multi-year, harmonised",
+    "count": null,
+    "confirmedPvOrigin": null,
+    "metric": "Weighted international average of ~29 PV-related fires per GW of installed capacity per year",
+    "sourceClass": "Peer-reviewed comparative research",
+    "sourceTitle": "Four-country comparative study, reaffirmed in Rus et al. 2025 (J. Phys.: Conf. Ser. 3121 012050)",
+    "sourceUrl": "https://iopscience.iop.org/article/10.1088/1742-6596/3121/1/012050",
+    "windowRelation": "context-benchmark",
+    "caveat": "National methodologies differ substantially and had to be harmonised; the benchmark expresses reporting frequency relative to installed capacity, not comparative safety of products or installers.",
     "yearly": null
   }
 ]

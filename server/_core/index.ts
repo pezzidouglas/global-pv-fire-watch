@@ -7,6 +7,7 @@ import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { registerDailyFeedRoute } from "../dailyFeed";
+import { dailyRefreshHandler } from "../scheduledRefresh";
 import { registerSeoRoutes } from "../seoRoutes";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
@@ -40,6 +41,8 @@ async function startServer() {
   registerOAuthRoutes(app);
   registerDailyFeedRoute(app);
   registerSeoRoutes(app);
+  // Heartbeat cron callback (created via manus-heartbeat CLI after deploy)
+  app.post("/api/scheduled/daily-refresh", dailyRefreshHandler);
   // tRPC API
   app.use(
     "/api/trpc",

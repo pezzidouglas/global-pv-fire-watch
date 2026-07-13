@@ -25,4 +25,19 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Persists the result of the scheduled daily public-index check so the
+ * daily-feed API can serve a warm, dated status even after serverless
+ * cold starts. One row per check; latest row wins.
+ */
+export const dailyChecks = mysqlTable("daily_checks", {
+  id: int("id").autoincrement().primaryKey(),
+  checkedAt: timestamp("checkedAt").defaultNow().notNull(),
+  overallStatus: varchar("overallStatus", { length: 32 }).notNull(),
+  sourceMode: varchar("sourceMode", { length: 64 }).notNull(),
+  degradedReason: varchar("degradedReason", { length: 128 }),
+  reportCount: int("reportCount").default(0).notNull(),
+  payloadJson: text("payloadJson").notNull(),
+});
+
+export type DailyCheck = typeof dailyChecks.$inferSelect;

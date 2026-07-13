@@ -16,5 +16,15 @@
 - [x] Responsive/mobile layout verified (390px full-page screenshots)
 - [x] Vitest coverage for daily-feed parsing/fallback and data integrity (12 tests passing)
 - [x] Shared typed data module (shared/pvFireWatchData.ts) with runtime validation + test
-- [ ] Checkpoint saved
-- [ ] Code pushed to pezzidouglas/global-pv-fire-watch GitHub repo (manus branch/dir)
+- [x] Checkpoint saved (b2b38aaf)
+- [x] Code pushed to pezzidouglas/global-pv-fire-watch GitHub repo (manus-app branch)
+
+## Follow-up: more sources + true daily refresh
+
+- [x] Research additional credible PV fire sources (national fire stats, research datasets, incident indexes)
+- [x] Add best new aggregate research sources to research-sources data + dashboard cards (Italy CNVVF, Slovenia URSZR, international 29/GW benchmark)
+- [x] Implement daily Heartbeat cron handler at /api/scheduled/daily-refresh (cron to be created after deploy)
+- [x] Persist last daily-check result in DB (daily_checks table) so status survives serverless cold starts
+- [x] Tests for the scheduled refresh handler (13 tests passing)
+- [ ] Checkpoint + ask user to keep deployment updated, create the cron after deploy
+- [ ] Push updates to GitHub manus-app branch
