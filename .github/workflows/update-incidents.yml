@@ -1,0 +1,117 @@
+name: Daily PV fire discovery
+
+on:
+  schedule:
+    - cron: "17 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-pv-fire-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository without persisted credentials
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@1e60f620b9541d56bece96c5465dc8ee9832be0b
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies without package scripts
+        run: npm ci --ignore-scripts
+
+      - name: Discover public incident reports
+        run: |
+          node scripts/update-incidents.mjs
+          node scripts/import-public-index.mjs
+
+      - name: Validate data and dashboard
+        run: npm test
+
+      - name: Package validated data only
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
+        with:
+          name: daily-pv-fire-data
+          if-no-files-found: error
+          retention-days: 3
+          path: |
+            data/candidates.json
+            data/indexed-reports.json
+            data/pipeline-status.json
+
+  propose-data-update:
+    needs: discover-and-validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Check out protected base
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Download validated data artifact
+        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16
+        with:
+          name: daily-pv-fire-data
+          path: incoming
+
+      - name: Revalidate artifact allowlist and schema
+        run: node scripts/validate-snapshot.mjs incoming
+
+      - name: Prepare data-only change
+        id: changes
+        run: |
+          cp incoming/candidates.json data/candidates.json
+          cp incoming/indexed-reports.json data/indexed-reports.json
+          cp incoming/pipeline-status.json data/pipeline-status.json
+          if git diff --quiet -- data/candidates.json data/indexed-reports.json data/pipeline-status.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push bot branch
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "pv-fire-watch-bot"
+          git config user.email "pv-fire-watch-bot@users.noreply.github.com"
+          git switch -C automation/daily-pv-fire-data
+          git add data/candidates.json data/indexed-reports.json data/pipeline-status.json
+          git commit -m "data: daily PV fire discovery"
+          git push --force origin HEAD:automation/daily-pv-fire-data
+
+      - name: Open or update review pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh pr list --head automation/daily-pv-fire-data --state open --json number --jq 'length > 0' | grep -q true; then
+            echo "Existing daily-data pull request updated."
+          else
+            gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body "Automated data-only update. Discovery ran without write permission; this pull request requires review before publication."
+          fi
+
+      - name: Write workflow summary
+        if: always()
+        run: |
+          echo "## Global PV Fire Watch daily scan" >> "$GITHUB_STEP_SUMMARY"
+          echo >> "$GITHUB_STEP_SUMMARY"
+          if [ -f incoming/pipeline-status.json ]; then
+            node -e "const s=require('./incoming/pipeline-status.json'); console.log(JSON.stringify({overallStatus:s.overallStatus,lastSuccessfulCheckAt:s.lastSuccessfulCheckAt,sources:s.sources.map(({id,status,recordCount,successfulQueries,failedQueries})=>({id,status,recordCount,successfulQueries,failedQueries}))},null,2))" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Validated pipeline status was not available." >> "$GITHUB_STEP_SUMMARY"
+          fi

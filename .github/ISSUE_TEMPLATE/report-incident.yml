@@ -1,0 +1,42 @@
+name: Report a PV fire incident
+description: Submit a source-backed rooftop or utility-scale photovoltaic fire for review.
+title: "Incident: [location] [date]"
+labels: ["incident-candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for improving the public record. Do not submit private or personally identifying information.
+  - type: input
+    id: date
+    attributes:
+      label: Incident date
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: City and country
+    validations:
+      required: true
+  - type: dropdown
+    id: asset
+    attributes:
+      label: Asset type
+      options: [Rooftop, Utility-scale, Floating PV, Building-integrated PV, Unknown]
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source URL
+      description: Prefer a fire authority, regulator, investigation, or reputable local news report.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: What the source establishes
+      description: Separate confirmed facts from suspected cause.
+    validations:
+      required: true

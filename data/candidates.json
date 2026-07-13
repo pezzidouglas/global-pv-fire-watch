@@ -1,0 +1,112 @@
+[
+  {
+    "id": "candidate-us-allendale-2026",
+    "fingerprint": "allendale center fire panel rehabilitation solar",
+    "title": "Allendale rehabilitation-center solar-panel fire",
+    "publishedAt": "2026-06-29T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "Daily Voice",
+    "sourceUrl": "https://dailyvoice.com/article/solar-panel-fire-forces-resident-relocations-at-allendale-rehab-center/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-asheville-2026",
+    "fingerprint": "asheville chamber fire panel rooftop solar",
+    "title": "Asheville Chamber rooftop solar-panel fire",
+    "publishedAt": "2026-06-15T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WLOS",
+    "sourceUrl": "https://wlos.com/news/local/solar-panel-fire-put-out-on-roof-of-downtown-building-no-damages-reported-fire-department-visitor-center-emergency-response-contained-blaze",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-champaign-2026",
+    "fingerprint": "champaign fire panel residential solar",
+    "title": "Champaign residential solar-panel fire",
+    "publishedAt": "2026-04-07T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WCIA",
+    "sourceUrl": "https://www.wcia.com/news/champaign-county/crews-quickly-extinguish-residential-solar-panel-fire-in-champaign/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-rockford-2026",
+    "fingerprint": "fire panel residential rockford solar",
+    "title": "Rockford residential solar-panel fire",
+    "publishedAt": "2026-03-04T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "MyStateline",
+    "sourceUrl": "https://www.mystateline.com/news/local-news/rockford-house-fire-damages-solar-panels-draws-multi-department-response/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-lunenburg-2025",
+    "fingerprint": "fire lunenburg panel rooftop school solar",
+    "title": "Lunenburg school rooftop solar-panel fire",
+    "publishedAt": "2025-08-26T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "CBS Boston",
+    "sourceUrl": "https://www.cbsnews.com/boston/news/lunenburg-middle-high-school-fire-on-first-day/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-east-longmeadow-2025",
+    "fingerprint": "east fire longmeadow panel solar",
+    "title": "East Longmeadow solar-panel fire",
+    "publishedAt": "2025-08-25T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WWLP",
+    "sourceUrl": "https://www.wwlp.com/news/local-news/hampden-county/crews-put-out-solar-panel-fire-in-east-longmeadow/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-franklin-county-2025",
+    "fingerprint": "county fire franklin panel rooftop solar",
+    "title": "Franklin County rooftop solar-panel fire",
+    "publishedAt": "2025-08-02T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WGAL",
+    "sourceUrl": "https://www.wgal.com/article/crews-on-scene-of-solar-panel-fire-in-franklin-county/65581362",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-charlotte-2024",
+    "fingerprint": "building charlotte commercial fire panel solar",
+    "title": "Charlotte commercial-building solar-panel fire",
+    "publishedAt": "2024-08-19T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WSOC-TV",
+    "sourceUrl": "https://www.wsoctv.com/news/local/solar-panel-system-sparks-fire-north-charlotte-building/USM6LMC255HIDCP6ZLABIULALE/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-cumberland-2024",
+    "fingerprint": "commercial cumberland fire panel rooftop solar",
+    "title": "Cumberland commercial rooftop solar-panel fire",
+    "publishedAt": "2024-07-22T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "WPRI",
+    "sourceUrl": "https://www.wpri.com/news/local-news/blackstone-valley/cumberland-road-closed-due-to-reported-fire/",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  },
+  {
+    "id": "candidate-us-sandisfield-2023",
+    "fingerprint": "fire panel residential roof sandisfield solar",
+    "title": "Sandisfield residential solar-panel roof fire",
+    "publishedAt": "2023-04-10T12:00:00.000Z",
+    "discoveredAt": "2026-07-12T20:00:00.000Z",
+    "sourceTitle": "The Berkshire Eagle",
+    "sourceUrl": "https://www.berkshireeagle.com/breaking/fire-sandisfield-solar-panel-roof-reignite-tesla/article_ce59f7b6-d7d0-11ed-8171-cfe2b8b20fa1.html",
+    "reviewStatus": "pending",
+    "discoveryQuery": "manual deep-research follow-up"
+  }
+]

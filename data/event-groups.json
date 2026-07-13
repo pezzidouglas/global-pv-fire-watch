@@ -1,0 +1,40 @@
+{
+  "methodologyVersion": "2026-07",
+  "recordToEvent": {
+    "index-2017-07-large-blaze-at-brand-new-block-of-flats-in-east-london": "uk-bow-wharf-2017",
+    "index-2017-10-cornwall-fire-rescue-service-news": "uk-crowan-2017",
+    "index-2020-08-coleridge-community-college-fire-photos-show-damage-left-behind": "uk-cambridge-school-2020",
+    "index-2021-06-le-toit-du-gymnase-montbonnot-saint-martin-prend-feu": "fr-montbonnot-2021",
+    "index-2022-06-solar-panels-catch-fire-on-roof-of-glenn-dale-building": "us-glenn-dale-2022",
+    "index-2022-07-partial-collapse-of-roof-following-fleet-flat-fire": "uk-church-crookham-2022",
+    "index-2023-04-fire-breaks-out-in-solar-panels-on-roof-of-house-in-falmouth": "us-falmouth-2023",
+    "index-2023-05-flats-evacuated-following-fire-in-gosport": "uk-gosport-2023",
+    "index-2024-02-drone-footage-shows-fire-tearing-across-roof-of-70m-lidl-warehouse-itv-n": "uk-peterborough-2024",
+    "index-2024-05-dak-met-zonnepanelen-in-de-brand-in-zwartsluis": "nl-zwartsluis-2024",
+    "index-2024-05-sofocan-incendio-en-banco-general-de-costa-del-este": "pa-panama-city-2024",
+    "index-2024-09-el-origen-del-incendio-en-la-comisari-a-de-polici-a-de-pamplona-en-el-te": "es-pamplona-2024",
+    "index-2024-09-los-bomberos-trabajan-en-la-primera-teori-a-sobre-el-origen-del-incendio": "es-pamplona-2024",
+    "index-2025-08-solar-farm-fire-near-beryl-extinguished-with-swift-collaboration": "us-beryl-2025",
+    "index-2026-06-newsom-and-l-a-declare-state-of-emergency-as-boyle-heights-fire-continue": "us-boyle-heights-2026",
+    "index-2026-03-firefighters-put-out-blaze-at-europa-point-stadium": "event-2026-03-gibraltar-europa-point",
+    "index-2026-03-incendio-en-la-instalacio-n-fotovoltaica-de-un-complejo-deportivo-en-gib": "event-2026-03-gibraltar-europa-point",
+    "index-2025-10-fire-at-store-wembley": "event-2025-10-wembley-ikea",
+    "index-2025-10-hundreds-evacuated-from-ikea-wembley-as-solar-panels-catch-fire": "event-2025-10-wembley-ikea",
+    "index-2025-09-st-martins-school-to-close-for-second-day-after-serious-fire": "event-2025-09-st-martins-school",
+    "index-2025-10-cause-of-major-fire-at-north-shropshire-school-which-sent-pupils-home-fo": "event-2025-09-st-martins-school",
+    "index-2025-06-cornwall-fire-rescue-service-news": "event-2025-06-newquay-island-crescent",
+    "index-2025-06-solar-fire-tackled-on-rooftop-near-newquay-beach": "event-2025-06-newquay-island-crescent",
+    "index-2025-05-moment-1-5m-mansion-is-destroyed-by-huge-fire": "event-2025-05-ferndown-golf-links-road",
+    "index-2025-05-property-fire-ferndown": "event-2025-05-ferndown-golf-links-road",
+    "index-2024-08-fire-in-block-of-flats-closed-major-road-in-south-london": "event-2024-08-lewisham-loampit-vale",
+    "index-2024-08-solar-panel-fire-lewisham": "event-2024-08-lewisham-loampit-vale",
+    "index-2024-07-un-incendio-en-la-cubierta-de-una-nave-industrial-de-meco-arrasa-con-par": "event-2024-07-meco-logistics-warehouse",
+    "index-2024-07-un-incendio-en-una-nave-logi-stica-de-meco-sin-heridos-provoca-una-gran": "event-2024-07-meco-logistics-warehouse",
+    "index-2025-07-shanklea-primary-school-stays-shut-after-solar-panel-fire": "event-2025-shanklea-primary-school",
+    "index-2025-05-solar-panel-issue-known-a-year-before-shanklea-school-fire": "event-2025-shanklea-primary-school"
+  },
+  "excludedRecords": {
+    "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
+    "index-2025-01-el-incendio-en-una-nave-del-puerto-de-gandia-ha-sido-extinguido": "Battery-container incident; conflicts with BESS-only exclusion"
+  }
+}
