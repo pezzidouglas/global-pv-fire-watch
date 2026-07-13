@@ -16,7 +16,6 @@ import {
   ExternalLink,
   FileSearch,
   Filter,
-  Flame,
   Globe2,
   Info,
   Layers3,
@@ -419,7 +418,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
       <a className="skip-link" href="#incidents">Skip to incident explorer</a>
       <header className="masthead" id="global">
         <div className="brand-lockup">
-          <span className="brand-mark"><Flame size={20} /></span>
+          <span className="brand-mark" aria-hidden="true"><ShieldCheck size={22} /></span>
           <div>
             <div className="eyebrow">PV fire intelligence</div>
             <h1>Global PV Fire Watch</h1>
@@ -466,10 +465,12 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
         <div className="country-strip">
           <button className={country === "all" ? "active" : ""} aria-pressed={country === "all"} onClick={() => selectCountry("all")}>
             <span>Global</span><strong>{globalStats.events}</strong><small>{globalStats.total} source records</small><Globe2 size={17} />
+            <span className="country-share" aria-hidden="true"><i style={{ width: "100%" }} /></span>
           </button>
           {countryCoverage.map((item) => (
             <button key={item.country} className={country === item.country ? "active" : ""} aria-pressed={country === item.country} onClick={() => selectCountry(item.country)}>
               <span>{item.country}</span><strong>{item.events}</strong><small>{item.total} records · {item.reviewed} reviewed</small><ChevronRight size={17} />
+              <span className="country-share" aria-hidden="true"><i style={{ width: `${Math.max(4, Math.round(item.events / Math.max(1, globalStats.events) * 100))}%` }} /></span>
             </button>
           ))}
         </div>
@@ -552,7 +553,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
               <svg className="world-map" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-label={`Interactive global reporting map showing ${globalStats.events} provisional events from ${globalStats.total} source records and ${filtered.length} reviewed locations`}>
                 <title>Interactive global PV fire public reporting coverage</title>
                 <desc>Country bubbles show provisional event clusters. Red and amber points open reviewed incident details.</desc>
-                <rect width={WIDTH} height={HEIGHT} fill="#0b141c" />
+                <rect width={WIDTH} height={HEIGHT} className="map-bg" />
                 <g className="graticule-lines">
                   {[140, 280, 420].map((y) => <line key={`h-${y}`} x1="0" x2={WIDTH} y1={y} y2={y} />)}
                   {[200, 400, 600, 800, 1000].map((x) => <line key={`v-${x}`} x1={x} x2={x} y1="0" y2={HEIGHT} />)}
@@ -762,7 +763,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
       </section>
 
       <footer>
-        <div><Flame size={17} /><strong>Global PV Fire Watch</strong><span>Open incident intelligence for prevention, engineering and insurance.</span></div>
+        <div><ShieldCheck size={17} /><strong>Global PV Fire Watch</strong><span>Open incident intelligence for prevention, engineering and insurance.</span></div>
         <div className="footer-meta"><span>Last successful check · {lastUpdated}</span><span>·</span><span>Snapshot changed {contentUpdated}</span>{contentDiffersFromSnapshot && <><span>·</span><span>Live source differs from snapshot</span></>}</div>
         <nav aria-label="Project policies"><a href="/methodology">Methodology</a><a href="/data-policy">Data policy</a><a href="/corrections">Corrections</a></nav>
       </footer>

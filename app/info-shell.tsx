@@ -1,4 +1,4 @@
-import { Flame } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function InfoShell({
@@ -15,7 +15,7 @@ export default function InfoShell({
   return (
     <main className="info-page">
       <nav className="info-nav" aria-label="Project navigation">
-        <Link className="info-brand" href="/"><Flame size={18} /> Global PV Fire Watch</Link>
+        <Link className="info-brand" href="/"><ShieldCheck size={18} /> Global PV Fire Watch</Link>
         <Link href="/">Return to dashboard</Link>
       </nav>
       <header>
