@@ -177,6 +177,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
   const [mobileSection, setMobileSection] = useState<"global" | "cases" | "index" | "research">("global");
   const [showFilters, setShowFilters] = useState(false);
   const [showAllIndex, setShowAllIndex] = useState(false);
+  const [showAllRail, setShowAllRail] = useState(false);
   const [liveIndexedReports, setLiveIndexedReports] = useState(indexedReports);
   const [liveCandidateCount, setLiveCandidateCount] = useState(candidateCount);
   const [livePipeline, setLivePipeline] = useState(pipelineStatus);
@@ -404,7 +405,8 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     document.getElementById("incidents")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  const latest = [...filtered].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 7);
+  const reviewedSorted = [...filtered].sort((a, b) => b.date.localeCompare(a.date));
+  const latest = reviewedSorted.slice(0, showAllRail ? reviewedSorted.length : 7);
   const scopeLabel = country === "all" ? "Global" : country;
 
   return (
@@ -667,7 +669,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
             </div>
             <aside className="incident-rail">
               <div className="rail-header">
-                <div><h3>Latest reviewed incidents</h3><small>{scopeLabel} · incident-level sources</small></div>
+                <div><h3>Reviewed incidents</h3><small>{scopeLabel} · {reviewedSorted.length} incident-level records</small></div>
                 <CircleDot size={18} />
               </div>
               <div className="rail-list">
@@ -680,6 +682,11 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                   </button>
                 ))}
               </div>
+              {reviewedSorted.length > 7 && (
+                <button className="show-rail-button" onClick={() => setShowAllRail((value) => !value)}>
+                  {showAllRail ? "Show fewer incidents" : `Show all ${reviewedSorted.length} incidents`}
+                </button>
+              )}
               <div className="queue-card"><FileSearch size={18} /><span><b>{liveCandidateCount} reports pending review</b><small>Global discovery queue · not mapped</small></span></div>
             </aside>
           </div>
@@ -688,7 +695,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
             <div className="view-section-head"><div><h3>Reviewed incident register</h3><small>{filtered.length} incident-level records in {scopeLabel}</small></div><ShieldCheck size={18} /></div>
             <div className="table-head"><span>Date</span><span>Incident</span><span>Asset</span><span>Evidence</span><span>Cause</span><span /></div>
             {filtered.length === 0 && <div className="zero-state"><FileSearch size={23} /><strong>No reviewed incidents match</strong><span>Change the evidence layer or clear the current filters.</span><button onClick={resetFilters}>Clear filters</button></div>}
-            {latest.concat(filtered.filter((item) => !latest.includes(item))).map((incident) => (
+            {reviewedSorted.map((incident) => (
               <button className="table-row" key={incident.id} onClick={() => setSelected(incident)}>
                 <span className="row-date">{formatDate(incident.date, incident.datePrecision)}</span>
                 <span className="row-main"><b>{incident.title}</b><small>{incident.city}, {incident.country}</small><em>{formatDate(incident.date, incident.datePrecision)} · {titleCase(incident.assetType)} · {titleCase(incident.pvRole)} PV role</em></span>

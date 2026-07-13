@@ -379,7 +379,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .rail-header h3, .section-title h2, .view-section-head h3 { margin: 0; font-size: 13px; font-weight: 660; }
 .rail-header small, .section-title small, .view-section-head small { color: var(--gpv-muted); font-size: 10px; }
 .rail-header svg, .section-title svg, .view-section-head svg { color: var(--gpv-blue); }
-.rail-list { flex: 1; }
+.rail-list { flex: 1; overflow-y: auto; max-height: 560px; scrollbar-width: thin; scrollbar-color: var(--gpv-line-bright) transparent; }
 .rail-list > button { width: 100%; min-height: 59px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 11px 14px; border: 0; border-bottom: 1px solid var(--gpv-line-soft); background: transparent; text-align: left; cursor: pointer; transition: background .15s, padding-left .15s; }
 .rail-list > button:hover { background: var(--gpv-surface-raised); padding-left: 17px; }
 .rail-list > button > span { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
@@ -431,8 +431,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .index-main small { color: var(--gpv-muted); font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .index-main em { display: none; color: var(--gpv-muted); font-size: 11px; font-style: normal; }
 .index-row svg { justify-self: center; color: var(--gpv-muted-2); }
-.show-index-button { width: 100%; min-height: 44px; border: 0; border-top: 1px solid var(--gpv-line); background: var(--gpv-surface); color: var(--gpv-blue); font-size: 11px; font-weight: 600; cursor: pointer; transition: background .15s; }
-.show-index-button:hover { background: var(--gpv-surface-raised); }
+.show-index-button, .show-rail-button { width: 100%; min-height: 44px; border: 0; border-top: 1px solid var(--gpv-line); background: var(--gpv-surface); color: var(--gpv-blue); font-size: 11px; font-weight: 600; cursor: pointer; transition: background .15s; }
+.show-index-button:hover, .show-rail-button:hover { background: var(--gpv-surface-raised); }
 
 /* ---------- Disclosure ---------- */
 .disclosure { margin-top: 14px; border: 1px solid var(--gpv-line); border-radius: var(--gpv-radius); background: var(--gpv-surface); box-shadow: var(--gpv-shadow-card); overflow: hidden; }

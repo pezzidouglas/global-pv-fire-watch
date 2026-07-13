@@ -50,4 +50,11 @@
 ## Follow-up 3: remove CSV export
 
 - [x] Remove "Export current view" CSV download button + related export code from the dashboard (button, exportData fn, unused imports, CSS rules incl. mobile; tsc clean, 21 tests passing, screenshot verified)
+- [x] Checkpoint (0ed7cf58) + push to GitHub manus-app branch (0ed7cf5)
+
+## Follow-up 4: list all incidents/reports in explorer
+
+- [x] Replace 7-item "Latest reviewed incidents" preview with full list of reviewed incidents for current filter scope: rail renamed "Reviewed incidents" with record count, "Show all N incidents" click-to-load-more, scrollable expanded list; Reviewed register tab now uses date-desc full list
+- [x] Show all vendor-indexed reports in the Index tab with load-more expansion (already present: "Show all N reports" toggle, confirmed)
+- [x] Mobile responsiveness check for the expanded lists (390px verified; tsc clean, 21 tests passing)
 - [ ] Checkpoint + push to GitHub manus-app branch
