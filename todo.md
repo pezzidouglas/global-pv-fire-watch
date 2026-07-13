@@ -26,5 +26,6 @@
 - [x] Implement daily Heartbeat cron handler at /api/scheduled/daily-refresh (cron to be created after deploy)
 - [x] Persist last daily-check result in DB (daily_checks table) so status survives serverless cold starts
 - [x] Tests for the scheduled refresh handler (13 tests passing)
-- [ ] Checkpoint + ask user to keep deployment updated, create the cron after deploy
-- [ ] Push updates to GitHub manus-app branch
+- [x] Checkpoint saved (042a01fe); awaiting user re-publish, then create Heartbeat cron
+- [x] Create + verify daily Heartbeat cron after user publishes the new version (task_uid VcxHMo2zJ7ctW4zyqzUPaS, 04:17 UTC daily; verified end-to-end: test-fired run a2vsYSbN3KdYiP4qtwBvpi returned 200 {ok:true, healthy, 121 reports}, and production /api/daily-feed now serves the cron-written check timestamp 2026-07-13T05:09:06Z from the DB)
+- [x] Push updates to GitHub manus-app branch (042a01f)
