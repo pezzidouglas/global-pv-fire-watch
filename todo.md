@@ -39,10 +39,15 @@
 - [x] Server: daily-feed payload extended with newReports diff vs snapshot (empty in fallback mode)
 - [x] Tests for the diff logic and country data selectors (19 tests passing, tsc clean)
 - [x] Responsive check (390px) for new pages/panel
-- [ ] Checkpoint + push to GitHub manus-app branch
+- [x] Checkpoint (f4ba1403) + push to GitHub manus-app branch (f4ba140)
 
 ### Gap fixes before checkpoint
 
 - [x] Recompute newReports server-side when serving persisted payloads that predate the field (normalizePersistedPayload in dailyFeed.ts)
 - [x] Test covering legacy persisted payloads without newReports (21 tests passing)
 - [x] Verify What's new panel state: investigated — live index currently has 0 reports beyond the snapshot (live-only diff = []); the earlier "7" was a transient pre-cron check. All-clear state is correct today. Has-new UI state verified deterministically via dev-only ?demoNew flag (screenshot: 8-count badge, New pills, show-all toggle, caveat all render correctly); flag is inert in production (NODE_ENV guard)
+
+## Follow-up 3: remove CSV export
+
+- [x] Remove "Export current view" CSV download button + related export code from the dashboard (button, exportData fn, unused imports, CSS rules incl. mobile; tsc clean, 21 tests passing, screenshot verified)
+- [ ] Checkpoint + push to GitHub manus-app branch

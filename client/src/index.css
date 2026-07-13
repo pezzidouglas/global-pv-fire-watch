@@ -250,15 +250,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .masthead h1 { margin: 3px 0 0; font-size: 30px; line-height: 1; letter-spacing: -.035em; font-weight: 650; background: linear-gradient(180deg, #ffffff 30%, #c3d2df 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .masthead p { margin: 7px 0 0; color: var(--gpv-muted); font-size: 13px; }
 .header-actions { display: flex; align-items: stretch; gap: 9px; }
-.updated-badge, .export-button { min-height: 44px; border: 1px solid var(--gpv-line); border-radius: var(--gpv-radius-sm); background: var(--gpv-surface); box-shadow: var(--gpv-shadow-card); }
+.updated-badge { min-height: 44px; border: 1px solid var(--gpv-line); border-radius: var(--gpv-radius-sm); background: var(--gpv-surface); box-shadow: var(--gpv-shadow-card); }
 .updated-badge { display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 0 14px; position: relative; overflow: hidden; }
 .updated-badge::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; }
 .updated-badge.healthy::before { background: linear-gradient(180deg, var(--gpv-blue), rgba(143, 184, 221, .25)); }
 .updated-badge.attention::before { background: linear-gradient(180deg, var(--gpv-amber), rgba(220, 169, 75, .25)); }
 .updated-badge span { color: var(--gpv-muted); font-size: 10px; letter-spacing: .04em; }
 .updated-badge b { font-size: 11px; font-weight: 640; font-variant-numeric: tabular-nums; }
-.export-button { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; color: #dde9f4; cursor: pointer; transition: border-color .18s, background .18s, box-shadow .18s, transform .18s; }
-.export-button:hover { border-color: var(--gpv-line-bright); background: var(--gpv-surface-raised); box-shadow: var(--gpv-shadow-card), 0 0 24px -10px var(--gpv-glow-blue); transform: translateY(-1px); }
 
 /* ---------- Coverage hero ---------- */
 .coverage-command {
@@ -601,8 +599,6 @@ footer a:hover { color: var(--gpv-blue-bright); }
   .updated-badge { min-height: 42px; flex: 1; padding: 0 11px; }
   .updated-badge span { font-size: 9px; }
   .updated-badge b { font-size: 10px; }
-  .export-button { width: 44px; min-height: 44px; padding: 0; }
-  .export-button span { display: none; }
 
   .coverage-command { margin-top: 10px; }
   .coverage-primary { padding: 14px 15px 13px; }

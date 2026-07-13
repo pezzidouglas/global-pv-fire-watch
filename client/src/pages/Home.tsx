@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { geoCentroid, geoEqualEarth, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
-import { createIncidentCsv } from "@shared/csv";
 import { countrySlug } from "@shared/countryData";
 import { Link } from "wouter";
 import {
@@ -12,7 +11,6 @@ import {
   CheckCircle2,
   ChevronRight,
   CircleDot,
-  Download,
   ExternalLink,
   FileSearch,
   Filter,
@@ -406,16 +404,6 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     document.getElementById("incidents")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function exportData() {
-    const blob = new Blob([createIncidentCsv(filtered, filteredIndexed)], { type: "text/csv;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = `global-pv-fire-records-${new Date().toISOString().slice(0, 10)}.csv`;
-    anchor.click();
-    URL.revokeObjectURL(url);
-  }
-
   const latest = [...filtered].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 7);
   const scopeLabel = country === "all" ? "Global" : country;
 
@@ -441,7 +429,6 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
             <span>Daily source check</span>
             <b>{pipelineStale ? "Stale · " : livePipeline.overallStatus === "healthy" ? "Successful · " : "Snapshot · "}{lastUpdated}</b>
           </div>
-          <button className="export-button" onClick={exportData}><Download size={17} /><span>Export current view</span></button>
         </div>
       </header>
 
