@@ -13,6 +13,7 @@ import {
   stableReportContent,
   type PublicIndexReport,
 } from "../shared/public-index";
+import { diffNewReports } from "../shared/countryData";
 
 const SAFE_SHRINK_RATIO = 0.9;
 const CACHE_TTL_MS = 60 * 60 * 1000; // re-check the live source at most hourly per instance
@@ -29,9 +30,25 @@ type FeedPayload = {
   pendingCandidateCount: number;
   sourceMode: "daily-live-check" | "validated-snapshot";
   degradedReason: string | null;
+  /** Live-indexed reports not present in the validated snapshot (empty in snapshot mode). */
+  newReports: PublicIndexReport[];
 };
 
 let cached: { payload: FeedPayload; at: number } | null = null;
+
+/**
+ * Legacy persisted checks predate the newReports field; recompute the diff
+ * from the persisted report list so the dashboard never shows a false all-clear.
+ */
+export function normalizePersistedPayload(payload: FeedPayload): FeedPayload {
+  if (!Array.isArray(payload.newReports)) {
+    payload.newReports =
+      payload.sourceMode === "daily-live-check"
+        ? diffNewReports(payload.indexedReports ?? [], fallbackReports as PublicIndexReport[])
+        : [];
+  }
+  return payload;
+}
 
 /** Persist a check result so status survives serverless cold starts. */
 async function persistCheck(payload: FeedPayload): Promise<void> {
@@ -59,7 +76,7 @@ async function loadLatestCheck(maxAgeMs: number): Promise<FeedPayload | null> {
     const row = rows[0];
     if (!row) return null;
     if (Date.now() - new Date(row.checkedAt).getTime() > maxAgeMs) return null;
-    return JSON.parse(row.payloadJson) as FeedPayload;
+    return normalizePersistedPayload(JSON.parse(row.payloadJson) as FeedPayload);
   } catch (error) {
     console.warn("[daily-feed] failed to load persisted check:", error);
     return null;
@@ -103,6 +120,7 @@ export function snapshotPayload(attemptedAt: string, reason: string): FeedPayloa
     ).length,
     sourceMode: "validated-snapshot",
     degradedReason: reason,
+    newReports: [],
   };
 }
 
@@ -132,6 +150,7 @@ export async function buildDailyFeedPayload(fetchImpl: typeof fetch = fetch): Pr
     if (reports.length < minimumSafeCount) throw new Error("source-shrink-quarantined");
     const contentDiffersFromSnapshot =
       stableReportContent(reports) !== stableReportContent(fallbackReports as PublicIndexReport[]);
+    const newReports = diffNewReports(reports, fallbackReports as PublicIndexReport[]);
 
     return {
       overallStatus: "healthy",
@@ -146,6 +165,7 @@ export async function buildDailyFeedPayload(fetchImpl: typeof fetch = fetch): Pr
       ).length,
       sourceMode: "daily-live-check",
       degradedReason: null,
+      newReports,
     };
   } catch (error) {
     return snapshotPayload(attemptedAt, safeReason(error));
@@ -154,6 +174,20 @@ export async function buildDailyFeedPayload(fetchImpl: typeof fetch = fetch): Pr
 
 export function registerDailyFeedRoute(app: Express) {
   app.get("/api/daily-feed", async (_req: Request, res: Response) => {
+    // Dev-only: ?demoNew=N synthesizes N "new" reports so the What's new
+    // has-new UI state can be verified deterministically. Never active in production.
+    if (process.env.NODE_ENV !== "production" && typeof _req.query.demoNew === "string") {
+      const count = Math.min(Math.max(parseInt(_req.query.demoNew, 10) || 0, 0), 12);
+      const base = await buildDailyFeedPayload();
+      const synthetic = (fallbackReports as PublicIndexReport[]).slice(0, count).map((report, index) => ({
+        ...report,
+        id: `index-demo-new-${index + 1}`,
+        title: `[Demo] ${report.title}`,
+      }));
+      res.setHeader("cache-control", "no-store");
+      res.json({ ...base, sourceMode: "daily-live-check", overallStatus: "healthy", newReports: synthetic });
+      return;
+    }
     if (cached && Date.now() - cached.at < CACHE_TTL_MS && cached.payload.overallStatus === "healthy") {
       res.setHeader("cache-control", "public, max-age=0, s-maxage=3600, stale-while-revalidate=1800");
       res.setHeader("x-content-type-options", "nosniff");

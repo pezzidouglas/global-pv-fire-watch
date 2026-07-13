@@ -3,6 +3,8 @@ import { geoCentroid, geoEqualEarth, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
 import { createIncidentCsv } from "@shared/csv";
+import { countrySlug } from "@shared/countryData";
+import { Link } from "wouter";
 import {
   Activity,
   AlertTriangle,
@@ -20,6 +22,7 @@ import {
   MapPin,
   Search,
   ShieldCheck,
+  Sparkles,
   X,
 } from "lucide-react";
 
@@ -181,6 +184,8 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
   const [livePipeline, setLivePipeline] = useState(pipelineStatus);
   const [sourceMode, setSourceMode] = useState<"daily-live-check" | "validated-snapshot">("validated-snapshot");
   const [contentDiffersFromSnapshot, setContentDiffersFromSnapshot] = useState(false);
+  const [newReports, setNewReports] = useState<IndexedReport[]>([]);
+  const [showAllNew, setShowAllNew] = useState(false);
   const filterDialogRef = useRef<HTMLDivElement>(null);
   const drawerRef = useRef<HTMLElement>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
@@ -316,7 +321,8 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
 
   useEffect(() => {
     let active = true;
-    fetch("/api/daily-feed", { headers: { accept: "application/json" } })
+    const demoNew = import.meta.env.DEV ? new URLSearchParams(window.location.search).get("demoNew") : null;
+    fetch(demoNew ? `/api/daily-feed?demoNew=${encodeURIComponent(demoNew)}` : "/api/daily-feed", { headers: { accept: "application/json" } })
       .then((response) => {
         if (!response.ok) throw new Error("Daily feed unavailable");
         return response.json();
@@ -330,12 +336,14 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
         pendingCandidateCount: number;
         sourceMode: "daily-live-check" | "validated-snapshot";
         contentDiffersFromSnapshot: boolean;
+        newReports?: IndexedReport[];
       }) => {
         if (!active || !Array.isArray(payload.indexedReports)) return;
         setLiveIndexedReports(payload.indexedReports);
         setLiveCandidateCount(payload.pendingCandidateCount);
         setSourceMode(payload.sourceMode);
         setContentDiffersFromSnapshot(Boolean(payload.contentDiffersFromSnapshot));
+        setNewReports(Array.isArray(payload.newReports) ? payload.newReports : []);
         setLivePipeline((current) => ({
           ...current,
           overallStatus: payload.overallStatus,
@@ -455,10 +463,47 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
         </div>
       </section>
 
+      {sourceMode === "daily-live-check" && (
+        <section className={`whats-new-panel ${newReports.length > 0 ? "has-new" : "all-clear"}`} aria-label="New reports since the validated snapshot">
+          <div className="whats-new-head">
+            <span className="whats-new-mark" aria-hidden="true"><Sparkles size={17} /></span>
+            <div>
+              <h2>What&apos;s new</h2>
+              <small>{newReports.length > 0
+                ? `${newReports.length} new indexed report${newReports.length === 1 ? "" : "s"} discovered by the daily source check, not yet in the validated snapshot`
+                : "Today's live source check found no reports beyond the validated snapshot"}</small>
+            </div>
+            {newReports.length > 0 && <b className="whats-new-count">{newReports.length}</b>}
+          </div>
+          {newReports.length > 0 && (
+            <>
+              <div className="whats-new-list">
+                {(showAllNew ? newReports : newReports.slice(0, 6)).map((report) => (
+                  <a key={report.id} href={report.sourceUrl} target="_blank" rel="noreferrer">
+                    <span className="new-pill">New</span>
+                    <span className="whats-new-main"><b>{report.title}</b><small>{report.country} · {titleCase(report.assetType)} · {formatMonth(report.date)}</small></span>
+                    <ExternalLink size={14} />
+                  </a>
+                ))}
+              </div>
+              {newReports.length > 6 && (
+                <button className="show-index-button" onClick={() => setShowAllNew((value) => !value)}>
+                  {showAllNew ? "Show fewer" : `Show all ${newReports.length} new reports`}
+                </button>
+              )}
+              <div className="whats-new-caveat"><Info size={13} /><span>New discoveries are country-level index records awaiting incident review; they appear in the Index layer immediately.</span></div>
+            </>
+          )}
+        </section>
+      )}
+
       <section className="country-explorer" aria-label="Reporting coverage by country">
         <div className="country-explorer-head">
           <div><h2>Reporting coverage by country</h2><small>Provisional events and source volume—not comparative fire-risk rates</small></div>
-          {country !== "all" && <button onClick={() => selectCountry("all")}>Back to global</button>}
+          <div className="country-explorer-actions">
+            {country !== "all" && <Link href={`/country/${countrySlug(country)}`} className="country-detail-link">{country} detail page <ChevronRight size={14} /></Link>}
+            {country !== "all" && <button onClick={() => selectCountry("all")}>Back to global</button>}
+          </div>
         </div>
         <div className="country-strip">
           <button className={country === "all" ? "active" : ""} aria-pressed={country === "all"} onClick={() => selectCountry("all")}>
@@ -479,7 +524,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
           <div>
             <span className="scope-breadcrumb">Global coverage <b>/</b> {country === "all" ? "All countries" : country}</span>
             <h2>{stats.events.toLocaleString()} provisional events in {scopeLabel}</h2>
-            <p>{stats.total} source records · {stats.reviewed} reviewed · {stats.indexed} vendor-indexed</p>
+            <p>{stats.total} source records · {stats.reviewed} reviewed · {stats.indexed} vendor-indexed{country !== "all" && <> · <Link href={`/country/${countrySlug(country)}`} className="inline-country-link">open {country} detail page</Link></>}</p>
           </div>
           <div className="layer-key"><span><i className="country-layer" /> Provisional event total</span><span><i className="reviewed-layer" /> Reviewed location</span></div>
         </div>

@@ -179,3 +179,80 @@ describe("scheduled daily-refresh handler success path", () => {
     runSpy.mockRestore();
   });
 });
+
+describe("country data selectors", () => {
+  it("builds slugs and lists every covered country", async () => {
+    const { listCountries, countrySlug } = await import("../shared/countryData");
+    const countries = listCountries();
+    expect(countries.length).toBeGreaterThanOrEqual(10);
+    const us = countries.find((item) => item.country === "United States");
+    expect(us?.slug).toBe("united-states");
+    expect(countrySlug("New South Wales, Australia")).toBe("new-south-wales-australia");
+    for (const item of countries) {
+      expect(item.events).toBeGreaterThan(0);
+      expect(item.slug).toMatch(/^[a-z0-9-]+$/);
+    }
+  });
+
+  it("returns full country detail with matched national statistics", async () => {
+    const { getCountryDetail } = await import("../shared/countryData");
+    const uk = getCountryDetail("united-kingdom");
+    expect(uk).not.toBeNull();
+    expect(uk!.reviewed.every((incident) => incident.country === "United Kingdom")).toBe(true);
+    expect(uk!.indexed.every((report) => report.country === "United Kingdom")).toBe(true);
+    // England IRS + UK-wide sources must map to the United Kingdom page
+    expect(uk!.research.some((source) => source.jurisdiction === "England")).toBe(true);
+    expect(uk!.internationalBenchmarks.length).toBeGreaterThan(0);
+    expect(getCountryDetail("atlantis")).toBeNull();
+  });
+
+  it("maps Australian state jurisdictions to the Australia page", async () => {
+    const { getCountryDetail } = await import("../shared/countryData");
+    const au = getCountryDetail("australia");
+    expect(au).not.toBeNull();
+    expect(au!.research.some((source) => source.jurisdiction.includes("New South Wales"))).toBe(true);
+  });
+
+  it("diffs new reports against the snapshot by id", async () => {
+    const { diffNewReports } = await import("../shared/countryData");
+    const snapshot = [{ id: "index-1" }, { id: "index-2" }];
+    const live = [{ id: "index-1" }, { id: "index-2" }, { id: "index-3" }];
+    expect(diffNewReports(live, snapshot).map((item) => item.id)).toEqual(["index-3"]);
+    expect(diffNewReports(snapshot, snapshot)).toEqual([]);
+  });
+});
+
+describe("daily-feed newReports field", () => {
+  it("returns an empty newReports array in snapshot fallback mode", async () => {
+    const failingFetch = (async () => {
+      throw new Error("source-unavailable");
+    }) as unknown as typeof fetch;
+    const payload = await buildDailyFeedPayload(failingFetch);
+    expect(payload.sourceMode).toBe("validated-snapshot");
+    expect(payload.newReports).toEqual([]);
+  });
+});
+
+describe("legacy persisted payload normalization", () => {
+  it("recomputes newReports for live-check payloads missing the field", async () => {
+    const { normalizePersistedPayload, snapshotPayload } = await import("./dailyFeed");
+    const fallback = (await import("../shared/data/indexed-reports.json")).default as Array<{ id: string }>;
+    const legacyLive = {
+      ...snapshotPayload(new Date().toISOString(), "test"),
+      sourceMode: "daily-live-check" as const,
+      overallStatus: "healthy" as const,
+      indexedReports: [...fallback, { ...fallback[0], id: "index-synthetic-new" }],
+    } as Record<string, unknown>;
+    delete legacyLive.newReports;
+    const normalized = normalizePersistedPayload(legacyLive as never);
+    expect(normalized.newReports.map((r) => r.id)).toEqual(["index-synthetic-new"]);
+  });
+
+  it("keeps newReports empty for legacy snapshot-mode payloads", async () => {
+    const { normalizePersistedPayload, snapshotPayload } = await import("./dailyFeed");
+    const legacySnapshot = snapshotPayload(new Date().toISOString(), "test") as Record<string, unknown>;
+    delete legacySnapshot.newReports;
+    const normalized = normalizePersistedPayload(legacySnapshot as never);
+    expect(normalized.newReports).toEqual([]);
+  });
+});

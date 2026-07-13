@@ -1,4 +1,5 @@
 import type { Express, Request, Response } from "express";
+import { listCountries } from "../shared/countryData";
 
 function siteBase(req: Request) {
   const proto = (req.headers["x-forwarded-proto"] as string) ?? req.protocol ?? "https";
@@ -22,6 +23,7 @@ export function registerSeoRoutes(app: Express) {
       ["/methodology", "monthly", "0.7"],
       ["/data-policy", "monthly", "0.6"],
       ["/corrections", "monthly", "0.6"],
+      ...listCountries().map((item): [string, string, string] => [`/country/${item.slug}`, "weekly", "0.8"]),
     ];
     const body = pages
       .map(
