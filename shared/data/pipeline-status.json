@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 2,
+  "cadence": "daily",
+  "overallStatus": "healthy",
+  "lastAttemptAt": "2026-07-12T21:05:46Z",
+  "lastSuccessfulCheckAt": "2026-07-12T21:05:46Z",
+  "lastContentChangeAt": "2026-07-12T21:05:46Z",
+  "sources": [
+    {
+      "id": "multilingual-news",
+      "label": "Multilingual news discovery",
+      "status": "healthy",
+      "attemptedQueries": 4,
+      "successfulQueries": 4,
+      "failedQueries": 0,
+      "lookbackDays": 21,
+      "recordCount": 10
+    },
+    {
+      "id": "public-report-index",
+      "label": "Vendor-curated public incident index",
+      "status": "healthy",
+      "recordCount": 122,
+      "checksum": "1ac9a39fd8ec43488151972fde5cfe91f8dc5dba48cce7013830aea632fba776"
+    }
+  ],
+  "lastValidatedSnapshotAt": "2026-07-12T21:05:46Z"
+}
