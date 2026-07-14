@@ -68,4 +68,14 @@
 - [x] Verify map markers, country pages, trend chart, and counts update correctly (desktop + 390px screenshots; new country pages render)
 - [x] Reconcile rendered hero counts vs data model (scripts/verify_counts.py): model = 115 reviewed / 122 indexed / 25 countries; hero shows 114 reviewed because the default 10-year filter excludes us-milpitas-walmart-2016 (Jun 2016), and 121 indexed because the live daily-check index has 1 fewer record than the snapshot (a removed 2022 French floating-solar article) — both differences are by-design filter/live-data behavior, no mismatch. Trend series sums to 115 = reviewed count OK
 - [x] tsc + tests + mobile check (tsc clean, 21 tests passing, 390px verified)
+- [x] Checkpoint (f2a5295b) + push to GitHub manus-app branch (f2a5295)
+
+## Follow-up 6: easier return to global view after country selection
+
+- [x] Floating "Back to global view" reset chip overlaid on the map when a country is selected (verified in browser: click resets to global)
+- [x] Click empty map space (ocean/background) to reset to global (background rect click handler + "Click to return to global view" title)
+- [x] Escape key resets country selection (skips when drawer/sheet open) — Playwright-verified: Germany selected → Escape → "212 provisional events in Global" restored
+- [x] Selected-country state clearly visible: clickable "Global coverage" breadcrumb + amber "× Back to global" chip next to it; coverage strip shows detail-page link + back button
+- [x] Mobile: verified at 390px with Germany actively selected — screenshot shows amber "× BACK TO GLOBAL" breadcrumb chip and floating "Back to global view" chip over the map, both visible and tappable
+- [x] Verify (browser click-through: Germany select → chip click → global restored), tsc clean, 21 tests passing
 - [ ] Checkpoint + push to GitHub manus-app branch

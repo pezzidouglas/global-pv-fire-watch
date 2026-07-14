@@ -405,6 +405,19 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     document.getElementById("incidents")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  const resetToGlobal = useCallback(() => {
+    setCountry("all");
+  }, []);
+
+  useEffect(() => {
+    if (country === "all") return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !selected && !showFilters) resetToGlobal();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [country, resetToGlobal, selected, showFilters]);
+
   const reviewedSorted = [...filtered].sort((a, b) => b.date.localeCompare(a.date));
   const latest = reviewedSorted.slice(0, showAllRail ? reviewedSorted.length : 7);
   const scopeLabel = country === "all" ? "Global" : country;
@@ -511,7 +524,17 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
       <section className="workspace" id="incidents">
         <div className="workspace-head">
           <div>
-            <span className="scope-breadcrumb">Global coverage <b>/</b> {country === "all" ? "All countries" : country}</span>
+            <span className="scope-breadcrumb">
+              {country === "all" ? (
+                <>Global coverage <b>/</b> All countries</>
+              ) : (
+                <>
+                  <button type="button" className="breadcrumb-reset" onClick={resetToGlobal}>Global coverage</button>
+                  <b>/</b> {country}
+                  <button type="button" className="scope-clear-chip" onClick={resetToGlobal} aria-label={`Clear ${country} selection and return to global view`}><X size={12} /> Back to global</button>
+                </>
+              )}
+            </span>
             <h2>{stats.events.toLocaleString()} provisional events in {scopeLabel}</h2>
             <p>{stats.total} source records · {stats.reviewed} reviewed · {stats.indexed} vendor-indexed{country !== "all" && <> · <Link href={`/country/${countrySlug(country)}`} className="inline-country-link">open {country} detail page</Link></>}</p>
           </div>
@@ -585,7 +608,13 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
               <svg className="world-map" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-label={`Interactive global reporting map showing ${globalStats.events} provisional events from ${globalStats.total} source records and ${filtered.length} reviewed locations`}>
                 <title>Interactive global PV fire public reporting coverage</title>
                 <desc>Country bubbles show provisional event clusters. Red and amber points open reviewed incident details.</desc>
-                <rect width={WIDTH} height={HEIGHT} className="map-bg" />
+                <rect
+                  width={WIDTH}
+                  height={HEIGHT}
+                  className="map-bg"
+                  onClick={country !== "all" ? resetToGlobal : undefined}
+                  style={country !== "all" ? { cursor: "zoom-out" } : undefined}
+                >{country !== "all" && <title>Click to return to global view</title>}</rect>
                 <g className="graticule-lines">
                   {[140, 280, 420].map((y) => <line key={`h-${y}`} x1="0" x2={WIDTH} y1={y} y2={y} />)}
                   {[200, 400, 600, 800, 1000].map((x) => <line key={`v-${x}`} x1={x} x2={x} y1="0" y2={HEIGHT} />)}
@@ -659,6 +688,11 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                   })}
                 </g>
               </svg>
+              {country !== "all" && (
+                <button type="button" className="map-reset-chip" onClick={resetToGlobal}>
+                  <Globe2 size={14} /> Back to global view
+                </button>
+              )}
               <div className="map-legend">
                 <span><i className="coverage" /> Provisional event total</span>
                 <span><i className="verified" /> Source-reviewed location</span>
