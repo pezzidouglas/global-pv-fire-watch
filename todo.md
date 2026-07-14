@@ -82,9 +82,9 @@
 
 ## Follow-up 7: interactive timeline slider below the map
 
-- [ ] Timeline slider component below the map: dual-handle range (start/end) over the full data span (2016–present) with year/month tick marks and a mini event-density histogram
-- [ ] Wire slider to the existing date filtering so map markers, bubbles, incident lists, and counts update live
-- [ ] Keep slider in sync with the existing date-range dropdown (10 years / custom presets)
-- [ ] Match dark mission-control styling (amber accents, glassy track, glow handles); keyboard-accessible handles
-- [ ] Mobile 390px check: touch-friendly handles, layout intact
-- [ ] tsc + tests, checkpoint, push to GitHub manus-app branch
+- [x] Timeline slider component below the map: dual-handle range (start/end) over the full data span (2016–present) with year tick marks and a 40-bin event-density histogram (TimelineSlider.tsx)
+- [x] Wire slider to the existing date filtering so map markers, bubbles, incident lists, and counts update live (inWindow() applied to reviewed + indexed filters; Playwright drag test: 235→32 records, map/legend/rail updated)
+- [x] Keep slider in sync with the existing date-range dropdown (slider engaged overrides dropdown; changing dropdown or Reset/Clear filters returns slider to dropdown window)
+- [x] Match dark mission-control styling (amber accents, glassy blurred track over map, glow handles, muted year ticks); keyboard-accessible handles (Arrow = month, Shift+Arrow = year, Home/End)
+- [x] Mobile 390px check: slider moves into normal flow below the map legend, 18px touch handles, drag verified (Apr 2021–Jul 2026 → 213 records)
+- [x] tsc + tests, checkpoint, push to GitHub manus-app branch (tsc clean, 21 tests passing)

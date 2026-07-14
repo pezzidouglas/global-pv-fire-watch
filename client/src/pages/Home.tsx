@@ -3,6 +3,7 @@ import { geoCentroid, geoEqualEarth, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
 import { countrySlug } from "@shared/countryData";
+import TimelineSlider, { type TimelineRange } from "@/components/TimelineSlider";
 import { Link } from "wouter";
 import {
   Activity,
@@ -196,30 +197,53 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     return date;
   }, [years]);
 
+  const timelineMax = useMemo(() => {
+    const now = new Date();
+    return Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  }, []);
+  const timelineMin = useMemo(() => {
+    const dates = [
+      ...initialIncidents.map((item) => Date.parse(`${item.date}T00:00:00Z`)),
+      ...indexedReports.map((item) => Date.parse(`${item.date}T00:00:00Z`)),
+    ].filter((ms) => Number.isFinite(ms));
+    const earliest = dates.length ? Math.min(...dates) : Date.UTC(2016, 0, 1);
+    return Math.min(earliest, Date.UTC(2016, 0, 1));
+  }, [indexedReports, initialIncidents]);
+  const [timeline, setTimeline] = useState<{ start: number; end: number } | null>(null);
+
+  // The effective window: timeline slider (when engaged) refines the dropdown cutoff
+  const windowStart = timeline ? timeline.start : cutoff.getTime();
+  const windowEnd = timeline ? timeline.end : timelineMax;
+
+  const inWindow = useCallback((dateStr: string) => {
+    const ms = Date.parse(`${dateStr}T00:00:00Z`);
+    return ms >= windowStart && ms <= windowEnd;
+  }, [windowStart, windowEnd]);
+
   const baseReviewed = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return initialIncidents.filter((incident) => {
-      const inDate = new Date(`${incident.date}T00:00:00Z`) >= cutoff;
+      const inDate = inWindow(incident.date);
       const inAsset = asset === "all" || incident.assetType === asset;
       const inEvidence = evidence === "all" || (evidence !== "indexed" && incident.status === evidence);
       const inSearch = !needle || [incident.title, incident.city, incident.country, incident.causeCategory, incident.propertyType]
         .some((value) => value.toLowerCase().includes(needle));
       return inDate && inAsset && inEvidence && inSearch;
     });
-  }, [asset, cutoff, evidence, initialIncidents, query]);
+  }, [asset, inWindow, evidence, initialIncidents, query]);
 
   const baseIndexed = useMemo(() => {
     const needle = query.trim().toLowerCase();
     return liveIndexedReports.filter((report) => {
       if (eventGroups.excludedRecords[report.id]) return false;
-      const inDate = new Date(`${report.date}T00:00:00Z`) >= cutoff;
+      const inDate = inWindow(report.date);
       const inAsset = asset === "all" || report.assetType === asset;
       const inEvidence = evidence === "all" || evidence === "indexed";
       const inSearch = !needle || [report.title, report.country, report.propertyType, report.summary]
         .some((value) => value.toLowerCase().includes(needle));
       return inDate && inAsset && inEvidence && inSearch;
     });
-  }, [asset, cutoff, evidence, eventGroups.excludedRecords, liveIndexedReports, query]);
+  }, [asset, inWindow, evidence, eventGroups.excludedRecords, liveIndexedReports, query]);
 
   const filtered = useMemo(
     () => baseReviewed.filter((incident) => country === "all" || incident.country === country),
@@ -280,13 +304,13 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
       const year = Number(item.date.slice(0, 4));
       result.set(year, (result.get(year) ?? 0) + 1);
     });
-    const currentYear = new Date().getUTCFullYear();
-    const startYear = cutoff.getUTCFullYear();
+    const currentYear = new Date(windowEnd).getUTCFullYear();
+    const startYear = new Date(windowStart).getUTCFullYear();
     return Array.from({ length: currentYear - startYear + 1 }, (_, index) => {
       const year = startYear + index;
       return [year, result.get(year) ?? 0] as [number, number];
     });
-  }, [cutoff, filtered]);
+  }, [filtered, windowEnd, windowStart]);
 
   const maxTrend = Math.max(1, ...trend.map(([, count]) => count));
 
@@ -396,7 +420,30 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     setEvidence("all");
     setCountry("all");
     setQuery("");
+    setTimeline(null);
   }
+
+  // Dates of all events matching the non-date filters, for the timeline density histogram
+  const timelineEventDates = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    const dates: number[] = [];
+    initialIncidents.forEach((incident) => {
+      const inAsset = asset === "all" || incident.assetType === asset;
+      const inEvidence = evidence === "all" || (evidence !== "indexed" && incident.status === evidence);
+      const inCountry = country === "all" || incident.country === country;
+      const inSearch = !needle || [incident.title, incident.city, incident.country, incident.causeCategory, incident.propertyType].some((value) => value.toLowerCase().includes(needle));
+      if (inAsset && inEvidence && inCountry && inSearch) dates.push(Date.parse(`${incident.date}T00:00:00Z`));
+    });
+    liveIndexedReports.forEach((report) => {
+      if (eventGroups.excludedRecords[report.id]) return;
+      const inAsset = asset === "all" || report.assetType === asset;
+      const inEvidence = evidence === "all" || evidence === "indexed";
+      const inCountry = country === "all" || report.country === country;
+      const inSearch = !needle || [report.title, report.country, report.propertyType, report.summary].some((value) => value.toLowerCase().includes(needle));
+      if (inAsset && inEvidence && inCountry && inSearch) dates.push(Date.parse(`${report.date}T00:00:00Z`));
+    });
+    return dates.filter((ms) => Number.isFinite(ms));
+  }, [asset, country, evidence, eventGroups.excludedRecords, initialIncidents, liveIndexedReports, query]);
 
   function selectCountry(name: string) {
     setCountry(name);
@@ -563,7 +610,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
         >
           <div className="filter-sheet-head"><div><span id="filter-dialog-title">Filter records</span><small>{stats.total} results in current scope</small></div><button aria-label="Close filters" onClick={() => setShowFilters(false)}><X size={19} /></button></div>
           <label><CalendarDays size={16} /><span className="sr-only">Date range</span>
-            <select value={years} onChange={(event) => setYears(event.target.value)}>
+            <select value={years} onChange={(event) => { setYears(event.target.value); setTimeline(null); }}>
               <option value="10">Date · Last 10 years</option>
               <option value="5">Date · Last 5 years</option>
               <option value="3">Date · Last 3 years</option>
@@ -700,6 +747,14 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                 <span className="legend-total">{filtered.length} mapped locations · {stats.total} records</span>
               </div>
               <div className="map-note">Marker locations are approximate at city/site level</div>
+              <TimelineSlider
+                min={timelineMin}
+                max={timelineMax}
+                value={{ start: windowStart, end: windowEnd }}
+                onChange={(range: TimelineRange) => setTimeline(range)}
+                eventDates={timelineEventDates}
+                matchCount={stats.total}
+              />
             </div>
             <aside className="incident-rail">
               <div className="rail-header">
