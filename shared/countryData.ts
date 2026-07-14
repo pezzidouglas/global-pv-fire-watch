@@ -23,7 +23,7 @@ export function countrySlug(name: string): string {
 /** Maps research-source jurisdiction labels to a canonical country name (or null for multi-country benchmarks). */
 export function jurisdictionCountry(jurisdiction: string): string | null {
   const j = jurisdiction.toLowerCase();
-  if (j.includes("international")) return null;
+  if (j.includes("international") || j.includes("global")) return null;
   if (j.includes("amazon")) return "United States";
   if (j === "england" || j.includes("united kingdom")) return "United Kingdom";
   if (j.includes("australia")) return "Australia";
@@ -33,6 +33,15 @@ export function jurisdictionCountry(jurisdiction: string): string | null {
   if (j.includes("netherlands")) return "Netherlands";
   if (j.includes("slovenia")) return "Slovenia";
   if (j.includes("united states")) return "United States";
+  if (j.includes("austria")) return "Austria";
+  if (j.includes("denmark")) return "Denmark";
+  if (j.includes("sweden")) return "Sweden";
+  if (j.includes("poland")) return "Poland";
+  if (j.includes("czech")) return "Czechia";
+  if (j.includes("korea")) return "South Korea";
+  if (j.includes("new zealand")) return "New Zealand";
+  if (j.includes("france")) return "France";
+  if (j.includes("taiwan")) return "Taiwan";
   return jurisdiction;
 }
 

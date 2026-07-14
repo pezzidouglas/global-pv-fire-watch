@@ -88,3 +88,12 @@
 - [x] Match dark mission-control styling (amber accents, glassy blurred track over map, glow handles, muted year ticks); keyboard-accessible handles (Arrow = month, Shift+Arrow = year, Home/End)
 - [x] Mobile 390px check: slider moves into normal flow below the map legend, 18px touch handles, drag verified (Apr 2021–Jul 2026 → 213 records)
 - [x] tsc + tests, checkpoint, push to GitHub manus-app branch (tsc clean, 21 tests passing)
+
+## Follow-up 8: deep research expansion — more incidents + more aggregate sources
+
+- [x] Audit current dataset (115 reviewed incidents, 21 countries, existing research sources) and define coverage gaps
+- [x] Broad parallel research: 20 parallel scopes returned 115 incident candidates + 27 aggregate-source candidates
+- [x] Validate + de-duplicate candidates against evidence protocol (21 rejected at validation, 4 more at curation: ESS-only/PV-factory scope; all 125 source URLs liveness-checked, bot-blocked 403s manually verified)
+- [x] Merge 94 new incidents (incidents.json: 115 → 209) + 14 new aggregate research sources (research-sources.json: 16 → 30, incl. Denmark BRS, Sweden MSB, Poland KG PSP, Czechia HZS, Japan NITE, Korea NFA, NZ FENZ OIA, Victoria ESV, Lower Austria, France ARIA, UK QBE 2024 breakdown, CEA audit, kWh Analytics SRA 2026, IEA PVPS PVFS 2025); extended jurisdictionCountry mapping; normalized causeCategory taxonomy (20 relabels)
+- [x] Verify counts (209 reviewed / 331 records / 308 event clusters per verify_counts.py, 306 shown on dashboard within the 10-year filter window / 44 countries, trend sum OK), map + country pages (Sweden, Poland, South Korea, China) screenshot-verified; 390px mobile check on home + Sweden page passed; tsc clean, 21 tests passing
+- [x] Checkpoint + push to GitHub manus-app branch
