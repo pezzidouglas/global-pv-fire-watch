@@ -78,4 +78,13 @@
 - [x] Selected-country state clearly visible: clickable "Global coverage" breadcrumb + amber "× Back to global" chip next to it; coverage strip shows detail-page link + back button
 - [x] Mobile: verified at 390px with Germany actively selected — screenshot shows amber "× BACK TO GLOBAL" breadcrumb chip and floating "Back to global view" chip over the map, both visible and tappable
 - [x] Verify (browser click-through: Germany select → chip click → global restored), tsc clean, 21 tests passing
-- [ ] Checkpoint + push to GitHub manus-app branch
+- [x] Checkpoint (89d61792) + push to GitHub manus-app branch (89d6179)
+
+## Follow-up 7: interactive timeline slider below the map
+
+- [ ] Timeline slider component below the map: dual-handle range (start/end) over the full data span (2016–present) with year/month tick marks and a mini event-density histogram
+- [ ] Wire slider to the existing date filtering so map markers, bubbles, incident lists, and counts update live
+- [ ] Keep slider in sync with the existing date-range dropdown (10 years / custom presets)
+- [ ] Match dark mission-control styling (amber accents, glassy track, glow handles); keyboard-accessible handles
+- [ ] Mobile 390px check: touch-friendly handles, layout intact
+- [ ] tsc + tests, checkpoint, push to GitHub manus-app branch
