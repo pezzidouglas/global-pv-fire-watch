@@ -348,6 +348,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .map-bg { fill: transparent; }
 .graticule-lines line { stroke: #2c3c4a; stroke-width: .6; stroke-opacity: .3; stroke-dasharray: 2 6; }
 .countries path { fill: #16222d; stroke: #45596c; stroke-width: .5; vector-effect: non-scaling-stroke; transition: fill .2s; }
+.zoom-layer { transition: transform .55s cubic-bezier(0.77, 0, 0.175, 1); transform-origin: 0 0; will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .zoom-layer { transition: none; } }
 .coverage-bubble { cursor: pointer; transition: opacity .18s; }
 .coverage-bubble .coverage-hit { fill: transparent; stroke: none; }
 .coverage-bubble .coverage-ring { fill: rgba(143, 184, 221, .14); stroke: var(--gpv-blue); stroke-width: 1.6; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 6px rgba(143, 184, 221, .35)); transition: fill .18s; }
@@ -355,7 +357,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .coverage-bubble text { fill: white; font-size: 11px; font-weight: 740; pointer-events: none; paint-order: stroke; stroke: rgba(5, 10, 15, .55); stroke-width: 2.4px; }
 .coverage-bubble:hover .coverage-ring, .coverage-bubble:focus-visible .coverage-ring, .coverage-bubble.active .coverage-ring { fill: rgba(143, 184, 221, .3); stroke: white; stroke-width: 2.2; filter: drop-shadow(0 0 10px rgba(174, 207, 235, .55)); }
 .coverage-bubble.muted { opacity: .2; }
+.coverage-bubble.zoomed-away { opacity: 0; pointer-events: none; transition: opacity .35s .2s; }
 .marker-group { cursor: pointer; }
+.markers-passive { pointer-events: none; }
 .marker-hit { fill: transparent; }
 .marker { stroke: rgba(255, 244, 234, .92); stroke-width: 1; vector-effect: non-scaling-stroke; }
 .marker.verified { fill: var(--gpv-red); filter: drop-shadow(0 0 4px var(--gpv-glow-red)); }
@@ -658,9 +662,7 @@ footer a:hover { color: var(--gpv-blue-bright); }
   .map-layout { min-height: 0; }
   .map-panel { min-height: 300px; overflow: hidden; }
   .world-map { width: 100%; height: auto; min-height: 0; aspect-ratio: 1200 / 560; }
-  .coverage-bubble text { font-size: 25px; }
-  .coverage-hit { r: 96px; }
-  .marker-hit { r: 96px; }
+
   .marker { stroke-width: 2; }
   .marker-halo { display: none; }
   .map-legend { position: static; max-width: none; display: grid; grid-template-columns: 1fr 1fr; gap: 7px 12px; padding: 9px 11px; border: 0; border-top: 1px solid var(--gpv-line); border-radius: 0; background: var(--gpv-surface); font-size: 9px; box-shadow: none; backdrop-filter: none; }

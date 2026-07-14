@@ -4,6 +4,7 @@ import { feature } from "topojson-client";
 import worldData from "world-atlas/countries-110m.json";
 import { countrySlug } from "@shared/countryData";
 import TimelineSlider, { type TimelineRange } from "@/components/TimelineSlider";
+import { useIsMobile } from "@/hooks/useMobile";
 import { Link } from "wouter";
 import {
   Activity,
@@ -210,6 +211,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     return Math.min(earliest, Date.UTC(2016, 0, 1));
   }, [indexedReports, initialIncidents]);
   const [timeline, setTimeline] = useState<{ start: number; end: number } | null>(null);
+  const isMobile = useIsMobile() ?? false;
 
   // The effective window: timeline slider (when engaged) refines the dropdown cutoff
   const windowStart = timeline ? timeline.start : cutoff.getTime();
@@ -456,6 +458,39 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
     setCountry("all");
   }, []);
 
+  // Zoom transform: when a country is selected, fit its incident/bubble extent so markers separate and become clickable
+  const zoom = useMemo(() => {
+    if (country === "all") return { k: 1, x: 0, y: 0 };
+    const points: Array<[number, number]> = [];
+    initialIncidents.forEach((incident) => {
+      if (incident.country !== country) return;
+      const p = world.projection([incident.lng, incident.lat]);
+      if (p) points.push(p as [number, number]);
+    });
+    if (points.length === 0) {
+      const coordinates = COUNTRY_CENTROID_OVERRIDES[country] ?? world.centroids.get(COUNTRY_NAME_ALIASES[country] ?? country);
+      const p = coordinates ? world.projection(coordinates) : null;
+      if (p) points.push(p as [number, number]);
+    }
+    if (points.length === 0) return { k: 1, x: 0, y: 0 };
+    const xs = points.map((p) => p[0]);
+    const ys = points.map((p) => p[1]);
+    const minX = Math.min(...xs);
+    const maxX = Math.max(...xs);
+    const minY = Math.min(...ys);
+    const maxY = Math.max(...ys);
+    const spanX = Math.max(maxX - minX, 24);
+    const spanY = Math.max(maxY - minY, 24);
+    const k = Math.max(1.6, Math.min(7, 0.62 * Math.min(WIDTH / spanX, HEIGHT / spanY)));
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    // Clamp translation so the zoomed viewport stays within the map bounds
+    const x = Math.min(0, Math.max(WIDTH - WIDTH * k, WIDTH / 2 - k * cx));
+    const y = Math.min(0, Math.max(HEIGHT - HEIGHT * k, HEIGHT / 2 - k * cy));
+    return { k, x, y };
+  }, [country, initialIncidents, world]);
+  const zk = zoom.k;
+
   useEffect(() => {
     if (country === "all") return;
     const onKey = (event: KeyboardEvent) => {
@@ -666,13 +701,14 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                   {[140, 280, 420].map((y) => <line key={`h-${y}`} x1="0" x2={WIDTH} y1={y} y2={y} />)}
                   {[200, 400, 600, 800, 1000].map((x) => <line key={`v-${x}`} x1={x} x2={x} y1="0" y2={HEIGHT} />)}
                 </g>
+                <g className="zoom-layer" style={{ transform: `translate(${zoom.x}px, ${zoom.y}px) scale(${zk})` }}>
                 <g className="countries">
                   {(world.countries as unknown as { features: { id?: string; type: string; properties: object; geometry: never }[] }).features.map((country, index) => (
                     <path key={country.id ?? `country-${index}`} d={world.path(country as never) ?? ""} />
                   ))}
                 </g>
                 <g className="coverage-bubbles">
-                  {countryCoverage.map((item) => {
+                  {[...countryCoverage].sort((a, b) => a.events - b.events).map((item) => {
                     const coordinates = COUNTRY_CENTROID_OVERRIDES[item.country]
                       ?? world.centroids.get(COUNTRY_NAME_ALIASES[item.country] ?? item.country);
                     const point = coordinates ? world.projection(coordinates) : null;
@@ -681,7 +717,7 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                     return (
                       <g
                         key={`coverage-${item.country}`}
-                        className={`coverage-bubble ${country === item.country ? "active" : ""} ${country !== "all" && country !== item.country ? "muted" : ""}`}
+                        className={`coverage-bubble ${country === item.country ? "active zoomed-away" : ""} ${country !== "all" && country !== item.country ? "muted" : ""}`}
                         transform={`translate(${point[0].toFixed(4)},${point[1].toFixed(4)})`}
                         role="button"
                         tabIndex={0}
@@ -695,14 +731,14 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                           }
                         }}
                       >
-                        <circle className="coverage-hit" r={Math.max(radius, 32)} />
-                        <circle className="coverage-ring" r={radius} />
-                        <text textAnchor="middle" dominantBaseline="central">{item.events}</text>
+                        <circle className="coverage-hit" r={(isMobile ? Math.max(radius + 6, 24) : radius + 4) / zk} />
+                        <circle className="coverage-ring" r={radius / zk} strokeWidth={1.4 / zk} />
+                        <text textAnchor="middle" dominantBaseline="central" style={{ fontSize: `${(isMobile ? 25 : 13) / zk}px` }}>{item.events}</text>
                       </g>
                     );
                   })}
                 </g>
-                <g className="markers">
+                <g className={`markers ${country === "all" ? "markers-passive" : ""}`}>
                   {filtered.map((incident) => {
                     const point = world.projection([incident.lng, incident.lat]);
                     if (!point) return null;
@@ -724,15 +760,17 @@ function DashboardView({ initialIncidents, candidateCount, indexedReports, resea
                           }
                         }}
                       >
-                        <circle className="marker-hit" r="16" />
-                        {isMajor && <circle className={`marker-halo ${isVerified ? "verified" : "reported"}`} r="12" />}
+                        <circle className="marker-hit" r={(isMobile ? 30 : 16) / zk} />
+                        {isMajor && <circle className={`marker-halo ${isVerified ? "verified" : "reported"}`} r={12 / zk} />}
                         <circle
                           className={`marker ${isVerified ? "verified" : "reported"}`}
-                          r={isMajor ? 5.3 : 4}
+                          r={(isMajor ? 5.3 : 4) / Math.max(1, zk * 0.72)}
+                          strokeWidth={1.5 / zk}
                         />
                       </g>
                     );
                   })}
+                </g>
                 </g>
               </svg>
               {country !== "all" && (

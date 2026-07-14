@@ -97,3 +97,12 @@
 - [x] Merge 94 new incidents (incidents.json: 115 → 209) + 14 new aggregate research sources (research-sources.json: 16 → 30, incl. Denmark BRS, Sweden MSB, Poland KG PSP, Czechia HZS, Japan NITE, Korea NFA, NZ FENZ OIA, Victoria ESV, Lower Austria, France ARIA, UK QBE 2024 breakdown, CEA audit, kWh Analytics SRA 2026, IEA PVPS PVFS 2025); extended jurisdictionCountry mapping; normalized causeCategory taxonomy (20 relabels)
 - [x] Verify counts (209 reviewed / 331 records / 308 event clusters per verify_counts.py, 306 shown on dashboard within the 10-year filter window / 44 countries, trend sum OK), map + country pages (Sweden, Poland, South Korea, China) screenshot-verified; 390px mobile check on home + Sweden page passed; tsc clean, 21 tests passing
 - [x] Checkpoint + push to GitHub manus-app branch
+
+## Follow-up 9: map click-to-zoom so incident markers are clickable
+
+- [x] Click a country bubble/area on the world map → smooth zoom into that region (country-fit transform, eased zoom-layer transition; UK scale 7, Australia scale 3.56); real mouse click verified after fixing hit-stealing (bubbles now sorted small→large so big bubbles win clicks; markers layer pointer-passive at global view)
+- [x] At zoomed level, individual incident markers become clickable and open the incident drawer (verified: Sandridge Hill desktop, Sidegate Primary mobile tap)
+- [x] Reset control ("Back to global view" chip + Escape key + background/ocean click zoom-out) returns to global scale(1), verified with real clicks; selected country's own bubble fades out while zoomed so markers are reachable. (Wheel/pinch free-zoom intentionally not included — zoom is country-fit based; noted as possible future enhancement)
+- [x] Keep marker/bubble sizes readable while zoomed (scale-compensated radii, stroke widths, font sizes; mobile-specific larger touch hit areas 44/zk bubbles, 30/zk markers)
+- [x] Verify with REAL clicks/taps (no synthetic events): desktop mouse click zooms UK + marker click opens drawer + ocean click zooms out; mobile 390px real touch tap zooms + marker tap opens drawer; tsc clean, 21 tests passing
+- [x] Checkpoint + deliver
