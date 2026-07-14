@@ -57,4 +57,15 @@
 - [x] Replace 7-item "Latest reviewed incidents" preview with full list of reviewed incidents for current filter scope: rail renamed "Reviewed incidents" with record count, "Show all N incidents" click-to-load-more, scrollable expanded list; Reviewed register tab now uses date-desc full list
 - [x] Show all vendor-indexed reports in the Index tab with load-more expansion (already present: "Show all N reports" toggle, confirmed)
 - [x] Mobile responsiveness check for the expanded lists (390px verified; tsc clean, 21 tests passing)
+- [x] Checkpoint (d9de6877) + push to GitHub manus-app branch (d9de687)
+
+## Follow-up 5: research + add more documented PV fire events
+
+- [x] Inspect current incidents dataset schema and existing IDs/coverage to avoid duplicates (48 reviewed incidents, 10 countries; schema + existing list saved to /home/ubuntu/research_inputs/dataset_reference.txt)
+- [x] Parallel research: 16 regional scopes searched (fire brigades, national news, trade press); 79 candidate events returned
+- [x] De-duplicate + validate: schema/enum/date>=2016/coords checks; rejected social-media & aggregator sources, battery/ESS-primary events, dupes; dropped mis-scoped Shanghai record; fixed umlaut slugs; URL spot-check 16/16 OK (report: /home/ubuntu/research_inputs/merge_report.txt)
+- [x] Add verified new events: 48 -> 115 reviewed incidents (+67), 21 countries (11 new: Germany +9, Belgium, Switzerland, Portugal, Taiwan, South Korea, Singapore, Thailand, Brazil, Argentina, Cuba, Israel)
+- [x] Verify map markers, country pages, trend chart, and counts update correctly (desktop + 390px screenshots; new country pages render)
+- [x] Reconcile rendered hero counts vs data model (scripts/verify_counts.py): model = 115 reviewed / 122 indexed / 25 countries; hero shows 114 reviewed because the default 10-year filter excludes us-milpitas-walmart-2016 (Jun 2016), and 121 indexed because the live daily-check index has 1 fewer record than the snapshot (a removed 2022 French floating-solar article) — both differences are by-design filter/live-data behavior, no mismatch. Trend series sums to 115 = reviewed count OK
+- [x] tsc + tests + mobile check (tsc clean, 21 tests passing, 390px verified)
 - [ ] Checkpoint + push to GitHub manus-app branch
