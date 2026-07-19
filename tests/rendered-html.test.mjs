@@ -50,7 +50,7 @@ test("renders production metadata, policy links and security headers", async () 
   assert.match(html, /\/methodology/);
   assert.match(html, /\/data-policy/);
   assert.match(html, /\/corrections/);
-  assert.match(html, new RegExp(`${recordCount}(?:<!-- -->)? public source records`, "i"));
+  assert.match(html, new RegExp(`<strong>${recordCount}</strong><span>public source records`, "i"));
   assert.match(html, new RegExp(`${eventCount}(?:<!-- -->)? provisional event clusters`, "i"));
 });
 
