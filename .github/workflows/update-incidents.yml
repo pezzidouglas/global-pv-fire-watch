@@ -41,14 +41,11 @@ jobs:
       - name: Discover public incident reports
         run: |
           set +e
-          {
+          (
+            set -e
             node scripts/update-incidents.mjs
-            first_status=$?
-            if [ "$first_status" -ne 0 ]; then
-              exit "$first_status"
-            fi
             node scripts/import-public-index.mjs
-          } > discovery.log 2>&1
+          ) > discovery.log 2>&1
           status=$?
           tail -n 100 discovery.log
           exit "$status"
