@@ -140,8 +140,10 @@ jobs:
         run: |
           if gh pr list --head automation/daily-pv-fire-data --state open --json number --jq 'length > 0' | grep -q true; then
             echo "Existing daily-data pull request updated."
+          elif gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body "Automated data-only update. Discovery ran without write permission; this pull request requires review before publication."; then
+            echo "Daily-data pull request created."
           else
-            gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body "Automated data-only update. Discovery ran without write permission; this pull request requires review before publication."
+            echo "::warning::Repository policy prevented GitHub Actions from creating the pull request. The validated automation/daily-pv-fire-data branch was retained for review."
           fi
 
       - name: Write workflow summary
