@@ -6,6 +6,12 @@ on:
       - main
     paths:
       - ".github/workflows/update-incidents.yml"
+      - "vite.config.ts"
+      - "build/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - "package-lock.json"
   schedule:
     - cron: "17 14 * * *"
   workflow_dispatch:
