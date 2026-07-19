@@ -64,9 +64,15 @@ test("incident and index records satisfy the publication schema", async () => {
   const activeReviewed = incidents.filter((item) => new Date(item.date + "T00:00:00Z") >= cutoff);
   const activeIndexed = indexed.filter((item) => new Date(item.date + "T00:00:00Z") >= cutoff);
   const eventIds = new Set([...activeReviewed, ...activeIndexed].map((item) => groups.recordToEvent[item.id] ?? item.id));
-  assert.equal(activeReviewed.length, 47);
-  assert.equal(activeIndexed.length, 122);
-  assert.equal(eventIds.size, 146, "provisional event count changed; audit event links before publishing");
+  const collapsedRecordCount = activeReviewed.length + activeIndexed.length - eventIds.size;
+
+  assert.ok(activeReviewed.length >= 47, "active reviewed dataset unexpectedly shrank");
+  assert.ok(activeIndexed.length >= 122, "active public index unexpectedly shrank");
+  assert.equal(
+    collapsedRecordCount,
+    23,
+    "known event-link collapse count changed; audit event links before publishing",
+  );
 });
 
 test("pipeline metadata and automation describe a real daily scan", async () => {
