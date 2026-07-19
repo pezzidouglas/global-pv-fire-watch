@@ -51,7 +51,10 @@ jobs:
           (
             set -e
             node scripts/update-incidents.mjs
-            node scripts/import-public-index.mjs
+            if ! node scripts/import-public-index.mjs 2> public-index-error.log; then
+              cat public-index-error.log >&2
+              node scripts/mark-public-index-degraded.mjs public-index-error.log
+            fi
           ) > discovery.log 2>&1
           status=$?
           tail -n 100 discovery.log
@@ -73,6 +76,7 @@ jobs:
           path: |
             discovery.log
             validation.log
+            public-index-error.log
           if-no-files-found: warn
           retention-days: 3
 
