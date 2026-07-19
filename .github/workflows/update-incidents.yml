@@ -44,7 +44,21 @@ jobs:
           node scripts/import-public-index.mjs
 
       - name: Validate data and dashboard
-        run: npm test
+        run: |
+          set +e
+          npm test > validation.log 2>&1
+          status=$?
+          tail -n 100 validation.log
+          exit "$status"
+
+      - name: Upload validation report on failure
+        if: failure()
+        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
+        with:
+          name: daily-pv-fire-validation-log
+          path: validation.log
+          if-no-files-found: error
+          retention-days: 3
 
       - name: Package validated data only
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
