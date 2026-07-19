@@ -40,8 +40,18 @@ jobs:
 
       - name: Discover public incident reports
         run: |
-          node scripts/update-incidents.mjs
-          node scripts/import-public-index.mjs
+          set +e
+          {
+            node scripts/update-incidents.mjs
+            first_status=$?
+            if [ "$first_status" -ne 0 ]; then
+              exit "$first_status"
+            fi
+            node scripts/import-public-index.mjs
+          } > discovery.log 2>&1
+          status=$?
+          tail -n 100 discovery.log
+          exit "$status"
 
       - name: Validate data and dashboard
         run: |
@@ -51,13 +61,15 @@ jobs:
           tail -n 100 validation.log
           exit "$status"
 
-      - name: Upload validation report on failure
+      - name: Upload failure diagnostics
         if: failure()
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
         with:
-          name: daily-pv-fire-validation-log
-          path: validation.log
-          if-no-files-found: error
+          name: daily-pv-fire-failure-logs
+          path: |
+            discovery.log
+            validation.log
+          if-no-files-found: warn
           retention-days: 3
 
       - name: Package validated data only
