@@ -1,10 +1,31 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function loadWorker() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${Math.random()}`);
   return (await import(workerUrl.href)).default;
+}
+
+const readJson = async (name) => JSON.parse(
+  await readFile(new URL("../data/" + name, import.meta.url), "utf8")
+);
+
+async function currentPublicationMetrics() {
+  const [incidents, indexed, groups] = await Promise.all([
+    readJson("incidents.json"),
+    readJson("indexed-reports.json"),
+    readJson("event-groups.json"),
+  ]);
+  const cutoff = new Date("2016-07-12T00:00:00Z");
+  const activeRecords = [...incidents, ...indexed].filter(
+    (item) => new Date(item.date + "T00:00:00Z") >= cutoff,
+  );
+  const eventIds = new Set(
+    activeRecords.map((item) => groups.recordToEvent[item.id] ?? item.id),
+  );
+  return { recordCount: activeRecords.length, eventCount: eventIds.size };
 }
 
 const env = {
@@ -23,12 +44,14 @@ test("renders production metadata, policy links and security headers", async () 
   assert.equal(response.headers.get("referrer-policy"), "strict-origin-when-cross-origin");
   assert.match(response.headers.get("strict-transport-security") ?? "", /max-age=31536000/);
   const html = await response.text();
+  const { recordCount, eventCount } = await currentPublicationMetrics();
   assert.doesNotMatch(html, /codex-preview/i);
   assert.match(html, /rel="canonical"/i);
   assert.match(html, /\/methodology/);
   assert.match(html, /\/data-policy/);
   assert.match(html, /\/corrections/);
-  assert.match(html, /146(?:<!-- -->)? provisional event clusters/i);
+  assert.match(html, new RegExp(`${recordCount}(?:<!-- -->)? public source records`, "i"));
+  assert.match(html, new RegExp(`${eventCount}(?:<!-- -->)? provisional event clusters`, "i"));
 });
 
 test("public information routes render", async () => {
