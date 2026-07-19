@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - ".github/workflows/update-incidents.yml"
+      - ".openai/**"
       - "vite.config.ts"
       - "build/**"
       - "scripts/**"
