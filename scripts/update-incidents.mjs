@@ -211,7 +211,9 @@ for (const query of queries) {
 }
 
 if (successfulQueries === 0) {
-  throw new Error("All multilingual discovery queries failed; previous candidate data was preserved.");
+  console.warn(
+    "PV Fire Watch: all multilingual discovery queries failed; preserving prior candidates and continuing in degraded mode."
+  );
 }
 
 const merged = [...existing, ...discovered]
