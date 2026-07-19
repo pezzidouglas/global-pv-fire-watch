@@ -1,6 +1,11 @@
 name: Daily PV fire discovery
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-incidents.yml"
   schedule:
     - cron: "17 14 * * *"
   workflow_dispatch:
