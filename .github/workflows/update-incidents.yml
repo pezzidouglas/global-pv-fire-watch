@@ -138,9 +138,33 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh pr list --head automation/daily-pv-fire-data --state open --json number --jq 'length > 0' | grep -q true; then
-            echo "Existing daily-data pull request updated."
-          elif gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body "Automated data-only update. Discovery ran without write permission; this pull request requires review before publication."; then
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from "node:fs";
+
+          const status = JSON.parse(readFileSync("incoming/pipeline-status.json", "utf8"));
+          const news = status.sources.find((source) => source.id === "multilingual-news") ?? {};
+          const publicIndex = status.sources.find((source) => source.id === "public-report-index") ?? {};
+          const body = [
+            "Automated, validated data-only update from the daily PV fire discovery pipeline.",
+            "",
+            "Latest validated snapshot:",
+            `- Status: ${status.overallStatus ?? "unknown"}`,
+            `- Last successful check: ${status.lastSuccessfulCheckAt ?? "unknown"}`,
+            `- Multilingual discovery: ${news.successfulQueries ?? 0}/${news.attemptedQueries ?? 0} queries succeeded (${news.failedQueries ?? 0} failed)`,
+            `- Public-index reports: ${publicIndex.recordCount ?? 0}`,
+            `- Pending discovery candidates: ${news.recordCount ?? 0}`,
+            "- Production build, artifact checks, and test suite passed",
+            "",
+            "This pull request remains review-only; no automated merge is requested.",
+          ].join("\n");
+          writeFileSync("daily-pr-body.md", body + "\n");
+          NODE
+
+          pr_number="$(gh pr list --head automation/daily-pv-fire-data --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" --body-file daily-pr-body.md
+            echo "Existing daily-data pull request and validation summary updated."
+          elif gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body-file daily-pr-body.md; then
             echo "Daily-data pull request created."
           else
             echo "::warning::Repository policy prevented GitHub Actions from creating the pull request. The validated automation/daily-pv-fire-data branch was retained for review."
