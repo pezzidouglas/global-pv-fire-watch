@@ -1,9 +1,9 @@
 [
   {
-    "id": "index-2026-06-erneuter-brand-in-einem-haus-mit-photovoltaik-dachziegeln-in-deutschland",
-    "date": "2026-06-01",
+    "id": "index-2026-07-solaranlage-in-bassersdorf-fa-ngt-feuer-dachstock-brennt-lichterloh",
+    "date": "2026-07-01",
     "datePrecision": "month",
-    "title": "Erneuter Brand in einem Haus mit Photovoltaik-Dachziegeln in Deutschland",
+    "title": "Solaranlage in Bassersdorf fängt Feuer – Dachstock brennt lichterloh",
     "country": "Germany",
     "assetType": "rooftop",
     "propertyType": "Residential",
@@ -11,9 +11,57 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.de/2026/06/12/erneuter-brand-in-einem-haus-mit-photovoltaik-dachziegeln-in-deutschland/",
+    "sourceUrl": "https://20min.ch/story/bassersdorf-zh-solaranlage-faengt-feuer-dachstock-brennt-lichterloh-103599855",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2026-07-langer-einsatz-in-su-lz-photovoltaik-anlage-brannte-auf-haus-nachbarscha",
+    "date": "2026-07-01",
+    "datePrecision": "month",
+    "title": "Langer Einsatz in Sülz: Photovoltaik-Anlage brannte auf Haus – Nachbarschaft lag unter Rauchschwaden",
+    "country": "Germany",
+    "assetType": "rooftop",
+    "propertyType": "Residential",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://ksta.de/koeln/lindenthal/suelz/koeln-photovoltaikanlage-brennt-auf-dach-feuerwehr-warnt-vor-rauch-in-suelz-1331007",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2026-07-major-house-fire-causes-roof-collapse-in-weston-super-mare",
+    "date": "2026-07-01",
+    "datePrecision": "month",
+    "title": "Major house fire causes roof collapse in Weston-super-Mare",
+    "country": "United Kingdom",
+    "assetType": "rooftop",
+    "propertyType": "Residential",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://thewestonmercury.co.uk/news/26258316.weston-super-mare-house-fire-causes-dramatic-roof-collapse",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2026-07-solar-panels-catch-fire-on-roof-of-manchester-walmart",
+    "date": "2026-07-01",
+    "datePrecision": "month",
+    "title": "Solar panels catch fire on roof of Manchester Walmart",
+    "country": "United States",
+    "assetType": "rooftop",
+    "propertyType": "Commercial / institutional",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://wfsb.com/2026/07/12/solar-panels-catch-fire-roof-manchester-walmart",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-photovoltaikanlage-auf-industriedach-stand-in-flammen",
@@ -27,9 +75,25 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Austria. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.kleinezeitung.at/artikel/28562872/brandeinsatz-bei-industriegebaeude-in-st-stefan-im-rosental",
+    "sourceUrl": "https://kleinezeitung.at/artikel/28562872/brandeinsatz-bei-industriegebaeude-in-st-stefan-im-rosental",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2026-06-erneuter-brand-in-einem-haus-mit-photovoltaik-dachziegeln-in-deutschland",
+    "date": "2026-06-01",
+    "datePrecision": "month",
+    "title": "Erneuter Brand in einem Haus mit Photovoltaik-Dachziegeln in Deutschland",
+    "country": "Germany",
+    "assetType": "rooftop",
+    "propertyType": "Residential",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://pv-magazine.de/2026/06/12/erneuter-brand-in-einem-haus-mit-photovoltaik-dachziegeln-in-deutschland",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-brand-in-wachtberg-pech-brennende-solaranlage-ha-lt-feuerwehr-stundenlan",
@@ -45,7 +109,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://ga.de/region/voreifel-und-vorgebirge/wachtberg/wachtberg-pech-brennende-solaranlage-haelt-feuerwehr-in-atem_aid-149475925",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-mehr-als-500-000-euro-schaden-diesen-verdacht-hat-die-kripo-nach-dem-gro",
@@ -59,9 +123,25 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.augsburger-allgemeine.de/augsburg/augsburg-lechhausen-mehr-als-500-000-euro-schaden-kripo-ermittelt-nach-grossbrand-von-sporthalle-114450208",
+    "sourceUrl": "https://augsburger-allgemeine.de/augsburg/augsburg-lechhausen-mehr-als-500-000-euro-schaden-kripo-ermittelt-nach-grossbrand-von-sporthalle-114450208",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2026-06-pv-anlage-brannte-235-kinder-an-grundschule-evakuiert",
+    "date": "2026-06-01",
+    "datePrecision": "month",
+    "title": "PV-Anlage brannte: 235 Kinder an Grundschule evakuiert",
+    "country": "Germany",
+    "assetType": "rooftop",
+    "propertyType": "Commercial / institutional",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://mdr.de/nachrichten/sachsen-anhalt/stendal/gardelegen/grundschule-brand-photovoltaik-gardelegen-,grundschule-brand-100.html",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-incendio-alla-giba-di-camerano-le-fiamme-partite-dall-impianto-fotovolta",
@@ -75,9 +155,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Italy. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ansa.it/marche/notizie/2026/06/11/incendio-alla-giba-di-camerano-le-fiamme-partite-dallimpianto-fotovoltaico_f0cc2d3c-d8cf-4b98-8efd-3bf2a10490de.html",
+    "sourceUrl": "https://ansa.it/marche/notizie/2026/06/11/incendio-alla-giba-di-camerano-le-fiamme-partite-dallimpianto-fotovoltaico_f0cc2d3c-d8cf-4b98-8efd-3bf2a10490de.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-ince-ndio-em-supermercado-continente-de-camarate-dado-como-extinto",
@@ -91,9 +171,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Portugal. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://observador.pt/2026/06/12/incendio-em-supermercado-continente-de-camarate-dado-como-extinto/",
+    "sourceUrl": "https://observador.pt/2026/06/12/incendio-em-supermercado-continente-de-camarate-dado-como-extinto",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-evacuated-some-150-workers-due-to-the-fire-at-the-honda-warehouse-in-san",
@@ -109,7 +189,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://en.ara.cat/economy/evacuated-about-150-workers-due-to-the-fire-in-the-honda-warehouse-in-santa-perpetua_1_5759669.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-faulty-solar-panel-suspected-after-blaze-near-keswick",
@@ -123,9 +203,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://keswickreminder.co.uk/2026/06/12/faulty-solar-panel-suspected-after-blaze-at-new-homes/",
+    "sourceUrl": "https://keswickreminder.co.uk/2026/06/12/faulty-solar-panel-suspected-after-blaze-at-new-homes",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-community-rallies-to-help-family-hit-by-house-fire-in-harborough",
@@ -139,9 +219,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.harboroughmail.co.uk/news/emergency-incident/community-rallies-to-help-family-hit-by-house-fire-in-harborough-8755127",
+    "sourceUrl": "https://harboroughmail.co.uk/news/emergency-incident/community-rallies-to-help-family-hit-by-house-fire-in-harborough-8755127",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-mum-and-son-left-heartbroken-after-solar-panel-fire-burns-down-house",
@@ -157,7 +237,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://news.stv.tv/west-central/mum-and-son-left-heartbroken-after-solar-panel-fire-burns-down-house-in-glasgow",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-union-has-grave-concerns-over-suffolk-school-solar-panel-fires",
@@ -171,9 +251,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cz9lqxewvy5o",
+    "sourceUrl": "https://bbc.co.uk/news/articles/cz9lqxewvy5o",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-06-newsom-and-l-a-declare-state-of-emergency-as-boyle-heights-fire-continue",
@@ -187,9 +267,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.latimes.com/business/story/2026-06-20/boyle-heights-fire-state-of-emergency",
+    "sourceUrl": "https://latimes.com/business/story/2026-06-20/boyle-heights-fire-state-of-emergency",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-05-brand-in-einem-haus-mit-solardachziegeln-in-gu-tersloh",
@@ -203,9 +283,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.de/2026/05/12/brand-in-einem-haus-mit-solardachziegeln-in-guetersloh/",
+    "sourceUrl": "https://pv-magazine.de/2026/05/12/brand-in-einem-haus-mit-solardachziegeln-in-guetersloh",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-05-feuerwehr-lo-scht-brand-unter-photovoltaikanlage-auf-landwirtschaftliche",
@@ -219,9 +299,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.presseportal.de/blaulicht/pm/170081/6281262",
+    "sourceUrl": "https://presseportal.de/blaulicht/pm/170081/6281262",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-05-pv-brand-in-lo-schenrod-einsatzkra-fte-arbeiten-unter-extrembedingungen",
@@ -237,7 +317,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://osthessen-news.de/n11794044/pv-brand-in-loeschenrod-einsatzkrafte-arbeiten-unter-extrembedingungen.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-05-feuerwehr-beka-mpft-brand-von-pv-anlage-in-oberdieten",
@@ -251,9 +331,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.mittelhessen.de/lokales/kreis-marburg-biedenkopf/breidenbach/feuerwehr-bekaempft-brand-von-pv-anlage-in-oberdieten-5681265",
+    "sourceUrl": "https://mittelhessen.de/lokales/kreis-marburg-biedenkopf/breidenbach/feuerwehr-bekaempft-brand-von-pv-anlage-in-oberdieten-5681265",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-05-ince-ndio-na-dhl-em-vialonga-obrigou-a-retirada-de-tre-s-dezenas-de-trab",
@@ -269,7 +349,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://omirante.pt/sociedade/2026-05-01-incendio-na-dhl-em-vialonga-obrigou-a-retirada-de-tres-dezenas-de-trabalhadores-a7ae4d1b",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-04-ikea-oak-creek-evacuated-after-rooftop-solar-panel-fire",
@@ -283,9 +363,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://hoodline.com/2026/04/solar-scare-at-ikea-oak-creek-as-rooftop-panel-sparks-evacuation/",
+    "sourceUrl": "https://hoodline.com/2026/04/solar-scare-at-ikea-oak-creek-as-rooftop-panel-sparks-evacuation",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-se-reporto-incendio-estructural-en-bodega-de-postobo-n-en-malambo",
@@ -299,9 +379,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Colombia. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.eltiempo.com/colombia/barranquilla/reportan-incendio-estructural-que-se-registro-en-bodega-de-almacenamiento-de-postobon-en-malambo-atlantico-se-activaron-los-protocolos-de-seguridad-3530113",
+    "sourceUrl": "https://eltiempo.com/colombia/barranquilla/reportan-incendio-estructural-que-se-registro-en-bodega-de-almacenamiento-de-postobon-en-malambo-atlantico-se-activaron-los-protocolos-de-seguridad-3530113",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-haute-savoie-une-maison-ravage-e-par-les-flammes-apre-s-l-embrasement-de",
@@ -315,9 +395,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ledauphine.com/faits-divers-justice/2026/03/09/une-maison-ravagee-par-les-flammes-apres-l-embrasement-des-panneaux-photovoltaiques-en-toiture",
+    "sourceUrl": "https://ledauphine.com/faits-divers-justice/2026/03/09/une-maison-ravagee-par-les-flammes-apres-l-embrasement-des-panneaux-photovoltaiques-en-toiture",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-firefighters-put-out-blaze-at-europa-point-stadium",
@@ -331,9 +411,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Gibraltar. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.gbc.gi/news/firefighters-put-out-blaze-at-europa-point-stadium-after-solar-panels-on-the-roof-caught-fire",
+    "sourceUrl": "https://gbc.gi/news/firefighters-put-out-blaze-at-europa-point-stadium-after-solar-panels-on-the-roof-caught-fire",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-incendio-en-la-instalacio-n-fotovoltaica-de-un-complejo-deportivo-en-gib",
@@ -347,9 +427,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Gibraltar. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.es/2026/03/13/incendio-en-la-instalacion-fotovoltaica-de-un-complejo-deportivo-en-gibraltar/",
+    "sourceUrl": "https://pv-magazine.es/2026/03/13/incendio-en-la-instalacion-fotovoltaica-de-un-complejo-deportivo-en-gibraltar",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-un-incendio-quema-cinco-paneles-solares-en-un-edificio-industrial",
@@ -365,7 +445,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://diaricatalunya.cat/es/conca-de-barbera/general/un-incendio-quema-cinco-placas-solares-en-una-nave-industrial-de-montblanc",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-03-house-fire-twickenham",
@@ -379,9 +459,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2026/march/house-fire-twickenham/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2026/march/house-fire-twickenham",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-02-incendie-sur-un-toit-recouvert-de-panneaux-photovoltai-ques",
@@ -395,9 +475,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dna.fr/faits-divers-justice/2026/02/02/les-pompiers-maitrisent-l-incendie-d-une-toiture-couverte-de-panneaux-photovoltaiques",
+    "sourceUrl": "https://dna.fr/faits-divers-justice/2026/02/02/les-pompiers-maitrisent-l-incendie-d-une-toiture-couverte-de-panneaux-photovoltaiques",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-02-feuer-zersto-rt-garage-und-auto-100-000-euro-schaden-welt",
@@ -411,9 +491,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.welt.de/regionales/thueringen/article698403a22dfdd2aa2452605c/feuer-zerstoert-garage-und-auto-100-000-euro-schaden.html",
+    "sourceUrl": "https://welt.de/regionales/thueringen/article698403a22dfdd2aa2452605c/feuer-zerstoert-garage-und-auto-100-000-euro-schaden.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-02-feuer-in-klinik-ausgebrochen-keine-verletzten-welt",
@@ -427,9 +507,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.welt.de/regionales/niedersachsen/article698d79e647ab02c761856556/feuer-in-klinik-ausgebrochen-keine-verletzten.html",
+    "sourceUrl": "https://welt.de/regionales/niedersachsen/article698d79e647ab02c761856556/feuer-in-klinik-ausgebrochen-keine-verletzten.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-02-kreisfeuerwehrverband-herford-monatsru-ckblick-februar-2026",
@@ -443,9 +523,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.kfv-herford.de/index.php/2026/1667-monatsrueckblick-februar-2026",
+    "sourceUrl": "https://kfv-herford.de/index.php/2026/1667-monatsrueckblick-februar-2026",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2026-01-rauch-u-ber-der-uni-kiel-photovoltaikanlage-in-flammen-welt",
@@ -459,9 +539,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.welt.de/regionales/hamburg/article696b9aba6b40895ba7f7119c/rauch-ueber-der-uni-kiel-photovoltaikanlage-in-flammen.html",
+    "sourceUrl": "https://welt.de/regionales/hamburg/article696b9aba6b40895ba7f7119c/rauch-ueber-der-uni-kiel-photovoltaikanlage-in-flammen.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-12-fire-scorches-almost-100ha-at-one-of-australia-s-biggest-solar-farms",
@@ -475,9 +555,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Australia. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.abc.net.au/news/2025-12-09/wellington-solar-farm-fire/106113846",
+    "sourceUrl": "https://abc.net.au/news/2025-12-09/wellington-solar-farm-fire/106113846",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-10-cause-of-major-fire-at-north-shropshire-school-which-sent-pupils-home-fo",
@@ -491,9 +571,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.shropshirestar.com/news/local-hubs/oswestry/st-martins/2025/10/17/revealed-cause-of-major-fire-at-st-martins-school-which-sent-pupils-home-for-weeks/",
+    "sourceUrl": "https://shropshirestar.com/news/local-hubs/oswestry/st-martins/2025/10/17/revealed-cause-of-major-fire-at-st-martins-school-which-sent-pupils-home-for-weeks",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-10-fire-at-store-wembley",
@@ -507,9 +587,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2025/october/fire-at-store-wembley/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2025/october/fire-at-store-wembley",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-10-hundreds-evacuated-from-ikea-wembley-as-solar-panels-catch-fire",
@@ -525,7 +605,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://iframe.standard.co.uk/news/london/ikea-wembley-fire-solar-panels-b1253284.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-09-un-ba-timent-agricole-prend-feu-au-niveau-des-panneaux-photovoltai-ques-",
@@ -539,9 +619,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.leveil.fr/bellevue-la-montagne-43350/faits-divers/un-batiment-agricole-prend-feu-au-niveau-des-panneaux-photovoltaiques-en-haute-loire_14752791/",
+    "sourceUrl": "https://leveil.fr/bellevue-la-montagne-43350/faits-divers/un-batiment-agricole-prend-feu-au-niveau-des-panneaux-photovoltaiques-en-haute-loire_14752791",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-09-landes-l-incendie-de-magescq-fixe-105-hectares-de-truits-au-total",
@@ -555,9 +635,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.sudouest.fr/faits-divers/incendies/landes-l-incendie-de-magescq-fixe-105-hectares-detruits-au-total-12317753.php",
+    "sourceUrl": "https://sudouest.fr/faits-divers/incendies/landes-l-incendie-de-magescq-fixe-105-hectares-detruits-au-total-12317753.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-09-st-martins-school-to-close-for-second-day-after-serious-fire",
@@ -571,9 +651,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c87y4g220pro",
+    "sourceUrl": "https://bbc.co.uk/news/articles/c87y4g220pro",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-09-single-story-building-fire-buckinghamshire-fire-rescue-service",
@@ -587,9 +667,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://bucksfire.gov.uk/incidents/single-story-building-fire/?utm_source",
+    "sourceUrl": "https://bucksfire.gov.uk/incidents/single-story-building-fire",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-08-community-s-shock-as-potential-cause-of-school-fire-revealed",
@@ -603,9 +683,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.eadt.co.uk/news/25364804.east-bergholt-school-fire-potentially-caused-solar-panel/",
+    "sourceUrl": "https://eadt.co.uk/news/25364804.east-bergholt-school-fire-potentially-caused-solar-panel",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-08-solar-farm-fire-near-beryl-extinguished-with-swift-collaboration",
@@ -619,9 +699,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.stgeorgeutah.com/flood-and-fire/solar-farm-fire-near-beryl-extinguished-with-swift-collaboration/article_2792f017-0a95-493b-b3fe-a18fcf2f56e9.html",
+    "sourceUrl": "https://stgeorgeutah.com/flood-and-fire/solar-farm-fire-near-beryl-extinguished-with-swift-collaboration/article_2792f017-0a95-493b-b3fe-a18fcf2f56e9.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-07-l-incendie-qui-s-est-de-clare-a-signes-est-mai-trise",
@@ -635,9 +715,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.nicematin.com/faits-divers/l-incendie-qui-s-est-declare-a-signes-est-maitrise-et-sous-surveillance-995423",
+    "sourceUrl": "https://nicematin.com/faits-divers/l-incendie-qui-s-est-declare-a-signes-est-maitrise-et-sous-surveillance-995423",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-07-un-colle-ge-frappe-par-trois-incendies-provoque-s-par-des-panneaux-solai",
@@ -651,9 +731,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.rtl.fr/actu/justice-faits-divers/gers-un-college-frappe-par-trois-incendies-provoques-par-des-panneaux-solaires-7900523813",
+    "sourceUrl": "https://rtl.fr/actu/justice-faits-divers/gers-un-college-frappe-par-trois-incendies-provoques-par-des-panneaux-solaires-7900523813",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-07-shanklea-primary-school-stays-shut-after-solar-panel-fire",
@@ -667,9 +747,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c98w91pwr7lo",
+    "sourceUrl": "https://bbc.co.uk/news/articles/c98w91pwr7lo",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-07-bungalow-fire-hornchurch",
@@ -683,9 +763,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2025/july/bungalow-fire-hornchurch/?utm_source",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2025/july/bungalow-fire-hornchurch",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-07-firefighters-tackle-blaze-at-primary-school",
@@ -699,9 +779,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.itv.com/news/anglia/2025-07-18/firefighters-tackle-blaze-at-primary-school?utm_source",
+    "sourceUrl": "https://itv.com/news/anglia/2025-07-18/firefighters-tackle-blaze-at-primary-school",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-un-incendie-se-de-clenche-des-panneaux-pv-et-se-propage-a-la-toiture-d-u",
@@ -715,9 +795,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.estrepublicain.fr/faits-divers-justice/2025/06/13/un-incendie-se-declenche-des-panneaux-photovoltaiques-et-se-propage-a-la-toiture-d-une-maison-de-bonnetage",
+    "sourceUrl": "https://estrepublicain.fr/faits-divers-justice/2025/06/13/un-incendie-se-declenche-des-panneaux-photovoltaiques-et-se-propage-a-la-toiture-d-une-maison-de-bonnetage",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-quatre-maisons-en-feu-les-panneaux-solaires-en-cause",
@@ -731,9 +811,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.youtube.com/watch?v=iNxWfSzzN7A",
+    "sourceUrl": "https://youtube.com/watch?v=iNxWfSzzN7A",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-los-bomberos-extinguen-un-incendio-de-vegetacio-n-en-una-planta-solar",
@@ -747,9 +827,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.cuencanews.es/noticia/107467/provincia/bomberos-de-la-diputacion-sofocan-un-incendio-de-vegetacion-en-una-planta-solar-de-olmedilla-de-alarcon.html",
+    "sourceUrl": "https://cuencanews.es/noticia/107467/provincia/bomberos-de-la-diputacion-sofocan-un-incendio-de-vegetacion-en-una-planta-solar-de-olmedilla-de-alarcon.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-fuego-en-la-planta-fotovoltaica-francisco-pizarro",
@@ -763,9 +843,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.es/2025/07/16/fuego-en-la-planta-fotovoltaica-francisco-pizarro/",
+    "sourceUrl": "https://pv-magazine.es/2025/07/16/fuego-en-la-planta-fotovoltaica-francisco-pizarro",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-fuego-en-otra-planta-fotovoltaica-de-iberdrola-esta-vez-en-palencia",
@@ -779,9 +859,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.es/2025/07/21/fuego-en-otra-planta-fotovoltaica-de-iberdrola-esta-vez-en-palencia/",
+    "sourceUrl": "https://pv-magazine.es/2025/07/21/fuego-en-otra-planta-fotovoltaica-de-iberdrola-esta-vez-en-palencia",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-controlado-un-incendio-en-un-parque-fotovoltaico-de-villalba-del-rey",
@@ -795,9 +875,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.liberaldecastilla.com/controlado-un-incendio-en-un-parque-fotovoltaico-de-villalba-del-rey/",
+    "sourceUrl": "https://liberaldecastilla.com/controlado-un-incendio-en-un-parque-fotovoltaico-de-villalba-del-rey",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-cornwall-fire-rescue-service-news",
@@ -811,9 +891,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://db.cornwall.gov.uk/fbnews/info/details.asp?id=50382&utm_source",
+    "sourceUrl": "https://db.cornwall.gov.uk/fbnews/info/details.asp?id=50382",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-06-solar-fire-tackled-on-rooftop-near-newquay-beach",
@@ -827,9 +907,25 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/cp901yvvyn5o",
+    "sourceUrl": "https://bbc.co.uk/news/articles/cp901yvvyn5o",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
+  },
+  {
+    "id": "index-2025-05-morning-peak-fire-at-ikea-springvale",
+    "date": "2025-05-01",
+    "datePrecision": "month",
+    "title": "Morning-peak fire at IKEA Springvale",
+    "country": "Australia",
+    "assetType": "rooftop",
+    "propertyType": "Commercial / institutional",
+    "status": "source-indexed",
+    "pvRole": "reported-involvement",
+    "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Australia. Date is recorded to month precision; PV ignition has not been independently confirmed.",
+    "sourceTitle": "Original public report",
+    "sourceUrl": "https://dandenong.starcommunity.com.au/news/2025-05-29/morning-peak-fire-at-ikea-springvale",
+    "indexedBy": "ArcBox vendor-curated public incident index",
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-incendio-en-inversores-de-parque-fotovoltaico-de-cueva-de-a-greda",
@@ -845,7 +941,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://elmirondesoria.es/soria/sucesos/incendio-en-inversores-de-parque-fotovoltaico-de-cueva-de-agreda",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-un-herido-en-el-incendio-de-una-planta-fotovoltaica-en-salteras",
@@ -859,9 +955,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.diariodesevilla.es/aljarafe/herido-incendio-planta-fotovoltaica-salteras_0_2003951287.html",
+    "sourceUrl": "https://diariodesevilla.es/aljarafe/herido-incendio-planta-fotovoltaica-salteras_0_2003951287.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-firefighters-rush-to-blaze-at-block-of-flats-in-addlestone",
@@ -875,9 +971,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.getsurrey.co.uk/news/live-addlestone-fire-updates-firefighters-31613832",
+    "sourceUrl": "https://getsurrey.co.uk/news/live-addlestone-fire-updates-firefighters-31613832",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-maternity-hospital-fire-caused-by-solar-panel-fault",
@@ -891,9 +987,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bristol247.com/news-and-features/news/maternity-hospital-fire-caused-by-solar-panel-fault/%20",
+    "sourceUrl": "https://bristol247.com/news-and-features/news/maternity-hospital-fire-caused-by-solar-panel-fault/%20",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-moment-1-5m-mansion-is-destroyed-by-huge-fire",
@@ -907,9 +1003,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dailymail.co.uk/news/article-14706831/mansion-fire-solar-panels-erupt-flames.html?fbclid=IwZXh0bgNhZW0CMTEAAR4HUR0b9LNa84nIrb-K_QWwi819MI7_C8c0VOY73nQZCe42WP2-Gw9cTyJP1Q_aem_pQNnSASjSvFW0VyWmYIw5w",
+    "sourceUrl": "https://dailymail.co.uk/news/article-14706831/mansion-fire-solar-panels-erupt-flames.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-housing-estate-residents-feel-like-sitting-ducks-after-major-fires",
@@ -923,9 +1019,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.getsurrey.co.uk/news/surrey-news/surrey-housing-estate-residents-say-31652211",
+    "sourceUrl": "https://getsurrey.co.uk/news/surrey-news/surrey-housing-estate-residents-say-31652211",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-fire-breaks-out-in-stoke-on-trent-house-after-solar-panel-overheats",
@@ -941,7 +1037,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://uk.news.yahoo.com/fire-breaks-stoke-trent-house-101032553.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-solar-panel-issue-known-a-year-before-shanklea-school-fire",
@@ -955,9 +1051,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/articles/c2k1k2xg7wko",
+    "sourceUrl": "https://bbc.co.uk/news/articles/c2k1k2xg7wko",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-property-fire-ferndown",
@@ -971,9 +1067,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dwfire.org.uk/incident/property-fire-ferndown-5/",
+    "sourceUrl": "https://dwfire.org.uk/incident/property-fire-ferndown-5",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-05-specialist-fire-kit-used-after-smoke-seen-coming-from-solar-panel-in-bem",
@@ -987,25 +1083,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.islandecho.co.uk/specialist-fire-kit-used-after-smoke-seen-coming-from-solar-panel-in-bembridge",
+    "sourceUrl": "https://islandecho.co.uk/specialist-fire-kit-used-after-smoke-seen-coming-from-solar-panel-in-bembridge",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
-  },
-  {
-    "id": "index-2025-05-morning-peak-fire-at-ikea-springvale",
-    "date": "2025-05-01",
-    "datePrecision": "month",
-    "title": "Morning-peak fire at IKEA Springvale",
-    "country": "Australia",
-    "assetType": "rooftop",
-    "propertyType": "Commercial / institutional",
-    "status": "source-indexed",
-    "pvRole": "reported-involvement",
-    "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Australia. Date is recorded to month precision; PV ignition has not been independently confirmed.",
-    "sourceTitle": "Original public report",
-    "sourceUrl": "https://dandenong.starcommunity.com.au/news/2025-05-29/morning-peak-fire-at-ikea-springvale/",
-    "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-04-fire-damages-pv-system-on-school-in-belgium",
@@ -1019,9 +1099,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Belgium. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.com/2025/04/04/fire-damages-pv-system-on-school-in-belgium/",
+    "sourceUrl": "https://pv-magazine.com/2025/04/04/fire-damages-pv-system-on-school-in-belgium",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-04-un-hangar-recouvert-de-panneaux-photovoltai-ques-en-feu-dans-le-centre-b",
@@ -1037,7 +1117,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://saint-brieuc.maville.com/actu/actudet_-un-hangar-recouvert-de-panneaux-photovoltaiques-en-feu-dans-le-centre-bretagne-_dep-6779272_actu.Htm",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-04-firefighters-rush-to-hamlet-near-bridgnorth-after-fire-involving-solar-p",
@@ -1051,9 +1131,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.shropshirestar.com/news/2025/04/29/firefighters-rush-to-hamlet-near-bridgnorth-after-fire-involving-solar-panels/",
+    "sourceUrl": "https://shropshirestar.com/news/2025/04/29/firefighters-rush-to-hamlet-near-bridgnorth-after-fire-involving-solar-panels",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-04-fire-damages-joliet-ikea-warehouse-roof-and-solar-panels-usa-solar-cell",
@@ -1067,9 +1147,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://usasolarcell.com/news/2025/04/29/fire-damages-joliet-ikea-warehouse-roof-and-solar-panels/",
+    "sourceUrl": "https://usasolarcell.com/news/2025/04/29/fire-damages-joliet-ikea-warehouse-roof-and-solar-panels",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-03-des-pompiers-luttent-contre-un-incendie-dans-une-entreprise-a-marmande",
@@ -1085,7 +1165,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://actu.fr/nouvelle-aquitaine/marmande_47157/un-impressionnant-dispositif-de-pompiers-deploye-pour-un-incendie-dans-une-entreprise-a-marmande_62430098.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-03-incendio-en-una-planta-fotovoltaica-en-tordesillas",
@@ -1099,9 +1179,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.es/2025/03/31/incendio-en-una-planta-fotovoltaica-en-tordesillas/",
+    "sourceUrl": "https://pv-magazine.es/2025/03/31/incendio-en-una-planta-fotovoltaica-en-tordesillas",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-03-firefighters-deal-with-blaze-at-industrial-unit-near-horningtops",
@@ -1115,9 +1195,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.cornish-times.co.uk/news/999/firefighters-deal-with-blaze-at-industrial-unit-near-horningtops-772940",
+    "sourceUrl": "https://cornish-times.co.uk/news/999/firefighters-deal-with-blaze-at-industrial-unit-near-horningtops-772940",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2025-03-latest-on-fire-at-solar-farm-near-cirencester",
@@ -1131,9 +1211,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.wiltsglosstandard.co.uk/news/25050489.latest-fire-cirencester-hybrid-solar-farm/",
+    "sourceUrl": "https://wiltsglosstandard.co.uk/news/25050489.latest-fire-cirencester-hybrid-solar-farm",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-11-bipv-likely-linked-to-recent-fire-at-brussels-first-net-zero-building",
@@ -1147,9 +1227,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Belgium. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.pv-magazine.com/2024/11/19/bipv-likely-linked-to-recent-fire-at-brussels-first-net-zero-building/",
+    "sourceUrl": "https://pv-magazine.com/2024/11/19/bipv-likely-linked-to-recent-fire-at-brussels-first-net-zero-building",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-09-el-origen-del-incendio-en-la-comisari-a-de-polici-a-de-pamplona-en-el-te",
@@ -1163,9 +1243,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.noticiasdenavarra.com/sucesos/2024/09/11/origen-incendio-comisaria-policia-municipal-8674863.html",
+    "sourceUrl": "https://noticiasdenavarra.com/sucesos/2024/09/11/origen-incendio-comisaria-policia-municipal-8674863.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-09-los-bomberos-trabajan-en-la-primera-teori-a-sobre-el-origen-del-incendio",
@@ -1179,9 +1259,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.diariodenavarra.es/noticias/navarra/pamplona-comarca/2024/09/11/bomberos-trabajan-primera-teoria-sobre-el-origen-incendio-el-edificio-policia-municipal-621502-1002.html",
+    "sourceUrl": "https://diariodenavarra.es/noticias/navarra/pamplona-comarca/2024/09/11/bomberos-trabajan-primera-teoria-sobre-el-origen-incendio-el-edificio-policia-municipal-621502-1002.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-09-the-beeches-primary-school-closed-after-overnight-fire",
@@ -1195,9 +1275,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ipswich.co.uk/articles/the-beeches-primary-school-closed-after-overnight-fire",
+    "sourceUrl": "https://ipswich.co.uk/articles/the-beeches-primary-school-closed-after-overnight-fire",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-08-un-incendie-prive-d-e-lectricite-300-foyers",
@@ -1211,9 +1291,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/08/04/un-incendie-prive-delectricite-300-foyers-12123888.php",
+    "sourceUrl": "https://ladepeche.fr/2024/08/04/un-incendie-prive-delectricite-300-foyers-12123888.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-08-fire-in-block-of-flats-closed-major-road-in-south-london",
@@ -1227,9 +1307,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.mylondon.news/news/south-london-news/live-lewisham-fire-updates-blaze-29665229",
+    "sourceUrl": "https://mylondon.news/news/south-london-news/live-lewisham-fire-updates-blaze-29665229",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-08-solar-panel-fire-lewisham",
@@ -1243,9 +1323,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2024/august/solar-panel-fire-lewisham/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2024/august/solar-panel-fire-lewisham",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-07-violent-incendie-de-hangar-agricole-a-bellegarde-marsal",
@@ -1259,9 +1339,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/07/07/violent-incendie-de-hangar-agricole-a-bellegarde-marsal-12067244.php",
+    "sourceUrl": "https://ladepeche.fr/2024/07/07/violent-incendie-de-hangar-agricole-a-bellegarde-marsal-12067244.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-07-dans-la-re-gion-du-tarn-un-incendie-a-de-truit-un-ba-timent-agricole",
@@ -1275,9 +1355,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/07/22/dans-le-tarn-un-incendie-detruit-un-batiment-agricole-selon-le-proprietaire-les-panneaux-photovoltaiques-pourraient-etre-a-lorigine-du-sinistre-12096378.php",
+    "sourceUrl": "https://ladepeche.fr/2024/07/22/dans-le-tarn-un-incendie-detruit-un-batiment-agricole-selon-le-proprietaire-les-panneaux-photovoltaiques-pourraient-etre-a-lorigine-du-sinistre-12096378.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-07-un-incendio-en-la-cubierta-de-una-nave-industrial-de-meco-arrasa-con-par",
@@ -1293,7 +1373,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://material-electrico.cdecomunicacion.es/fotovoltaica-autoconsumo/174761/un-incendio-en-la-cubierta-de-una-nave-industrial-de-meco-arrasa-con-parte-de-su-instalacion-fotovoltaica",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-07-un-incendio-en-una-nave-logi-stica-de-meco-sin-heridos-provoca-una-gran",
@@ -1307,9 +1387,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dream-alcala.com/un-incendio-en-una-nave-logistica-de-meco-sin-heridos-provoca-una-gran-columna-de-humo-negro/",
+    "sourceUrl": "https://dream-alcala.com/un-incendio-en-una-nave-logistica-de-meco-sin-heridos-provoca-una-gran-columna-de-humo-negro",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-07-el-incendio-forestal-en-talava-n-originado-en-una-planta-fotovoltaica-fu",
@@ -1323,9 +1403,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.rtve.es/noticias/20240720/efectivos-aereos-trabajan-incendio-forestal-talavan-caceres-planta-fotovoltaica/16193089.shtml",
+    "sourceUrl": "https://rtve.es/noticias/20240720/efectivos-aereos-trabajan-incendio-forestal-talavan-caceres-planta-fotovoltaica/16193089.shtml",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-06-un-feu-de-ba-timent-agricole-de-2-500-m2-entie-rement-de-truit-par-les-f",
@@ -1339,9 +1419,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/06/17/un-feu-de-batiment-agricole-de-2-500-m2-entierement-detruit-par-les-flammes-a-laguiole-12021886.php",
+    "sourceUrl": "https://ladepeche.fr/2024/06/17/un-feu-de-batiment-agricole-de-2-500-m2-entierement-detruit-par-les-flammes-a-laguiole-12021886.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-06-fire-at-block-of-flats-hackney",
@@ -1355,9 +1435,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2024/june/fire-at-block-of-flats-hackney/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2024/june/fire-at-block-of-flats-hackney",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-05-dak-met-zonnepanelen-in-de-brand-in-zwartsluis",
@@ -1371,9 +1451,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Netherlands. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://numeppel.nl/dak-met-zonnepanelen-in-de-brand-in-zwartsluis/",
+    "sourceUrl": "https://numeppel.nl/dak-met-zonnepanelen-in-de-brand-in-zwartsluis",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-05-grote-brand-in-nieuwbouwwoningen-capelle-aan-den-ijssel",
@@ -1389,7 +1469,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://mediatv.nl/nieuws/nieuws/27105/gebouwbrand-woningwoongebouw-duikerlaan-capelle-aan-den-ijssel",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-05-sofocan-incendio-en-banco-general-de-costa-del-este",
@@ -1403,9 +1483,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Panama. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://ensegundos.com.pa/2024/05/26/sofocan-incendio-en-banco-general-de-costa-del-este/",
+    "sourceUrl": "https://ensegundos.com.pa/2024/05/26/sofocan-incendio-en-banco-general-de-costa-del-este",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-05-fire-at-commercial-building-in-secaucus-sends-plumes-of-smoke-into-the-a",
@@ -1421,7 +1501,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://newjersey.news12.com/fire-at-commercial-building-in-secaucus-sends-plumes-of-smoke-into-the-air",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-03-rieux-volvestre-une-toiture-prend-feu-dans-un-quartier-re-sidentiel",
@@ -1435,9 +1515,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/03/14/une-toiture-prend-feu-dans-un-quartier-residentiel-11824800.php",
+    "sourceUrl": "https://ladepeche.fr/2024/03/14/une-toiture-prend-feu-dans-un-quartier-residentiel-11824800.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-03-9-panneaux-photovoltai-ques-partent-en-fume-e-sur-le-toit-d-une-maison-a",
@@ -1451,9 +1531,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.ladepeche.fr/2024/03/30/9-panneaux-photovoltaiques-partent-en-fumee-sur-le-toit-dune-maison-a-figeac-11859976.php",
+    "sourceUrl": "https://ladepeche.fr/2024/03/30/9-panneaux-photovoltaiques-partent-en-fumee-sur-le-toit-dune-maison-a-figeac-11859976.php",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-03-school-fire-carshalton",
@@ -1467,9 +1547,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2024/march/school-fire-carshalton-1",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2024/march/school-fire-carshalton-1",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-02-los-bomberos-respondieron-a-un-incendio-que-involucraba-una-instalacio-n",
@@ -1483,9 +1563,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Spain. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.murcia.com/cartagena/noticias/2024/02/19-bomberos-de-cartagena-intervienen-en-una-vivienda-por-el-incendio-de-una-instalacion-de-placas-solar.asp",
+    "sourceUrl": "https://murcia.com/cartagena/noticias/2024/02/19-bomberos-de-cartagena-intervienen-en-una-vivienda-por-el-incendio-de-una-instalacion-de-placas-solar.asp",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2024-02-drone-footage-shows-fire-tearing-across-roof-of-70m-lidl-warehouse-itv-n",
@@ -1499,9 +1579,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.itv.com/news/anglia/2024-02-23/drone-footage-shows-fire-tearing-across-roof-of-70m-lidl-warehouse",
+    "sourceUrl": "https://itv.com/news/anglia/2024-02-23/drone-footage-shows-fire-tearing-across-roof-of-70m-lidl-warehouse",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-09-ontruiming-na-brandmelding-appingedam",
@@ -1515,9 +1595,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Netherlands. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.rtvnoord.nl/nieuws/1061332/112-nieuws-brand-op-een-dak-vol-zonnepanelen-in-roden",
+    "sourceUrl": "https://rtvnoord.nl/nieuws/1061332/112-nieuws-brand-op-een-dak-vol-zonnepanelen-in-roden",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-09-outbuilding-alight-cricklewood",
@@ -1531,9 +1611,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2023/september/outbuilding-alight-cricklewood/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2023/september/outbuilding-alight-cricklewood",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-08-bow-fire-homes-severely-damaged-in-east-london-blaze",
@@ -1547,9 +1627,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/uk-england-london-66622684",
+    "sourceUrl": "https://bbc.co.uk/news/uk-england-london-66622684",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-08-house-fire-greenford",
@@ -1563,9 +1643,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2023/august/house-fire-greenford/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2023/august/house-fire-greenford",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-06-grote-brand-bij-cateringbedrijf-alblasserdam-scherven-zonnepanelen-vrijg",
@@ -1579,9 +1659,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in Netherlands. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.nu.nl/binnenland/6274526/grote-brand-bij-cateringbedrijf-alblasserdam-scherven-zonnepanelen-vrijgekomen.html",
+    "sourceUrl": "https://nu.nl/binnenland/6274526/grote-brand-bij-cateringbedrijf-alblasserdam-scherven-zonnepanelen-vrijgekomen.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-06-brann-i-solcellepanel-pa-hustak",
@@ -1595,9 +1675,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Norway. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.nrk.no/rogaland/brann-i-solcellepanel-pa-hustak-1.16434359",
+    "sourceUrl": "https://nrk.no/rogaland/brann-i-solcellepanel-pa-hustak-1.16434359",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-06-ten-fire-engines-called-to-flat-fire",
@@ -1611,9 +1691,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.kentonline.co.uk/maidstone/news/eight-fire-engines-called-to-flat-fire-288335/",
+    "sourceUrl": "https://kentonline.co.uk/maidstone/news/eight-fire-engines-called-to-flat-fire-288335",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-06-damaged-solar-panels-spark-stoke-on-trent-house-fire",
@@ -1627,9 +1707,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.stokesentinel.co.uk/news/stoke-on-trent-news/damaged-solar-panels-spark-stoke-8552412",
+    "sourceUrl": "https://stokesentinel.co.uk/news/stoke-on-trent-news/damaged-solar-panels-spark-stoke-8552412",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-05-flats-evacuated-following-fire-in-gosport",
@@ -1643,9 +1723,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.hantsfire.gov.uk/incident/flats-evacuated-following-fire-in-gosport/",
+    "sourceUrl": "https://hantsfire.gov.uk/incident/flats-evacuated-following-fire-in-gosport",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-05-solar-panel-fire-essex-county-fire-and-rescue-service",
@@ -1659,9 +1739,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.essex-fire.gov.uk/incidents/solar-panel-fire-2023-05-15-17-13",
+    "sourceUrl": "https://essex-fire.gov.uk/incidents/solar-panel-fire-2023-05-15-17-13",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-04-officials-still-investigating-cause-of-olympia-high-middle-school-fire-s",
@@ -1675,9 +1755,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.25newsnow.com/2023/04/13/active-fire-olympia-middlehigh-school",
+    "sourceUrl": "https://25newsnow.com/2023/04/13/active-fire-olympia-middlehigh-school",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2023-04-fire-breaks-out-in-solar-panels-on-roof-of-house-in-falmouth",
@@ -1691,9 +1771,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.capecod.com/cape-wide-news/developing-fire-breaks-out-in-solar-panels-on-roof-of-house-in-falmouth/",
+    "sourceUrl": "https://capecod.com/cape-wide-news/developing-fire-breaks-out-in-solar-panels-on-roof-of-house-in-falmouth",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-07-partial-collapse-of-roof-following-fleet-flat-fire",
@@ -1707,9 +1787,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.hantsfire.gov.uk/incident/partial-collapse-of-roof-following-fleet-flat-fire/",
+    "sourceUrl": "https://hantsfire.gov.uk/incident/partial-collapse-of-roof-following-fleet-flat-fire",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-07-verwood-poor-parking-delays-fire-crews-to-solar-farm-fire",
@@ -1723,9 +1803,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a utility-scale site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.bbc.co.uk/news/uk-england-dorset-62133426",
+    "sourceUrl": "https://bbc.co.uk/news/uk-england-dorset-62133426",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-06-fire-rages-at-scots-high-school-as-building-evacuated-and-smoke-billows-",
@@ -1739,9 +1819,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dailyrecord.co.uk/news/scottish-news/fire-rips-through-scots-high-27202759",
+    "sourceUrl": "https://dailyrecord.co.uk/news/scottish-news/fire-rips-through-scots-high-27202759",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-06-solar-panels-catch-fire-on-roof-of-glenn-dale-building",
@@ -1755,9 +1835,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United States. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://dailyvoice.com/md/bowie/police-fire/solar-panels-catch-fire-on-roof-of-glenn-dale-building/834902/",
+    "sourceUrl": "https://dailyvoice.com/md/bowie/police-fire/solar-panels-catch-fire-on-roof-of-glenn-dale-building/834902",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-05-fire-in-solar-panel",
@@ -1771,9 +1851,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Germany. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.coldcutsystems.com/operational-incidents/fire-in-solar-panel/",
+    "sourceUrl": "https://coldcutsystems.com/operational-incidents/fire-in-solar-panel",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-05-smoke-seen-coming-from-the-roof-at-old-basing-house-fire",
@@ -1787,9 +1867,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.hantsfire.gov.uk/incident/smoke-seen-coming-from-the-roof-at-old-basing-house-fire/",
+    "sourceUrl": "https://hantsfire.gov.uk/incident/smoke-seen-coming-from-the-roof-at-old-basing-house-fire",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-04-pictures-show-aftermath-of-solar-panel-blaze-which-ripped-roof-off-home",
@@ -1803,9 +1883,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.gazettelive.co.uk/news/teesside-news/pictures-show-aftermath-devastating-solar-23760004",
+    "sourceUrl": "https://gazettelive.co.uk/news/teesside-news/pictures-show-aftermath-devastating-solar-23760004",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2022-04-drone-shows-moment-solar-panel-fire-takes-hold-at-we-the-curious-in-bris",
@@ -1819,25 +1899,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.itv.com/news/westcountry/2022-04-11/drone-shows-moment-solar-panel-fire-takes-hold-at-we-the-curious-in-bristol",
+    "sourceUrl": "https://itv.com/news/westcountry/2022-04-11/drone-shows-moment-solar-panel-fire-takes-hold-at-we-the-curious-in-bristol",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
-  },
-  {
-    "id": "index-2022-01-pourquoi-certaines-centrales-solaires-flottantes-prennent-elles-feu",
-    "date": "2022-01-01",
-    "datePrecision": "month",
-    "title": "Pourquoi certaines centrales solaires flottantes prennent-elles feu?",
-    "country": "France",
-    "assetType": "utility",
-    "propertyType": "Utility-scale",
-    "status": "source-indexed",
-    "pvRole": "reported-involvement",
-    "summary": "Public reporting places a PV-related fire at a utility-scale site in France. Date is recorded to month precision; PV ignition has not been independently confirmed.",
-    "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.revolution-energetique.com/reportages/pourquoi-certaines-centrales-solaires-flottantes-prennent-elles-feu/",
-    "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2021-06-le-toit-du-gymnase-montbonnot-saint-martin-prend-feu",
@@ -1853,7 +1917,7 @@
     "sourceTitle": "Original public report",
     "sourceUrl": "https://france3-regions.franceinfo.fr/auvergne-rhone-alpes/isere/video-isere-le-toit-du-gymnase-de-montbonnot-saint-martin-prend-feu-des-dizaines-de-pompiers-sur-place-2134642.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2021-02-solar-panel-sparks-new-build-roof-blaze",
@@ -1867,9 +1931,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.kentonline.co.uk/dartford/news/solar-panel-sparks-new-build-roof-blaze-242985/",
+    "sourceUrl": "https://kentonline.co.uk/dartford/news/solar-panel-sparks-new-build-roof-blaze-242985",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2020-08-coleridge-community-college-fire-photos-show-damage-left-behind",
@@ -1883,9 +1947,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.cambridge-news.co.uk/news/local-news/cambridge-coleridge-community-college-fire-18743981",
+    "sourceUrl": "https://cambridge-news.co.uk/news/local-news/cambridge-coleridge-community-college-fire-18743981",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2020-05-flat-fire-penge",
@@ -1899,9 +1963,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.london-fire.gov.uk/incidents/2020/may/flat-fire-penge/",
+    "sourceUrl": "https://london-fire.gov.uk/incidents/2020/may/flat-fire-penge",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2018-06-brand-in-vinkeveen-door-mogelijke-kortsluiting-in-zonnepanelen",
@@ -1915,9 +1979,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in Netherlands. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.rtvutrecht.nl/nieuws/1803063/brand-in-vinkeveen-door-mogelijke-kortsluiting-in-zonnepanelen",
+    "sourceUrl": "https://rtvutrecht.nl/nieuws/1803063/brand-in-vinkeveen-door-mogelijke-kortsluiting-in-zonnepanelen",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2017-10-cornwall-fire-rescue-service-news",
@@ -1931,9 +1995,9 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a commercial / institutional site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://db.cornwall.gov.uk/fbnews/info/details.asp?ID=28589&utm",
+    "sourceUrl": "https://db.cornwall.gov.uk/fbnews/info/details.asp?ID=28589&utm=",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   },
   {
     "id": "index-2017-07-large-blaze-at-brand-new-block-of-flats-in-east-london",
@@ -1947,8 +2011,8 @@
     "pvRole": "reported-involvement",
     "summary": "Public reporting places a PV-related fire at a residential site in United Kingdom. Date is recorded to month precision; PV ignition has not been independently confirmed.",
     "sourceTitle": "Original public report",
-    "sourceUrl": "https://www.dailymail.co.uk/news/article-4658696/Large-blaze-brand-new-block-flats-East-London.html",
+    "sourceUrl": "https://dailymail.co.uk/news/article-4658696/Large-blaze-brand-new-block-flats-East-London.html",
     "indexedBy": "ArcBox vendor-curated public incident index",
-    "indexedAt": "2026-07-12"
+    "indexedAt": "2026-07-24"
   }
 ]
