@@ -180,5 +180,19 @@
     "windowRelation": "within-window",
     "caveat": "DOE states that the U.S. Fire Administration does not track the number of fires caused by rooftop PV systems. It also distinguishes PV-origin fires from ordinary building fires that later involve a PV-covered roof.",
     "yearly": null
+  },
+  {
+    "id": "poland-psp-2025-q1-2026",
+    "jurisdiction": "Poland",
+    "period": "2025–Q1 2026",
+    "count": 421,
+    "confirmedPvOrigin": null,
+    "metric": "Fires in buildings where photovoltaic equipment was installed",
+    "sourceClass": "Specialist reporting citing national fire-service data",
+    "sourceTitle": "Gramwzielone.pl data obtained from Komenda Główna Państwowej Straży Pożarnej",
+    "sourceUrl": "https://www.gramwzielone.pl/energia-sloneczna/20366952/pozar-fotowoltaiki-na-dolnym-slasku-strazacy-nie-mogli-odlaczyc-instalacji",
+    "windowRelation": "within-window",
+    "caveat": "The Polish State Fire Service does not separately count fires caused by PV. These 421 records describe buildings with PV present—312 in 2025 and 109 in Q1 2026—and must not be treated as confirmed PV-origin fires or added to incident-level totals.",
+    "yearly": {"2025": 312, "2026-Q1": 109}
   }
 ]
