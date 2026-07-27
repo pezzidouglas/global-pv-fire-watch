@@ -16,6 +16,7 @@
     "index-2024-09-los-bomberos-trabajan-en-la-primera-teori-a-sobre-el-origen-del-incendio": "es-pamplona-2024",
     "index-2025-08-solar-farm-fire-near-beryl-extinguished-with-swift-collaboration": "us-beryl-2025",
     "index-2026-06-newsom-and-l-a-declare-state-of-emergency-as-boyle-heights-fire-continue": "us-boyle-heights-2026",
+    "index-2026-07-solar-panels-catch-fire-on-roof-of-manchester-walmart": "us-manchester-walmart-2026",
     "index-2026-03-firefighters-put-out-blaze-at-europa-point-stadium": "event-2026-03-gibraltar-europa-point",
     "index-2026-03-incendio-en-la-instalacio-n-fotovoltaica-de-un-complejo-deportivo-en-gib": "event-2026-03-gibraltar-europa-point",
     "index-2025-10-fire-at-store-wembley": "event-2025-10-wembley-ikea",
@@ -31,10 +32,18 @@
     "index-2024-07-un-incendio-en-la-cubierta-de-una-nave-industrial-de-meco-arrasa-con-par": "event-2024-07-meco-logistics-warehouse",
     "index-2024-07-un-incendio-en-una-nave-logi-stica-de-meco-sin-heridos-provoca-una-gran": "event-2024-07-meco-logistics-warehouse",
     "index-2025-07-shanklea-primary-school-stays-shut-after-solar-panel-fire": "event-2025-shanklea-primary-school",
-    "index-2025-05-solar-panel-issue-known-a-year-before-shanklea-school-fire": "event-2025-shanklea-primary-school"
+    "index-2025-05-solar-panel-issue-known-a-year-before-shanklea-school-fire": "event-2025-shanklea-primary-school",
+    "index-2026-07-solar-panels-cause-of-malton-hospital-fire-says-fire-service": "uk-malton-hospital-2026",
+    "index-2026-07-langer-einsatz-in-su-lz-photovoltaik-anlage-brannte-auf-haus-nachbarscha": "de-cologne-suelz-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
     "index-2025-01-el-incendio-en-una-nave-del-puerto-de-gandia-ha-sido-extinguido": "Battery-container incident; conflicts with BESS-only exclusion"
+  },
+  "candidateReviews": {
+    "candidate-2023-calatrava-ciudad-construyo-de-en-en-en-hinojosas-hinojosas-incendio": "excluded: fact-check reporting says the named solar plant is in another municipality and does not establish PV involvement in the fire",
+    "candidate-90-assusta-bem-cias-cias-de-do-fogo-hipernoti-hipernoti-informado-morado": "excluded: official municipal reporting describes a vegetation fire around deactivated panels, with no established PV-equipment involvement",
+    "candidate-at-cartersville-contained-equipment-fire-in-plant-qcells-solar": "excluded: silicon-ingot manufacturing equipment fire, not an operating PV installation",
+    "candidate-at-breaks-cartersville-fire-in-manufacturing-out-plant-qcells-solar": "excluded: duplicate coverage of a silicon-ingot manufacturing equipment fire, not an operating PV installation"
   }
 }
