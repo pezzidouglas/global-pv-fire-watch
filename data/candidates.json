@@ -1,5 +1,27 @@
 [
   {
+    "id": "candidate-bufala-causano-che-dei-fotovoltaici-gli-incendi-pannelli-ultima",
+    "fingerprint": "bufala causano che dei fotovoltaici gli incendi pannelli ultima",
+    "title": "L’ultima bufala dei pannelli fotovoltaici che causano gli incendi",
+    "publishedAt": "2026-07-28T11:28:37.000Z",
+    "discoveredAt": "2026-07-28T16:16:23.134Z",
+    "sourceTitle": "Zazoom Social News",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPT1hCYlVBV1Q2NUxoLURCZE5wQWtNbjFqSHRzUFRLMmM1cF95cldHZ29CcEZqVzRfRkI4MWxNT3FDUlJwMVVGRUx5OXUwOU8tWVV3eWxPS2NDWTQ0eDQtYzE3RTl1X2FJSVdsTGJoTGN0c0cxQ2JCcGFlZmhyZUhXMGtaMTlQRG5GaXlyOW93em9FaGtIWWdOcHExMkNpMFZOenNwaGRUQkNjMzQ?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "incendio fotovoltaico pannelli solari tetto"
+  },
+  {
+    "id": "candidate-2020-double-fire-incidents-panels-since-solar-tied",
+    "fingerprint": "2020 double fire incidents panels since solar tied",
+    "title": "UK Fire Incidents Tied To Solar Panels Double Since 2020",
+    "publishedAt": "2026-07-27T15:32:57.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.406Z",
+    "sourceTitle": "Mjengo Hub",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUWtHWEhqemtJOF9GcVJFdVZHUXZqZEVkbzgxajk4TnhHU3o3bnhyNlQ4dEpGaV80dk5YM0xzcU91NWs5TUxOZU5UT0JvTHcwR1FkWW9HeUxPTmZoY2lfMUZYZEU3djh5clZTYnhqRFlKbXdiUDhZeGZHT2tCVmxXdldDcHRKUlVfRjZvdkxhNmJabV9KR3BMOFJYek9Pdw?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
+  },
+  {
     "id": "candidate-after-fears-fire-hospital-in-malton-panels-safety-solar-suspected",
     "fingerprint": "after fears fire hospital in malton panels safety solar suspected",
     "title": "Safety fears after solar panels suspected in Malton hospital fire",
@@ -13,6 +35,28 @@
     "discoveryQuery": "\"solar panel\" fire OR blaze"
   },
   {
+    "id": "candidate-calcina-comunidades-fotovoltaica-hecta-incendio-medios-movilizar-obliga-",
+    "fingerprint": "calcina comunidades fotovoltaica hecta incendio medios movilizar obliga planta puertollano reas tres una",
+    "title": "Un incendio en una planta fotovoltaica de Puertollano calcina 90 hectáreas y obliga a movilizar medios de tres comunidades",
+    "publishedAt": "2026-07-27T07:40:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:22.260Z",
+    "sourceTitle": "pv magazine España",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQZVdaMTRPLWcwQXBkYV9RdUcxSVh4TXJCc2xxbmdTbFVRdWtlY1VFT29hWEdiaG9MQkptNXlFOUpwM3BQb3ppRl9DaU9RbE5nU014Wi1XdjU0cFNQVjN6VVBpd0MtQ2Jpa1U3M0pJS1ptU2IwcW12cGNIVzg1TnJSQjZ2UFNFVzRHbHgzWnhTYVlveFVYS1F4ZjZlQUZWUldTN3JuRHRydl90RGJBUmRaRktabEp1dXRudWVjdXhzVzUzT2FIaHNjRFk3T3RCNnJueFMxblZ6bG9zN2NNeUh1MzVzVlRibU0tR0ZKemRFUHYyZVE?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "incendio paneles solares fotovoltaicos"
+  },
+  {
+    "id": "candidate-after-fears-fire-hospital-malton-panels-safety-solar-suspected",
+    "fingerprint": "after fears fire hospital malton panels safety solar suspected",
+    "title": "Safety fears after solar panels suspected in Malton hospital fire",
+    "publishedAt": "2026-07-27T05:09:05.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.406Z",
+    "sourceTitle": "BBC",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBnNTcxOE00ZFZvcFRQaFZsTnNZTU1ONnFqWl9MamYydEVuZDgwZFVRSlU5WGNtVFpDbDZJS0dCMExaenVUM25hMXFWQlI2QjhQMmFLbXI2OFFtYTNS?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
+  },
+  {
     "id": "candidate-bulos-combatir-con-el-este-gobierno-incendios-los-los-minas-nchez-niega-",
     "fingerprint": "bulos combatir con el este gobierno incendios los los minas nchez niega pide placas que relacionados sa sobre solares",
     "title": "Sánchez pide combatir los bulos sobre los incendios: el Gobierno niega que estén relacionados con placas solares o minas",
@@ -23,6 +67,17 @@
     "reviewStatus": "pending",
     "discoveryProvider": "google-news",
     "discoveryRegion": "Spain",
+    "discoveryQuery": "incendio paneles solares fotovoltaicos"
+  },
+  {
+    "id": "candidate-bulos-combatir-con-este-gobierno-incendios-los-los-minas-nchez-niega-pid",
+    "fingerprint": "bulos combatir con este gobierno incendios los los minas nchez niega pide placas que relacionados sobre solares",
+    "title": "Sánchez pide combatir los bulos sobre los incendios: el Gobierno niega que estén relacionados con placas solares o minas",
+    "publishedAt": "2026-07-26T12:32:58.000Z",
+    "discoveredAt": "2026-07-28T16:16:22.261Z",
+    "sourceTitle": "valencianoticias.com",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNby1PZlppeFFQQVRlOEphRWRBTDVCUjhUZzF4YlQ1a19HUWRaUUFHNGhGS3hUY0tPZEtCbFRpdEpPVHlpNDBjNEVJRnVHVzVzUVIwNmhnd2ZBUmZmQVVKZHpDYS05eC04ZUpERU1OQXFtUXpPODlERVMyTE5FQl9KNWtxRmVtcHBaazdYTUoya0MzazRWNXVxc2ExVDlrQjFRZ0RuM0oyZ0txTmFMVmw4bkF4a0VKQ1Z2a0Rkd28xUWRxM3VpWm5xY2hNNFBES0RGR0RyM1hBRVdjeUVRcm5ZbFlIcw?oc=5",
+    "reviewStatus": "pending",
     "discoveryQuery": "incendio paneles solares fotovoltaicos"
   },
   {
@@ -89,6 +144,17 @@
     "discoveryProvider": "google-news",
     "discoveryRegion": "Türkiye",
     "discoveryQuery": "güneş paneli yangın çatı"
+  },
+  {
+    "id": "candidate-2026-como-conjunto-conseguir-detalhes-eclipse-fire-free-raridade-solar",
+    "fingerprint": "2026 como conjunto conseguir detalhes eclipse fire free raridade solar",
+    "title": "Conjunto Eclipse Solar no Free Fire: como conseguir, raridade e detalhes (2026)",
+    "publishedAt": "2026-07-26T01:00:58.000Z",
+    "discoveredAt": "2026-07-28T16:16:23.469Z",
+    "sourceTitle": "Free Fire Mania",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBPa1lmb1UyNm9kTDJLVk51OUxoeHFIR0psdm1hMmtWN1N4MzBhZk9sdXZ5MzYwbmxkRVBlbndFNmxIMnpJUGpDdXk4SE5qLUpJOVpiQUdfRFNoblFiUWpRN0E5S3N6c3c2WXYxb05ETFBzdVk?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "incêndio painéis solares fotovoltaico"
   },
   {
     "id": "candidate-70-आग-चव-जयप-जस-पर-रद-लग-लर-सबस",
@@ -377,6 +443,17 @@
     "discoveryQuery": "brand zonnepanelen dak"
   },
   {
+    "id": "candidate-auf-brand-chern-coswig-einfamilienha-geraden-radebeul-solaranlagen-usern",
+    "fingerprint": "auf brand chern coswig einfamilienha geraden radebeul solaranlagen usern von",
+    "title": "Radebeul/Coswig: Solaranlagen auf Dächern von Einfamilienhäusern geraden in Brand",
+    "publishedAt": "2026-07-19T11:34:23.000Z",
+    "discoveredAt": "2026-07-28T16:16:22.933Z",
+    "sourceTitle": "Sächsische Zeitung",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNSDFPRkpCaVBXalNtUnlSdzdEc3JvVC1xZjRqbXZMM1VGN3gyOW1VU2FxVGVJbF9VVUFzaE1KRGtMLWZwZVFRYVFBRkhXNDJwVXRyM1d5QVl6S3BpMEV3bUJmb1RKeUV1QnNURTVPd3VjaF9MT19vUkFsVS1mTjF4TDJLa2FLZG04X3ZKcG90NGhQQmxNZnUwR25qTUxpY1dpWUNmVUpqSVIycnNCU0tRbUZDaFNneHBQV1pYYzBFNTh4OWYyY0FQa3c0b1NKSFhXdmtvamJsNU00THhlRmVvUEZhWFotNXloV09UcXZvSjZuZGctQ2tUdWZSd181UdIBmgJBVV95cUxOc3dWVktyVHE3WlZ4dEFkY3FHUnhQZ1NaWWtDQ0t1aWxuTnVHVzhxNDFrU2IyWWZjYjI2XzZIdkMyamhRTmU0VW1zMjdQdHlkQXBKLWZQVGJfdEVhRmpmc01LSGdUTHJ4WU82WVpnLWtSa3ktNHRocWJiNVhZV3U3bFFqQVlTdElkV3hRbUlQMWc1NDJ0UWFFWGVpUDhLdTRXdTBoQUpXQXNpMzNRUzVLUVd3MW5TY3hhQkZUeUR1NVVqY18yYlpTbTUzVVBZMUVIN2Y5OFJUVmdfQmJVdHl6V3lYazk3S3ZiMnpFX0Y5Tl9lOFJMa1RPVW9iaVVUeVFhU3hxS1BOZ1NBS2NNTzdJV2Uzc3JjSThPb0E?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "Brand Photovoltaikanlage Solarmodule Dach"
+  },
+  {
     "id": "candidate-across-blamed-england-fires-for-of-on-panels-roofs-school-solar-spate",
     "fingerprint": "across blamed england fires for of on panels roofs school solar spate",
     "title": "Solar panels blamed for spate of fires on school roofs across England",
@@ -520,6 +597,17 @@
     "discoveryQuery": "\"solar panel\" fire roof"
   },
   {
+    "id": "candidate-fires-force-inspected-norfolk-off-panels-schools-series-solar-switch",
+    "fingerprint": "fires force inspected norfolk off panels schools series solar switch",
+    "title": "Solar panels on Norfolk schools to be inspected as series of fires force switch off",
+    "publishedAt": "2026-07-16T05:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.406Z",
+    "sourceTitle": "Edp24",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZl81UnYzWW5acFUzSURTUGswTkp3dHFlQnJsM1M3d2czemg5b0dyRWFwVC1DVjctY0lPQkpaUVFROGFEamdpNnVVclJBampwUmpUMGlvM0w1Rm9BSmtYSEZxNTJ0cmliMlpTdklwRUVtX1dOYjdwd3UxdndiREs4R0ZGalBfSDFOZDUtSG54eW1sZw?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
+  },
+  {
     "id": "candidate-西班牙一座光伏电站发生火灾致两人受伤",
     "fingerprint": "西班牙一座光伏电站发生火灾致两人受伤",
     "title": "西班牙一座光伏电站发生火灾致两人受伤",
@@ -624,6 +712,17 @@
     "discoveryQuery": "\"solar panel\" fire OR blaze"
   },
   {
+    "id": "candidate-crews-farm-fire-grass-respond-schaghticoke-solar",
+    "fingerprint": "crews farm fire grass respond schaghticoke solar",
+    "title": "Crews respond to grass fire at solar farm in Schaghticoke",
+    "publishedAt": "2026-07-15T03:16:32.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.705Z",
+    "sourceTitle": "NEWS10 ABC",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSHRLWFIyQkhOZF9KOGlndHBPWWZVNU9QOWpXUTZROVltcEpIckxMSTRoNV9EaWp1cXo3MktIQ1owNDZ4Y296RkR0ak9nanRTUDlVUzgwd3Jxd1REVDFvdDR5cnN2d1Eyd1VaY2JfWWp3d3p0UzQwOVgtUlUxbU1ZbU9fZlV1SGhsbFVsUVlHWDVhN2V3ZVI4aWNra1k?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar farm\" fire -battery"
+  },
+  {
     "id": "candidate-at-crews-farm-fire-grass-in-respond-schaghticoke-solar-to",
     "fingerprint": "at crews farm fire grass in respond schaghticoke solar to",
     "title": "Crews respond to grass fire at solar farm in Schaghticoke",
@@ -686,6 +785,17 @@
     "reviewStatus": "pending",
     "discoveryProvider": "google-news",
     "discoveryRegion": "Spain",
+    "discoveryQuery": "incendio paneles solares fotovoltaicos"
+  },
+  {
+    "id": "candidate-almeri-fotovoltaica-fuera-hay-incendio-instalar-para-planta-provocado-pr",
+    "fingerprint": "almeri fotovoltaica fuera hay incendio instalar para planta provocado pruebas que una",
+    "title": "Incendio en Almería: no hay pruebas de que fuera provocado para instalar una planta fotovoltaica",
+    "publishedAt": "2026-07-14T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:22.260Z",
+    "sourceTitle": "RTVE.es",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcXFFbl9DWndzQTlGQTVMelNnUHNiRjVLcGhoOFdiQ1RSV1B2NFNIaTNhUmNGMkZpQkJNY3dRakc1U3ViallxcDBHUjlkVjRja2prVnpab19ybHZ3VUFQTzhVaUNSM2NyLTktSldUcmlJc09lRmxEMkNiVVV1ZktRNlE4Z3JXMHkybXdMdWZSdDR3TzFtNkFPaVY1cXdRQ3ZidkVJYmxR?oc=5",
+    "reviewStatus": "pending",
     "discoveryQuery": "incendio paneles solares fotovoltaicos"
   },
   {
@@ -930,6 +1040,17 @@
     "discoveryQuery": "incendio paneles solares fotovoltaicos"
   },
   {
+    "id": "candidate-alert-fire-gets-head-manchester-panel-rooftop-solar-staffer-start-walmar",
+    "fingerprint": "alert fire gets head manchester panel rooftop solar staffer start walmart",
+    "title": "Alert Walmart Staffer Gets Head Start On Rooftop Solar Panel Fire In Manchester",
+    "publishedAt": "2026-07-13T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.405Z",
+    "sourceTitle": "Patch",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQUwwVXJ5WUJRbE1GaU1VODdkREhRYkExbWFKRXVUWjd3SU44Vm90SkI4RHk0TjN1LXE3b2ZTR0trQnItTnNTb1VGVkhGM3NYYVFyS3phN0FZT1I5N3RHMWtPZmJmQl9PQjdwMmdOd0xfN09ReWpQUFgtVjN3bkNUU1A1VGl2QUIwYUktNVNRbFQya2JUYTFTQ0JkbXRkZE1EcVh5UnkxdUFydw?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
+  },
+  {
     "id": "candidate-ambiental-de-de-el-el-en-grup-incendio-investigar-la-la-llina-menorca-me",
     "fingerprint": "ambiental de de el el en grup incendio investigar la la llina menorca menorca per pide planta restauracio ritx solar",
     "title": "El Grup per a la Restauració Ambiental de Menorca pide investigar el incendio en la planta solar de Llinàritx - Menorca",
@@ -995,6 +1116,17 @@
     "discoveryProvider": "google-news",
     "discoveryRegion": "Germany",
     "discoveryQuery": "Brand Photovoltaikanlage Solarmodule Dach"
+  },
+  {
+    "id": "candidate-catch-closure-connecticut-fire-forcing-officials-panels-roof-say-solar-t",
+    "fingerprint": "catch closure connecticut fire forcing officials panels roof say solar temporary walmart",
+    "title": "Solar panels catch fire on roof of Connecticut Walmart, forcing temporary closure, officials say",
+    "publishedAt": "2026-07-12T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.405Z",
+    "sourceTitle": "CT Insider",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVWVIcDJkVHhhZUZrRGhDUnBZbGxWY2hfeWYwbVE1WlFxd2FIRTN4UUJhZVRMNkw1NC13TElsZXJabzZCNFdVQTYxUjQ0TnZqOUVyUUFuMXktcnY1eFVmRWJndTRDMnBkckFyR2trZVZ6eVNYY3JiR2IxOHRfd2poSmowWXdFNXRXcHp6LWptaVlFWTM2THdnMnllcGExUEVVSFMxcHFKQXU0WjZuSmJwNQ?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
   },
   {
     "id": "candidate-fires-following-multiple-of-panel-school-shutdown-solar-systems",
@@ -1276,6 +1408,39 @@
     "discoveryProvider": "google-news",
     "discoveryRegion": "Germany",
     "discoveryQuery": "Brand Photovoltaikanlage Solarmodule Dach"
+  },
+  {
+    "id": "candidate-amarillo-apartment-complex-displaces-fire-panel-residents-solar",
+    "fingerprint": "amarillo apartment complex displaces fire panel residents solar",
+    "title": "Solar panel fire displaces 10 residents at Amarillo apartment complex",
+    "publishedAt": "2026-07-09T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:21.405Z",
+    "sourceTitle": "KVII",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQMS11YkEzZkpxT1J6dk1hdVVzZkx6bUJsQkEwdWV2ckNHYmxocl9WbmZFVWhXc1BQOUhoa2hYTmtTN1BVUGNRVUN6eUFERUVrSXdiRG9zekRZeEJ0elR4MXBjUzFpeXo5THRXckZ0TE9mcllQS0JXbFBELWI4RUozMDNxcVBUaXJrNHV6TDQ3UmRaaGNNQ3REbU5QdGNGaW1rZU91a1VyYWlOV2NqZTFZTA?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "\"solar panel\" fire OR blaze"
+  },
+  {
+    "id": "candidate-bassersdorf-brennt-dachstock-feuer-lichterloh-ngt-solaranlage",
+    "fingerprint": "bassersdorf brennt dachstock feuer lichterloh ngt solaranlage",
+    "title": "Solaranlage in Bassersdorf fängt Feuer – Dachstock brennt lichterloh",
+    "publishedAt": "2026-07-09T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:22.933Z",
+    "sourceTitle": "20 Minuten",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOU0VITGU0eS1mYmFMay16ZnBvYkVxRjlzbFhaeUpmSm44ZVBlV3U2dkM3YUl0cFRPamRISzgxcjFyUVA5Mzh6MVQxNjhkTXo1NlNUMjJZMm5HNWItRUs3ZEhNbHJ4aGctbjVpdUl1Vk9vSVlFeUJkczJKWVM1QWZLMllqVGxTREJOODZYb05tV2RYVHlScVUxM3RRZ3NncF9rTFZKQnBaZw?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "Brand Photovoltaikanlage Solarmodule Dach"
+  },
+  {
+    "id": "candidate-del-fotovoltaico-fuoco-impianto-incendio-lavoro-sul-tetto-tilt-vigili",
+    "fingerprint": "del fotovoltaico fuoco impianto incendio lavoro sul tetto tilt vigili",
+    "title": "Impianto fotovoltaico in tilt: incendio sul tetto, vigili del fuoco al lavoro",
+    "publishedAt": "2026-07-09T07:00:00.000Z",
+    "discoveredAt": "2026-07-28T16:16:23.134Z",
+    "sourceTitle": "TrevisoToday",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNMjlvS0dTRWhWcFlEWUFVM3lFSm5GOG5na2Q4WlFHU3ZwazF1SkhERUVDRnp6OWM1UEsyR0I4N3MtdFd3WDZfVU00QzBBeGVRaFhPanNON3BEdXBIMGRWbUx5QnVIV184OFAxaDdzVlo1X1pTOGZSdGh0cXFMbWhkcmtnZDdIVjJQUmM2NkxOcll0WE40YWc?oc=5",
+    "reviewStatus": "pending",
+    "discoveryQuery": "incendio fotovoltaico pannelli solari tetto"
   },
   {
     "id": "candidate-banchette-capannone-danneggiati-di-fotovoltaici-incendio-pannelli-sul-te",
