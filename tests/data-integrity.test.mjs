@@ -64,15 +64,18 @@ test("incident and index records satisfy the publication schema", async () => {
   const activeReviewed = incidents.filter((item) => new Date(item.date + "T00:00:00Z") >= cutoff);
   const activeIndexed = indexed.filter((item) => new Date(item.date + "T00:00:00Z") >= cutoff);
   const eventIds = new Set([...activeReviewed, ...activeIndexed].map((item) => groups.recordToEvent[item.id] ?? item.id));
-  const collapsedRecordCount = activeReviewed.length + activeIndexed.length - eventIds.size;
+  assert.equal(activeReviewed.length, 73);
+  assert.equal(activeIndexed.length, 124);
+  assert.equal(eventIds.size, 172, "provisional event count changed; audit event links before publishing");
+});
 
-  assert.ok(activeReviewed.length >= 47, "active reviewed dataset unexpectedly shrank");
-  assert.ok(activeIndexed.length >= 122, "active public index unexpectedly shrank");
-  assert.equal(
-    collapsedRecordCount,
-    26,
-    "known event-link collapse count changed; audit event links before publishing",
-  );
+test("discovery registry includes independent feeds, Asia-Pacific and insurance sources", async () => {
+  const sources = await readJson("discovery-sources.json");
+  assert.ok(sources.some((source) => source.id === "google-news-multilingual" && source.queryLanes >= 20));
+  assert.ok(sources.some((source) => source.id === "gdelt-doc"), "independent global news provider is missing");
+  assert.ok(sources.filter((source) => source.regions.some((region) => /Asia|Japan|Korea/i.test(region))).length >= 4);
+  assert.ok(sources.filter((source) => /insur/i.test(source.sourceClass)).length >= 2);
+  for (const source of sources) assertPublicUrl(source.url, source.id);
 });
 
 test("pipeline metadata and automation describe a real daily scan", async () => {
