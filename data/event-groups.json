@@ -1,5 +1,5 @@
 {
-  "methodologyVersion": "2026-07",
+  "methodologyVersion": "2026-08",
   "recordToEvent": {
     "index-2017-07-large-blaze-at-brand-new-block-of-flats-in-east-london": "uk-bow-wharf-2017",
     "index-2017-10-cornwall-fire-rescue-service-news": "uk-crowan-2017",
@@ -42,8 +42,20 @@
   },
   "candidateReviews": {
     "candidate-2023-calatrava-ciudad-construyo-de-en-en-en-hinojosas-hinojosas-incendio": "excluded: fact-check reporting says the named solar plant is in another municipality and does not establish PV involvement in the fire",
-    "candidate-90-assusta-bem-cias-cias-de-do-fogo-hipernoti-hipernoti-informado-morado": "excluded: official municipal reporting describes a vegetation fire around deactivated panels, with no established PV-equipment involvement",
+    "candidate-90-assusta-bem-cias-cias-de-do-fogo-hipernoti-hipernoti-informado-morado": "superseded: later municipal reporting alleged deliberate ignition intended to burn the deactivated panels; grouped with br-cuiaba-pedra-90-2026",
     "candidate-at-cartersville-contained-equipment-fire-in-plant-qcells-solar": "excluded: silicon-ingot manufacturing equipment fire, not an operating PV installation",
-    "candidate-at-breaks-cartersville-fire-in-manufacturing-out-plant-qcells-solar": "excluded: duplicate coverage of a silicon-ingot manufacturing equipment fire, not an operating PV installation"
+    "candidate-at-breaks-cartersville-fire-in-manufacturing-out-plant-qcells-solar": "excluded: duplicate coverage of a silicon-ingot manufacturing equipment fire, not an operating PV installation",
+    "candidate-aan-ap-bij-bon-brand-in-ninove-omvormer-van-zonnepanelen": "excluded: closer local reporting identifies a rooftop refrigeration motor, not a PV inverter, as the equipment that burned",
+    "candidate-90-calcina-comunidades-de-de-en-fotovoltaica-hecta-incendio-medios-movil": "excluded pending stronger evidence: the fire began within the Puertollano solar-plant boundary, but officials had not established that PV equipment burned or ignited it",
+    "candidate-al-apagar-de-del-en-fotovoltaica-herido-incendio-intentar-las-llamas-ope": "excluded as duplicate Puertollano coverage; PV-equipment involvement was not established",
+    "candidate-90-auf-che-dem-eines-erfasst-feuer-fla-gela-hektar-nde-solarparks-spanis": "excluded as duplicate Puertollano coverage; PV-equipment involvement was not established",
+    "candidate-90-at-burns-fire-hectares-plant-solar-spanish": "excluded as duplicate Puertollano coverage; PV-equipment involvement was not established",
+    "candidate-at-but-catch-fire-home-is-island-panels-rhode-roof-rooftop-solar-spared-": "duplicate of us-jamestown-coulter-drive-2026",
+    "candidate-brand-dak-helmond-in-onder-op-uitgebroken-van-woning-zonnepanelen": "duplicate of nl-helmond-heijdendonk-2026",
+    "candidate-brand-dak-helmond-in-net-onder-op-uitgebroken-verkocht-woning-zonnepanel": "duplicate of nl-helmond-heijdendonk-2026",
+    "candidate-begon-brand-dak-helmond-huis-in-in-onder-van-vuur-zonnepanelen": "duplicate of nl-helmond-heijdendonk-2026",
+    "candidate-brand-onder-op-uitgebroken-woning-zonnepanelen": "duplicate of nl-helmond-heijdendonk-2026",
+    "candidate-brand-de-industriomra-missta-nkt-orsak-pa-solceller-tak": "duplicate of se-arlandastad-voltgatan-2026",
+    "candidate-nbc長崎放送-ネルか-佐々町て-午後3時20分鎮火-太陽光ハ-更新-民家火災-燃えている-長崎": "duplicate of jp-saza-hasuwa-2026"
   }
 }
