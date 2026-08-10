@@ -70,7 +70,7 @@ test("incident and index records satisfy the publication schema", async () => {
   assert.ok(activeIndexed.length >= 124, "active public index unexpectedly shrank");
   assert.equal(
     collapsedRecordCount,
-    25,
+    27,
     "known event-link collapse count changed; audit event links before publishing",
   );
 });
