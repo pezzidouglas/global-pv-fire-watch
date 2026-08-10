@@ -34,11 +34,14 @@
     "index-2025-07-shanklea-primary-school-stays-shut-after-solar-panel-fire": "event-2025-shanklea-primary-school",
     "index-2025-05-solar-panel-issue-known-a-year-before-shanklea-school-fire": "event-2025-shanklea-primary-school",
     "index-2026-07-solar-panels-cause-of-malton-hospital-fire-says-fire-service": "uk-malton-hospital-2026",
-    "index-2026-07-langer-einsatz-in-su-lz-photovoltaik-anlage-brannte-auf-haus-nachbarscha": "de-cologne-suelz-2026"
+    "index-2026-07-langer-einsatz-in-su-lz-photovoltaik-anlage-brannte-auf-haus-nachbarscha": "de-cologne-suelz-2026",
+    "index-2026-07-brennende-pv-anlage-dachstuhl-in-paderborn-brennt-aus-und-stu-rzt-ein": "de-paderborn-am-silberbrink-2026",
+    "index-2026-07-100-einsatzkra-fte-der-feuerwehr-lo-schen-brand-in-ehemaliger-veranstalt": "de-horst-elbmarschenhalle-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
-    "index-2025-01-el-incendio-en-una-nave-del-puerto-de-gandia-ha-sido-extinguido": "Battery-container incident; conflicts with BESS-only exclusion"
+    "index-2025-01-el-incendio-en-una-nave-del-puerto-de-gandia-ha-sido-extinguido": "Battery-container incident; conflicts with BESS-only exclusion",
+    "index-2026-07-fire-at-spanish-solar-plant-burns-90-hectares": "Puertollano fire began within a PV-plant boundary, but published authorities had not established that PV equipment burned or ignited it"
   },
   "candidateReviews": {
     "candidate-2023-calatrava-ciudad-construyo-de-en-en-en-hinojosas-hinojosas-incendio": "excluded: fact-check reporting says the named solar plant is in another municipality and does not establish PV involvement in the fire",
@@ -56,6 +59,25 @@
     "candidate-begon-brand-dak-helmond-huis-in-in-onder-van-vuur-zonnepanelen": "duplicate of nl-helmond-heijdendonk-2026",
     "candidate-brand-onder-op-uitgebroken-woning-zonnepanelen": "duplicate of nl-helmond-heijdendonk-2026",
     "candidate-brand-de-industriomra-missta-nkt-orsak-pa-solceller-tak": "duplicate of se-arlandastad-voltgatan-2026",
-    "candidate-nbc長崎放送-ネルか-佐々町て-午後3時20分鎮火-太陽光ハ-更新-民家火災-燃えている-長崎": "duplicate of jp-saza-hasuwa-2026"
+    "candidate-nbc長崎放送-ネルか-佐々町て-午後3時20分鎮火-太陽光ハ-更新-民家火災-燃えている-長崎": "duplicate of jp-saza-hasuwa-2026",
+    "candidate-arrow-battery-blaze-board-hits-solar-tong-works-yau": "excluded: solar-charged battery equipment fire with no photovoltaic module or balance-of-system involvement established",
+    "candidate-alami-bakar-blok-com-di-gresik-jiipe-kebakaran-luka-melanda-pabrik-peker": "excluded: solar-glass manufacturing-facility fire, not an operating photovoltaic installation",
+    "candidate-at-fire-firefighter-house-inhalation-issues-maryland-panel-smoke-solar-s": "excluded: fire marshal found discarded smoking materials in the basement; rooftop PV was present but did not burn and only complicated ventilation",
+    "candidate-farm-farmers-fight-forces-from-join-massive-metres-solar-to-wildfire": "excluded: wildfire was near a solar farm; no PV equipment involvement was established",
+    "candidate-auf-brennt-garagendach-ktn-photovoltaikanlage": "promoted to at-voelkermarkt-garage-2026",
+    "candidate-aus-feuereinsaetze-in-kaernten-loesen-photovoltaikanlagen-zwei": "source article promoted into two distinct records: at-voelkermarkt-garage-2026 and at-klagenfurt-theodor-koerner-school-2026",
+    "candidate-000-50-bedroht-brand-dachstuhl-euro-feuer-in-lachendorf-photovoltaik-sch": "promoted to de-lachendorf-rooftop-2026",
+    "candidate-at-breaks-expert-fire-house-long-maintenance-needs-of-out-panel-solar-vi": "promoted to hk-yuen-long-sheung-chuk-yuen-2026",
+    "candidate-auf-aus-bern-brand-den-feuer-hausdach-lo-ost-solarpanels-sten": "promoted to ch-walkringen-locher-mechanik-2026",
+    "candidate-battle-buzzard-crews-fire-in-leighton-panel-roof-solar": "pending: credible local report found, but sufficient official incident detail was not yet available for source-reviewed promotion",
+    "candidate-across-and-as-but-connectors-emerged-europe-finds-fires-panel-rare-solar": "context only: aggregate technical research, not an incident",
+    "candidate-133-by-fires-installations-insurer-outpace-panel-says-solar": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-double-fires-in-panel-solar-three-years": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-at-fires-installations-more-of-panel-rate-rise-solar-than-the-twice-uk": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-at-double-fires-increasing-installation-panel-rate-solar-the": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-133-as-fires-increase-installations-panel-rise-solar-uk": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-and-battery-cabling-dc-drive-fires-in-panel-risk-solar-surge-uk": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-fires-for-highlight-lifecycle-need-pv-rooftop-safety-solar-stronger-the-": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json",
+    "candidate-200-by-damaged-fires-homes-in-more-panel-solar-than-year": "context only: duplicate coverage of the QBE FOI release now recorded in research-sources.json"
   }
 }
