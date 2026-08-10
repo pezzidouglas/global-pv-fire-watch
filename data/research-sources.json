@@ -14,18 +14,18 @@
     "yearly": {"2016": 30, "2017": 31, "2018": 27, "2019": 26, "2020": 39, "2021": 64, "2022": 43, "2023": 68, "2024": 81, "2025": 59}
   },
   {
-    "id": "uk-qbe-foi-2022-2024",
+    "id": "uk-qbe-foi-2022-2025",
     "jurisdiction": "United Kingdom",
-    "period": "2022–2024",
-    "count": 406,
+    "period": "2022–2025",
+    "count": 589,
     "confirmedPvOrigin": null,
     "metric": "Fire-service incidents involving a solar panel",
     "sourceClass": "Insurer FOI compilation",
     "sourceTitle": "QBE UK fire-service FOI research",
-    "sourceUrl": "https://qbeeurope.com/news-and-events/press-releases/uk-fire-services-tackle-a-solar-panel-fire-every-two-days/",
+    "sourceUrl": "https://qbeeurope.com/news-and-events/press-releases/solar-panel-fires-increasing-at-more-than-double-the-rate-of-installations/",
     "windowRelation": "within-window",
-    "caveat": "Overlaps England IRS data and must not be added to it. QBE reports 107 incidents in 2022, 128 in 2023 and 171 in 2024.",
-    "yearly": {"2022": 107, "2023": 128, "2024": 171}
+    "caveat": "Overlaps England IRS data and must not be added to it. QBE's expanded 2026 FOI release reports 91 incidents in 2022, 131 in 2023, 155 in 2024 and 212 in 2025; these figures supersede its earlier, less-complete response set.",
+    "yearly": {"2022": 91, "2023": 131, "2024": 155, "2025": 212}
   },
   {
     "id": "netherlands-tno-2022-2023",
