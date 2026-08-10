@@ -110,7 +110,7 @@ const normalizeUrl = (value) => {
   }
 };
 
-const [reviewed, previousRecords, previousStatus, newsStatus] = await Promise.all([
+const [reviewed, previousRecords, previousStatus, newsStatus, eventGroups] = await Promise.all([
   readFile(new URL("../data/incidents.json", import.meta.url), "utf8").then(JSON.parse),
   readFile(INDEX_OUTPUT, "utf8").then(JSON.parse).catch(() => []),
   readFile(PIPELINE_STATUS, "utf8").then(JSON.parse).catch(() => null),
@@ -123,11 +123,13 @@ const [reviewed, previousRecords, previousStatus, newsStatus] = await Promise.al
     discoveredCount: 0,
     candidateCount: 0,
   })),
+  readFile(new URL("../data/event-groups.json", import.meta.url), "utf8").then(JSON.parse),
 ]);
 
 const seenUrls = new Set();
 const seenIds = new Set();
 const reviewedSources = new Set(reviewed.map((item) => normalizeUrl(item.sourceUrl)).filter(Boolean));
+const excludedIndexIds = new Set(Object.keys(eventGroups.excludedRecords ?? {}));
 const records = [];
 
 for (const part of parts) {
@@ -145,10 +147,11 @@ for (const part of parts) {
   const hostname = sourceUrl ? new URL(sourceUrl).hostname.toLowerCase() : "";
   if (hostname.endsWith(".com.au") || hostname.endsWith(".net.au") || hostname.endsWith(".org.au")) country = "Australia";
   if (hostname.endsWith(".at")) country = "Austria";
+  if (hostname.endsWith(".ch")) country = "Switzerland";
   if (!year || !month || !sourceUrl || !title || !upstreamSummary || !assetType || !country) continue;
   if (exclude.test(title) || !incidentLanguage.test(title + " " + upstreamSummary) || seenUrls.has(sourceUrl) || reviewedSources.has(sourceUrl)) continue;
   const id = "index-" + year + "-" + month + "-" + slug(title);
-  if (seenIds.has(id)) continue;
+  if (seenIds.has(id) || excludedIndexIds.has(id)) continue;
   seenUrls.add(sourceUrl);
   seenIds.add(id);
   const propertyType = classes.includes("residential") ? "Residential" : classes.includes("commercial") ? "Commercial / institutional" : "Utility-scale";
@@ -190,7 +193,28 @@ const checksum = createHash("sha256").update(nextContent).digest("hex");
 await writeFile(INDEX_TEMP, JSON.stringify(records, null, 2) + "\n");
 await rename(INDEX_TEMP, INDEX_OUTPUT);
 
-const overallStatus = newsStatus.failedQueries > 0 ? "degraded" : "healthy";
+const discoverySources = Array.isArray(newsStatus.providers)
+  ? newsStatus.providers.map((provider) => ({
+    id: provider.id,
+    label: provider.label,
+    status: provider.status,
+    attemptedQueries: provider.attemptedQueries,
+    successfulQueries: provider.successfulQueries,
+    failedQueries: provider.failedQueries,
+    lookbackDays: newsStatus.lookbackDays,
+    recordCount: provider.discoveredCount,
+  }))
+  : [{
+    id: "google-news",
+    label: "Google News RSS",
+    status: newsStatus.failedQueries > 0 ? "degraded" : "healthy",
+    attemptedQueries: newsStatus.attemptedQueries,
+    successfulQueries: newsStatus.successfulQueries,
+    failedQueries: newsStatus.failedQueries,
+    lookbackDays: newsStatus.lookbackDays,
+    recordCount: newsStatus.discoveredCount,
+  }];
+const overallStatus = discoverySources.some((source) => source.status !== "healthy") ? "degraded" : "healthy";
 const pipelineStatus = {
   schemaVersion: 2,
   cadence: "daily",
@@ -200,19 +224,10 @@ const pipelineStatus = {
   lastValidatedSnapshotAt: checkedAt,
   lastContentChangeAt: contentChanged ? checkedAt : previousStatus?.lastContentChangeAt ?? checkedAt,
   sources: [
-    {
-      id: "multilingual-news",
-      label: "Multilingual news discovery",
-      status: newsStatus.failedQueries > 0 ? "degraded" : "healthy",
-      attemptedQueries: newsStatus.attemptedQueries,
-      successfulQueries: newsStatus.successfulQueries,
-      failedQueries: newsStatus.failedQueries,
-      lookbackDays: newsStatus.lookbackDays,
-      recordCount: newsStatus.candidateCount,
-    },
+    ...discoverySources,
     {
       id: "public-report-index",
-      label: "Public incident index",
+      label: "ArcBox public incident index",
       status: "healthy",
       recordCount: records.length,
       checksum,
