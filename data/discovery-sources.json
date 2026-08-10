@@ -1,0 +1,114 @@
+[
+  {
+    "id": "google-news-multilingual",
+    "name": "Google News RSS",
+    "sourceClass": "Automated news discovery",
+    "regions": ["Global", "East Asia", "South Asia", "Southeast Asia", "Middle East", "Europe", "Americas"],
+    "languages": ["Arabic", "Chinese", "Dutch", "English", "French", "German", "Hebrew", "Hindi", "Indonesian", "Italian", "Japanese", "Korean", "Malay", "Polish", "Portuguese", "Spanish", "Swedish", "Thai", "Turkish", "Vietnamese"],
+    "cadence": "Daily",
+    "queryLanes": 27,
+    "role": "Incident candidate discovery",
+    "url": "https://news.google.com/",
+    "caveat": "Twenty-seven region-specific queries produce leads only. Syndication, translation and headline matching can create false positives or duplicates."
+  },
+  {
+    "id": "gdelt-doc",
+    "name": "GDELT DOC 2.1",
+    "sourceClass": "Global open news index",
+    "regions": ["Global", "East Asia", "South Asia", "Southeast Asia", "Europe", "Americas"],
+    "languages": ["Multilingual"],
+    "cadence": "Daily",
+    "queryLanes": 4,
+    "role": "Independent incident candidate discovery",
+    "url": "https://www.gdeltproject.org/",
+    "caveat": "A second public discovery provider reduces dependence on one news index. Every result still requires source, scope and duplicate review."
+  },
+  {
+    "id": "arcbox-index",
+    "name": "ArcBox public solar-fire index",
+    "sourceClass": "Vendor-curated incident index",
+    "regions": ["Global"],
+    "languages": ["Multilingual"],
+    "cadence": "Daily on access",
+    "role": "Country-level report indexing",
+    "url": "https://www.arcbox.solar/solar-fires/",
+    "caveat": "Useful for breadth but affected by vendor, language and editorial selection bias; reports stay unverified until incident-level review."
+  },
+  {
+    "id": "qbe-foi-watch",
+    "name": "QBE Europe solar-fire research",
+    "sourceClass": "Insurer research watch",
+    "regions": ["United Kingdom"],
+    "languages": ["English"],
+    "cadence": "Publication watch",
+    "role": "Aggregate context and fire-service leads",
+    "url": "https://qbeeurope.com/news-and-events/press-releases/solar-panel-fires-increasing-at-more-than-double-the-rate-of-installations/",
+    "caveat": "Freedom-of-information totals can overlap official statistics and are never added to incident totals."
+  },
+  {
+    "id": "fm-loss-prevention",
+    "name": "FM property loss-prevention data sheets",
+    "sourceClass": "Commercial property insurer engineering",
+    "regions": ["Global"],
+    "languages": ["English"],
+    "cadence": "Publication watch",
+    "role": "Loss mechanisms and prevention context",
+    "url": "https://www.fm.com/resources/fm-data-sheets",
+    "caveat": "Engineering guidance helps identify failure modes and terminology; it is not an incident register."
+  },
+  {
+    "id": "iea-pvps-task-13",
+    "name": "IEA PVPS Task 13",
+    "sourceClass": "International technical research",
+    "regions": ["Global", "Asia-Pacific", "Europe", "Americas"],
+    "languages": ["English"],
+    "cadence": "Publication watch",
+    "role": "PV reliability and failure research",
+    "url": "https://iea-pvps.org/research-tasks/performance-operation-and-reliability-of-photovoltaic-systems/",
+    "caveat": "Technical reports inform review vocabulary and causation checks but do not automatically create incident records."
+  },
+  {
+    "id": "japan-caa",
+    "name": "Japan Consumer Safety Investigation Commission",
+    "sourceClass": "Government safety investigation watch",
+    "regions": ["Japan", "East Asia"],
+    "languages": ["Japanese", "English"],
+    "cadence": "Publication watch",
+    "role": "Official investigations and aggregate evidence",
+    "url": "https://www.caa.go.jp/en/policies/policy/consumer_safety/",
+    "caveat": "Commission investigations are reviewed for installed-PV relevance, date-window fit and possible overlap with prior summaries."
+  },
+  {
+    "id": "japan-nite",
+    "name": "Japan NITE product-accident information",
+    "sourceClass": "Government product-safety watch",
+    "regions": ["Japan", "East Asia"],
+    "languages": ["Japanese", "English"],
+    "cadence": "Publication watch",
+    "role": "Product accident and recall context",
+    "url": "https://www.nite.go.jp/en/jiko/index.html",
+    "caveat": "Product notices are leads only; recalls or tests without an installed-system fire are excluded."
+  },
+  {
+    "id": "korea-nfa",
+    "name": "Korea National Fire Agency",
+    "sourceClass": "National fire-authority watch",
+    "regions": ["South Korea", "East Asia"],
+    "languages": ["Korean", "English"],
+    "cadence": "Publication watch",
+    "role": "Official fire reports and statistics",
+    "url": "https://www.nfa.go.kr/eng/",
+    "caveat": "Only installed-PV incidents with a public, traceable source enter review; battery-only events remain excluded."
+  },
+  {
+    "id": "energy-safe-victoria",
+    "name": "Energy Safe Victoria",
+    "sourceClass": "Asia-Pacific regulator watch",
+    "regions": ["Australia", "Asia-Pacific"],
+    "languages": ["English"],
+    "cadence": "Publication watch",
+    "role": "Regulatory consultation and fire-service evidence",
+    "url": "https://www.energysafe.vic.gov.au/",
+    "caveat": "Consultations can aggregate overlapping fire-service records and remain separate from incident totals."
+  }
+]
