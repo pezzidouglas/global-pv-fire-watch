@@ -136,6 +136,7 @@ export function parsePublicIndex(raw: string, checkedDate: string, reviewedSourc
     const hostname = sourceUrl ? new URL(sourceUrl).hostname.toLowerCase() : "";
     if (hostname.endsWith(".com.au") || hostname.endsWith(".net.au") || hostname.endsWith(".org.au")) country = "Australia";
     if (hostname.endsWith(".at")) country = "Austria";
+    if (hostname.endsWith(".ch")) country = "Switzerland";
     if (!year || !month || !sourceUrl || !title || !upstreamSummary || !assetType || !country) continue;
     const searchable = `${title} ${upstreamSummary}`;
     if (

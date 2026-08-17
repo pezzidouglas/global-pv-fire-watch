@@ -23,6 +23,9 @@ export default function MethodologyPage() {
         <p>Each reviewed record has an incident-level public source, a date, a country, a rooftop or utility-scale classification, and an approximate city or site point. “Source-reviewed” means an authority, technical investigation or corroborated reporting supports the incident and the stated PV relationship. It does not prove that PV caused the fire.</p>
         <h3>Vendor-indexed records</h3>
         <p>Additional reports are discovered through the ArcBox public incident index, a commercial fire-safety vendor resource. This layer is useful for breadth but carries geographic, language, commercial and editorial selection bias. It is kept at country level until incident-level review.</p>
+        <h3>Multilingual and institutional discovery</h3>
+        <p>Daily candidate discovery uses independent Google News RSS and GDELT lanes across 20 named languages, including dedicated Japan, South Korea, China, Taiwan, India, Indonesia, Malaysia, Thailand, Vietnam, the Philippines and Middle East searches. Government safety agencies, fire authorities, insurers and technical organizations are also watched for investigations, aggregate evidence and loss-prevention findings.</p>
+        <p>Automated matches never become published reviewed incidents on their own. Insurer guidance, recalls, aggregate studies and technical research inform review but do not increase incident totals unless they identify an in-scope event supported by a traceable public source.</p>
         <h3>Aggregate research</h3>
         <p>Official, insurer and technical datasets use different definitions, territories and time periods. Their totals overlap and are never added to the incident register.</p>
       </section>
@@ -44,7 +47,7 @@ export default function MethodologyPage() {
       <section>
         <h2>Daily refresh</h2>
         <p>The public index endpoint is rechecked on the first visit after its edge cache expires, with a maximum successful-cache age of 23 hours. Suspicious responses, unexpected content types, oversized payloads and contractions greater than 10% are quarantined; the last validated snapshot remains visible. Human-reviewed records change only after editorial review.</p>
-        <p>A GitHub mirror can also run the daily discovery workflow at 14:17 UTC. That schedule becomes active only after this project is connected to an actual GitHub repository with Actions enabled.</p>
+        <p>The public GitHub mirror runs the multilingual Google News and GDELT discovery workflow at 14:17 UTC each day. Validated data changes are proposed through a review pull request rather than being published directly.</p>
       </section>
       <section>
         <h2>What the dashboard cannot show</h2>

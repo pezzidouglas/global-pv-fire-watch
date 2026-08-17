@@ -16,12 +16,14 @@ import {
   ExternalLink,
   FileSearch,
   Filter,
+  Flame,
   Globe2,
   Info,
   Layers3,
   MapPin,
   Search,
   ShieldCheck,
+  Radar,
   X,
 } from "lucide-react";
 
@@ -83,6 +85,19 @@ type ResearchSource = {
   yearly: Record<string, number> | null;
 };
 
+type DiscoverySource = {
+  id: string;
+  name: string;
+  sourceClass: string;
+  regions: string[];
+  languages: string[];
+  cadence: string;
+  queryLanes?: number;
+  role: string;
+  url: string;
+  caveat: string;
+};
+
 type PipelineStatus = {
   schemaVersion: number;
   cadence: "daily";
@@ -108,6 +123,7 @@ export type DashboardProps = {
   candidateCount: number;
   indexedReports: IndexedReport[];
   researchSources: ResearchSource[];
+  discoverySources: DiscoverySource[];
   pipelineStatus: PipelineStatus;
   eventGroups: {
     methodologyVersion: string;
@@ -167,7 +183,7 @@ function formatUtcTimestamp(value: string) {
   }).format(new Date(value));
 }
 
-export default function Dashboard({ initialIncidents, candidateCount, indexedReports, researchSources, pipelineStatus, eventGroups }: DashboardProps) {
+export default function Dashboard({ initialIncidents, candidateCount, indexedReports, researchSources, discoverySources, pipelineStatus, eventGroups }: DashboardProps) {
   const [years, setYears] = useState("10");
   const [asset, setAsset] = useState("all");
   const [evidence, setEvidence] = useState("all");
@@ -271,6 +287,13 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
     events: new Set([...baseReviewed.map((item) => eventId(item.id)), ...baseIndexed.map((item) => eventId(item.id))]).size,
     countries: countryCoverage.length,
   }), [baseIndexed, baseReviewed, countryCoverage.length, eventId]);
+
+  const discoveryStats = useMemo(() => ({
+    lanes: discoverySources.reduce((sum, source) => sum + (source.queryLanes ?? 0), 0),
+    languages: new Set(discoverySources.flatMap((source) => source.languages).filter((language) => language !== "Multilingual")).size,
+    asiaPacific: discoverySources.filter((source) => source.regions.some((region) => /Asia|Japan|Korea|Australia/i.test(region))).length,
+    insurer: discoverySources.filter((source) => /insur/i.test(source.sourceClass)).length,
+  }), [discoverySources]);
 
   const trend = useMemo(() => {
     const result = new Map<number, number>();
@@ -418,7 +441,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
       <a className="skip-link" href="#incidents">Skip to incident explorer</a>
       <header className="masthead" id="global">
         <div className="brand-lockup">
-          <span className="brand-mark" aria-hidden="true"><ShieldCheck size={22} /></span>
+          <span className="brand-mark"><Flame size={20} /></span>
           <div>
             <div className="eyebrow">PV fire intelligence</div>
             <h1>Global PV Fire Watch</h1>
@@ -465,12 +488,10 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
         <div className="country-strip">
           <button className={country === "all" ? "active" : ""} aria-pressed={country === "all"} onClick={() => selectCountry("all")}>
             <span>Global</span><strong>{globalStats.events}</strong><small>{globalStats.total} source records</small><Globe2 size={17} />
-            <span className="country-share" aria-hidden="true"><i style={{ width: "100%" }} /></span>
           </button>
           {countryCoverage.map((item) => (
             <button key={item.country} className={country === item.country ? "active" : ""} aria-pressed={country === item.country} onClick={() => selectCountry(item.country)}>
               <span>{item.country}</span><strong>{item.events}</strong><small>{item.total} records · {item.reviewed} reviewed</small><ChevronRight size={17} />
-              <span className="country-share" aria-hidden="true"><i style={{ width: `${Math.max(4, Math.round(item.events / Math.max(1, globalStats.events) * 100))}%` }} /></span>
             </button>
           ))}
         </div>
@@ -553,7 +574,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
               <svg className="world-map" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="group" aria-label={`Interactive global reporting map showing ${globalStats.events} provisional events from ${globalStats.total} source records and ${filtered.length} reviewed locations`}>
                 <title>Interactive global PV fire public reporting coverage</title>
                 <desc>Country bubbles show provisional event clusters. Red and amber points open reviewed incident details.</desc>
-                <rect width={WIDTH} height={HEIGHT} className="map-bg" />
+                <rect width={WIDTH} height={HEIGHT} fill="#0b141c" />
                 <g className="graticule-lines">
                   {[140, 280, 420].map((y) => <line key={`h-${y}`} x1="0" x2={WIDTH} y1={y} y2={y} />)}
                   {[200, 400, 600, 800, 1000].map((x) => <line key={`v-${x}`} x1={x} x2={x} y1="0" y2={HEIGHT} />)}
@@ -719,6 +740,34 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
       </section>
 
       <section className="research-section" id="research">
+        <div className="discovery-network">
+          <div className="discovery-heading">
+            <div>
+              <div className="eyebrow"><Radar size={14} /> Discovery network</div>
+              <h2>More public feeds, with Asia-Pacific and insurance coverage</h2>
+              <p>Automated multilingual searches are paired with government, fire-authority, insurer and technical publication watchlists. Search matches enter a review queue; guidance and aggregate studies remain context, not incidents.</p>
+            </div>
+            <div className="discovery-metrics" aria-label="Discovery network coverage">
+              <span><strong>{discoveryStats.lanes}</strong><small>daily query lanes</small></span>
+              <span><strong>{discoveryStats.languages}</strong><small>named languages</small></span>
+              <span><strong>{discoveryStats.asiaPacific}</strong><small>Asia-Pacific sources</small></span>
+              <span><strong>{discoveryStats.insurer}</strong><small>insurance sources</small></span>
+            </div>
+          </div>
+          <div className="discovery-grid">
+            {discoverySources.map((source) => (
+              <article className="discovery-card" key={source.id}>
+                <div><span>{source.sourceClass}</span><b>{source.cadence}</b></div>
+                <h3>{source.name}</h3>
+                <p>{source.role}</p>
+                <small>{source.regions.join(" · ")}</small>
+                <details><summary>Coverage note</summary><p>{source.caveat}</p></details>
+                <a href={source.url} target="_blank" rel="noreferrer">Open public source <span className="sr-only">in a new tab</span><ExternalLink size={13} /></a>
+              </article>
+            ))}
+          </div>
+        </div>
+
         <div className="research-heading">
           <div>
             <div className="eyebrow"><FileSearch size={14} /> Coverage evidence</div>
@@ -763,7 +812,7 @@ export default function Dashboard({ initialIncidents, candidateCount, indexedRep
       </section>
 
       <footer>
-        <div><ShieldCheck size={17} /><strong>Global PV Fire Watch</strong><span>Open incident intelligence for prevention, engineering and insurance.</span></div>
+        <div><Flame size={17} /><strong>Global PV Fire Watch</strong><span>Open incident intelligence for prevention, engineering and insurance.</span></div>
         <div className="footer-meta"><span>Last successful check · {lastUpdated}</span><span>·</span><span>Snapshot changed {contentUpdated}</span>{contentDiffersFromSnapshot && <><span>·</span><span>Live source differs from snapshot</span></>}</div>
         <nav aria-label="Project policies"><a href="/methodology">Methodology</a><a href="/data-policy">Data policy</a><a href="/corrections">Corrections</a></nav>
       </footer>

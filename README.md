@@ -18,7 +18,8 @@ No global fire authority maintains a complete, standardized registry of PV-relat
 - Search, coverage/reviewed/index views, trend chart, and combined CSV export
 - Source URL and PV-causation language for every reviewed incident
 - On-access source checks with a cache that expires within 23 hours and a validated-snapshot fallback
-- Daily multilingual discovery automation for GitHub mirrors
+- Daily multilingual discovery across Google News RSS and GDELT, including dedicated Asia-Pacific and Middle East lanes
+- Public insurer, regulator, fire-authority and technical-research watchlists kept separate from incident totals
 - A separately labelled public-report index that is never treated as verified by default
 - Structured community incident-submission template
 
@@ -26,7 +27,9 @@ No global fire authority maintains a complete, standardized registry of PV-relat
 
 The live dashboard checks the public-report index through a server endpoint whose successful edge cache expires after 23 hours. A failed, oversized, malformed or suspiciously small response cannot erase the dataset; the last validated snapshot remains visible and the interface marks that state. This is a daily-on-access check: a true background run requires the GitHub workflow or another scheduler.
 
-In a GitHub mirror, the `Daily PV fire discovery` workflow runs at 14:17 UTC every day. It searches a 21-day overlap window in English, Spanish, French, German, Italian, Portuguese, and Dutch using region-appropriate news locales. New matches enter `data/candidates.json` as **pending candidates**. They do not become reviewed incidents automatically. A reviewer must validate the location, date, PV relationship, duplicate status, and source quality before promoting a record to `data/incidents.json`.
+In the public GitHub mirror, the `Daily PV fire discovery` workflow runs at 14:17 UTC every day. It searches a 21-day overlap window through 27 region-specific Google News RSS lanes and four independent GDELT lanes. The named-language coverage includes Arabic, Chinese, Dutch, English, French, German, Hebrew, Hindi, Indonesian, Italian, Japanese, Korean, Malay, Polish, Portuguese, Spanish, Swedish, Thai, Turkish, and Vietnamese. New matches enter `data/candidates.json` as **pending candidates**. They do not become reviewed incidents automatically. A reviewer must validate the location, date, PV relationship, duplicate status, and source quality before promoting a record to `data/incidents.json`.
+
+`data/discovery-sources.json` also records insurer, regulator, fire-authority and technical publication watchlists. These sources can reveal investigations, terminology and aggregate evidence, but they are non-additive context unless a publication identifies a specific in-scope event.
 
 The discovery job has read-only repository access. A separate publication job accepts only the three validated JSON files and opens or updates a bot pull request; it never pushes automated data directly to protected `main`. The workflow refreshes `data/indexed-reports.json`, records source health in `data/pipeline-status.json`, and rejects empty or abnormally small imports.
 

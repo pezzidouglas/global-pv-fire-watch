@@ -26,7 +26,7 @@ test("public URLs reject executable, credentialed and private destinations", () 
   assert.equal(normalizePublicHttpUrl("https://Example.com/fire?utm_source=test#x"), "https://example.com/fire");
 });
 
-test("parser publishes bounded project-authored records and fixes Austrian hosts", () => {
+test("parser publishes bounded project-authored records and fixes Austrian and Swiss hosts", () => {
   const reports = parsePublicIndex(block({
     href: "https://kleinezeitung.at/fire",
     title: "Photovoltaikanlage auf Industriedach stand in Flammen".repeat(8),
@@ -37,6 +37,12 @@ test("parser publishes bounded project-authored records and fixes Austrian hosts
   assert.ok(reports[0].title.length <= 220);
   assert.match(reports[0].summary, /^Public reporting places/);
   assert.doesNotMatch(reports[0].summary, /USA 06\/2026/);
+  const swiss = parsePublicIndex(block({
+    href: "https://20min.ch/story/pv-fire",
+    title: "Solaranlage in Bassersdorf fängt Feuer",
+    classes: "germany residential",
+  }), "2026-07-13");
+  assert.equal(swiss[0].country, "Switzerland");
 });
 
 test("parser discards unsafe links and known non-incidents", () => {

@@ -1,18 +1,6 @@
 name: Daily PV fire discovery
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/update-incidents.yml"
-      - ".openai/**"
-      - "vite.config.ts"
-      - "build/**"
-      - "scripts/**"
-      - "tests/**"
-      - "package.json"
-      - "package-lock.json"
   schedule:
     - cron: "17 14 * * *"
   workflow_dispatch:
@@ -37,56 +25,28 @@ jobs:
           persist-credentials: false
 
       - name: Use Node.js 22
-        uses: actions/setup-node@v4.4.0
+        uses: actions/setup-node@1e60f620b9541d56bece96c5465dc8ee9832be0b
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: package-lock.json
 
       - name: Install locked dependencies without package scripts
         run: npm ci --ignore-scripts
 
       - name: Discover public incident reports
         run: |
-          set +e
-          (
-            set -e
-            node scripts/update-incidents.mjs
-            if ! node scripts/import-public-index.mjs 2> public-index-error.log; then
-              cat public-index-error.log >&2
-              node scripts/mark-public-index-degraded.mjs public-index-error.log
-            fi
-          ) > discovery.log 2>&1
-          status=$?
-          tail -n 100 discovery.log
-          exit "$status"
+          node scripts/update-incidents.mjs
+          node scripts/import-public-index.mjs
 
       - name: Validate data and dashboard
-        run: |
-          set +e
-          npm test > validation.log 2>&1
-          status=$?
-          tail -n 100 validation.log
-          exit "$status"
-
-      - name: Upload failure diagnostics
-        if: failure()
-        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
-        with:
-          name: daily-pv-fire-failure-logs
-          path: |
-            discovery.log
-            validation.log
-            public-index-error.log
-          if-no-files-found: warn
-          retention-days: 3
+        run: npm test
 
       - name: Package validated data only
         uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808
         with:
           name: daily-pv-fire-data
           if-no-files-found: error
-          retention-days: 1
+          retention-days: 3
           path: |
             data/candidates.json
             data/indexed-reports.json
@@ -139,36 +99,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          node --input-type=module <<'NODE'
-          import { readFileSync, writeFileSync } from "node:fs";
-
-          const status = JSON.parse(readFileSync("incoming/pipeline-status.json", "utf8"));
-          const news = status.sources.find((source) => source.id === "multilingual-news") ?? {};
-          const publicIndex = status.sources.find((source) => source.id === "public-report-index") ?? {};
-          const body = [
-            "Automated, validated data-only update from the daily PV fire discovery pipeline.",
-            "",
-            "Latest validated snapshot:",
-            `- Status: ${status.overallStatus ?? "unknown"}`,
-            `- Last successful check: ${status.lastSuccessfulCheckAt ?? "unknown"}`,
-            `- Multilingual discovery: ${news.successfulQueries ?? 0}/${news.attemptedQueries ?? 0} queries succeeded (${news.failedQueries ?? 0} failed)`,
-            `- Public-index reports: ${publicIndex.recordCount ?? 0}`,
-            `- Pending discovery candidates: ${news.recordCount ?? 0}`,
-            "- Production build, artifact checks, and test suite passed",
-            "",
-            "This pull request remains review-only; no automated merge is requested.",
-          ].join("\n");
-          writeFileSync("daily-pr-body.md", body + "\n");
-          NODE
-
-          pr_number="$(gh pr list --head automation/daily-pv-fire-data --state open --json number --jq '.[0].number // empty')"
-          if [ -n "$pr_number" ]; then
-            gh pr edit "$pr_number" --body-file daily-pr-body.md
-            echo "Existing daily-data pull request and validation summary updated."
-          elif gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body-file daily-pr-body.md; then
-            echo "Daily-data pull request created."
+          if gh pr list --head automation/daily-pv-fire-data --state open --json number --jq 'length > 0' | grep -q true; then
+            echo "Existing daily-data pull request updated."
           else
-            echo "::warning::Repository policy prevented GitHub Actions from creating the pull request. The validated automation/daily-pv-fire-data branch was retained for review."
+            gh pr create --base main --head automation/daily-pv-fire-data --title "data: daily PV fire discovery" --body "Automated data-only update. Discovery ran without write permission; this pull request requires review before publication."
           fi
 
       - name: Write workflow summary
