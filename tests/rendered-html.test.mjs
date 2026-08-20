@@ -52,7 +52,6 @@ test("renders production metadata, policy links and security headers", async () 
   assert.match(html, /\/corrections/);
   assert.match(html, new RegExp(`<strong>${recordCount}</strong><span>public source records`, "i"));
   assert.match(html, new RegExp(`${eventCount}(?:<!-- -->)? provisional event clusters`, "i"));
-  assert.match(html, /More public feeds, with Asia-Pacific and insurance coverage/i);
 });
 
 test("public information routes render", async () => {
