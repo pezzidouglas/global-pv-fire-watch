@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "cadence": "daily",
   "overallStatus": "degraded",
-  "lastAttemptAt": "2026-08-17T15:31:36.214Z",
-  "lastSuccessfulCheckAt": "2026-08-17T15:31:36.214Z",
-  "lastValidatedSnapshotAt": "2026-08-17T15:31:36.214Z",
-  "lastContentChangeAt": "2026-08-17T15:31:00.000Z",
+  "lastAttemptAt": "2026-08-24T15:42:55.066Z",
+  "lastSuccessfulCheckAt": "2026-08-24T15:42:55.066Z",
+  "lastValidatedSnapshotAt": "2026-08-24T15:42:55.066Z",
+  "lastContentChangeAt": "2026-08-24T15:42:55.066Z",
   "sources": [
     {
       "id": "google-news",
@@ -15,24 +15,24 @@
       "successfulQueries": 27,
       "failedQueries": 0,
       "lookbackDays": 21,
-      "recordCount": 14
+      "recordCount": 31
     },
     {
       "id": "gdelt-doc",
       "label": "GDELT DOC 2.1",
       "status": "degraded",
       "attemptedQueries": 4,
-      "successfulQueries": 2,
-      "failedQueries": 2,
+      "successfulQueries": 1,
+      "failedQueries": 3,
       "lookbackDays": 21,
-      "recordCount": 1
+      "recordCount": 0
     },
     {
       "id": "public-report-index",
       "label": "ArcBox public incident index",
       "status": "healthy",
-      "recordCount": 128,
-      "checksum": "7cb7a8076df0c1ff4c3cf6c3e4278059193c940d2ea524576ae7384e665e74fc"
+      "recordCount": 129,
+      "checksum": "56c7a66cf5540e101983a847faf7dc62f26de37d58244a8b82571141d28eb781"
     }
   ]
 }
