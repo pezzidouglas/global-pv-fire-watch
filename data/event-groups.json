@@ -36,7 +36,8 @@
     "index-2026-07-solar-panels-cause-of-malton-hospital-fire-says-fire-service": "uk-malton-hospital-2026",
     "index-2026-07-langer-einsatz-in-su-lz-photovoltaik-anlage-brannte-auf-haus-nachbarscha": "de-cologne-suelz-2026",
     "index-2026-07-brennende-pv-anlage-dachstuhl-in-paderborn-brennt-aus-und-stu-rzt-ein": "de-paderborn-am-silberbrink-2026",
-    "index-2026-07-100-einsatzkra-fte-der-feuerwehr-lo-schen-brand-in-ehemaliger-veranstalt": "de-horst-elbmarschenhalle-2026"
+    "index-2026-07-100-einsatzkra-fte-der-feuerwehr-lo-schen-brand-in-ehemaliger-veranstalt": "de-horst-elbmarschenhalle-2026",
+    "index-2026-08-feuer-auf-schuldach": "de-luebeck-koggenweg-school-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
@@ -93,6 +94,14 @@
     "candidate-2y4rmditco-are-challenging-chief-explains-fire-fires-panel-scotland-so-s": "context only: general PV-fire response discussion, not a new incident",
     "candidate-brandrisiko-celler-der-ex-gu-hehlen-in-in-klein-kreisliga-lle-problem-pr": "context only: fire-risk discussion, not a new incident",
     "candidate-best-hands-on-panels-portable-solar": "excluded: product review, not a fire incident",
-    "candidate-afectan-al-calor-de-de-el-el-el-en-europa-fotovoltaico-humo-impulsa-ince": "excluded: wildfire-smoke generation-impact article, not a PV fire incident"
+    "candidate-afectan-al-calor-de-de-el-el-el-en-europa-fotovoltaico-humo-impulsa-ince": "excluded: wildfire-smoke generation-impact article, not a PV fire incident",
+    "candidate-acres-and-at-automatically-blaze-breaker-contained-converter-dry-failed-": "promoted to us-schaghticoke-herrington-solar-2026",
+    "candidate-at-crews-farm-fire-grass-in-respond-schaghticoke-solar-to": "duplicate coverage of us-schaghticoke-herrington-solar-2026",
+    "candidate-at-deployed-electricity-farm-fire-firefighters-involving-pylon-solar-tel": "promoted to uk-telford-wheat-leasows-2026 with reported evidence status because the ignition source is unpublished",
+    "candidate-fotovoltaico-fuoco-il-in-incendio-monte-padrio-tetto-tirano-via": "promoted to it-tirano-monte-padrio-2026",
+    "candidate-fire-house-in-palestine-panel-short-solar-sparks": "promoted to us-palestine-westbrook-street-2026",
+    "candidate-fire-house-in-palestine-panel-shortage-solar-sparks": "duplicate coverage of us-palestine-westbrook-street-2026",
+    "candidate-among-battling-bovey-crews-fire-firefighters-large-panel-solar-tracey": "excluded pending stronger evidence: the fire spread beneath panels, but the fire-service report does not establish that PV equipment burned or ignited it",
+    "candidate-compliquent-conilhe-des-du-gard-incendie-intervention-les-panneaux-photo": "excluded: photovoltaic panels complicated firefighting, but available reporting does not establish that PV equipment burned or ignited the fire"
   }
 }
