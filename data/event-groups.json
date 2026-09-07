@@ -38,7 +38,13 @@
     "index-2026-07-brennende-pv-anlage-dachstuhl-in-paderborn-brennt-aus-und-stu-rzt-ein": "de-paderborn-am-silberbrink-2026",
     "index-2026-07-100-einsatzkra-fte-der-feuerwehr-lo-schen-brand-in-ehemaliger-veranstalt": "de-horst-elbmarschenhalle-2026",
     "index-2026-08-feuer-auf-schuldach": "de-luebeck-koggenweg-school-2026",
-    "candidate-among-battling-bovey-crews-fire-firefighters-large-panel-solar-tracey": "uk-broadclyst-solar-farm-2026"
+    "candidate-among-battling-bovey-crews-fire-firefighters-large-panel-solar-tracey": "uk-broadclyst-solar-farm-2026",
+    "candidate-blaze-cottage-could-devon-east-farmers-flames-line-of-panel-rally-see-so": "uk-broadclyst-solar-farm-2026",
+    "candidate-at-blaze-broad-clyst-devon-fire-hits-news-panel-radio-service-solar-tack": "uk-broadclyst-solar-farm-2026",
+    "candidate-auf-bra-de-feuer-gartenlaube-in-in-nde-nordvorpommern-ostsee-qualm-schwa": "de-grimmen-handelshof-warehouse-2026",
+    "candidate-casa-di-fiamme-in-incendio-pannelli-rosta-solari-sul-tetto-una": "it-rosta-fratelli-votta-2026",
+    "candidate-aldein-ausgegangen-bei-feuer-photovoltaikanlage-thalerhof-von-wohl": "it-aldein-thalerhof-2026",
+    "index-2026-09-extinguido-el-incendio-que-ha-obligado-a-desalojar-un-lidl-de-vila-real": "es-vila-real-lidl-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
@@ -103,6 +109,27 @@
     "candidate-fire-house-in-palestine-panel-short-solar-sparks": "promoted to us-palestine-westbrook-street-2026",
     "candidate-fire-house-in-palestine-panel-shortage-solar-sparks": "duplicate coverage of us-palestine-westbrook-street-2026",
     "candidate-among-battling-bovey-crews-fire-firefighters-large-panel-solar-tracey": "promoted to uk-broadclyst-solar-farm-2026 after follow-up reporting identified the suspected inverter-area origin",
-    "candidate-compliquent-conilhe-des-du-gard-incendie-intervention-les-panneaux-photo": "excluded: photovoltaic panels complicated firefighting, but available reporting does not establish that PV equipment burned or ignited the fire"
+    "candidate-compliquent-conilhe-des-du-gard-incendie-intervention-les-panneaux-photo": "excluded: photovoltaic panels complicated firefighting, but available reporting does not establish that PV equipment burned or ignited the fire",
+    "candidate-blaze-cottage-could-devon-east-farmers-flames-line-of-panel-rally-see-so": "duplicate coverage of uk-broadclyst-solar-farm-2026",
+    "candidate-at-blaze-broad-clyst-devon-fire-hits-news-panel-radio-service-solar-tack": "duplicate coverage of uk-broadclyst-solar-farm-2026",
+    "candidate-auf-bra-de-feuer-gartenlaube-in-in-nde-nordvorpommern-ostsee-qualm-schwa": "promoted to de-grimmen-handelshof-warehouse-2026",
+    "candidate-casa-di-fiamme-in-incendio-pannelli-rosta-solari-sul-tetto-una": "promoted to it-rosta-fratelli-votta-2026",
+    "candidate-aldein-ausgegangen-bei-feuer-photovoltaikanlage-thalerhof-von-wohl": "promoted to it-aldein-thalerhof-2026",
+    "candidate-farm-fire-in-order-place-prompts-shelter-solar-summerside": "excluded pending evidence of PV-equipment involvement: current reporting identifies a battery fire at a co-located solar-and-storage facility",
+    "candidate-down-farm-fire-massive-near-rail-shuts-solar-vegetation": "excluded: vegetation fire occurred near Chinchilla Solar Farm without established PV-equipment involvement",
+    "candidate-battle-blaze-crews-farm-fire-near-qld-solar-southern": "duplicate Chinchilla vegetation-fire coverage; PV-equipment involvement was not established",
+    "candidate-batam-bea-cukai-di-diduga-kantor-kebakaran-panel-picu-surya": "pending: reporting attributes the rooftop fire broadly to the solar installation but also identifies a possible battery explosion; PV-equipment involvement requires clarification",
+    "candidate-atap-batam-bea-cukai-diduga-gedung-kebakaran-panel-picu-surya-terbakar": "duplicate Batam coverage; pending clarification between PV-equipment and battery-only involvement",
+    "candidate-api-area-atap-batam-bea-cukai-di-kantor-kebakaran-muncul-panel-surya": "duplicate Batam coverage; pending clarification between PV-equipment and battery-only involvement",
+    "candidate-212-91-across-against-and-array-beyond-britain-earlier-fires-in-itself-n": "context only: secondary coverage of the existing QBE UK fire-service aggregate, not a distinct incident",
+    "candidate-2026年最新-保証を徹底解説-値上か-免責増加への対策とは-動産保険-太陽光発電の火災-盗難": "context only: insurance guidance, not an incident",
+    "candidate-afecta-con-forestal-fotovoltaico-incendio-los-ocurre-proyecto-que-rtb-si": "context only: wildfire-risk guidance for solar projects, not an incident",
+    "candidate-an-detection-early-fires-for-heat-linear-panel-solar-system-warning": "context only: fire-detection guidance, not an incident",
+    "candidate-brandgefahr-das-du-durch-solaranlagen-solltest-tauben-unter-wissen": "context only: general fire-risk guidance, not an incident",
+    "candidate-brandgefahr-ko-nnen-solaranlagen-tauben-warum-werden-zur": "duplicate general fire-risk guidance, not an incident",
+    "candidate-and-bring-city-cost-efficiency-facilities-fire-new-panel-power-savings-s": "excluded: fire-station solar-installation announcement, not a fire incident",
+    "candidate-news-raebareli-आग-जल-नल-लर": "excluded: fire at a solar-panel retail shop, not an operating photovoltaic installation",
+    "candidate-be-believed-boyle-by-cause-conducted-contractors-fire-heights-lineage-of": "duplicate and malformed syndication of the existing Boyle Heights incident",
+    "candidate-bring-cover-fire-fresh-in-leasehold-new-plug-risk-rules-solar-to": "context only: insurance and leasehold-risk guidance, not an incident"
   }
 }
