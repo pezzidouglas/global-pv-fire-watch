@@ -2,10 +2,10 @@
   "schemaVersion": 2,
   "cadence": "daily",
   "overallStatus": "degraded",
-  "lastAttemptAt": "2026-09-14T15:17:31.865Z",
-  "lastSuccessfulCheckAt": "2026-09-14T15:17:31.865Z",
-  "lastValidatedSnapshotAt": "2026-09-14T15:17:31.865Z",
-  "lastContentChangeAt": "2026-09-14T15:17:31.865Z",
+  "lastAttemptAt": "2026-09-21T16:04:13.629Z",
+  "lastSuccessfulCheckAt": "2026-09-21T16:04:13.629Z",
+  "lastValidatedSnapshotAt": "2026-09-21T16:04:13.629Z",
+  "lastContentChangeAt": "2026-09-21T16:04:13.629Z",
   "sources": [
     {
       "id": "google-news",
@@ -15,17 +15,17 @@
       "successfulQueries": 27,
       "failedQueries": 0,
       "lookbackDays": 21,
-      "recordCount": 36
+      "recordCount": 22
     },
     {
       "id": "gdelt-doc",
       "label": "GDELT DOC 2.1",
       "status": "degraded",
       "attemptedQueries": 4,
-      "successfulQueries": 2,
-      "failedQueries": 2,
+      "successfulQueries": 1,
+      "failedQueries": 3,
       "lookbackDays": 21,
-      "recordCount": 1
+      "recordCount": 0
     },
     {
       "id": "public-report-index",
