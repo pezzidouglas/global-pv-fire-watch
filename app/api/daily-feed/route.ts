@@ -1,4 +1,5 @@
 import fallbackCandidates from "@/data/candidates.json";
+import eventGroups from "@/data/event-groups.json";
 import fallbackReports from "@/data/indexed-reports.json";
 import reviewedIncidents from "@/data/incidents.json";
 import pipelineStatus from "@/data/pipeline-status.json";
@@ -58,7 +59,7 @@ export async function GET() {
       await readTextWithLimit(response),
       attemptedAt.slice(0, 10),
       reviewedIncidents.map((item) => item.sourceUrl),
-    );
+    ).filter((item) => !eventGroups.excludedRecords[item.id as keyof typeof eventGroups.excludedRecords]);
     const minimumSafeCount = Math.max(25, Math.floor(fallbackReports.length * SAFE_SHRINK_RATIO));
     if (reports.length < minimumSafeCount) throw new Error("source-shrink-quarantined");
     const contentDiffersFromSnapshot = stableReportContent(reports) !== stableReportContent(fallbackReports as PublicIndexReport[]);
