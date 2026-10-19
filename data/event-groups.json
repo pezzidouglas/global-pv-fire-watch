@@ -103,6 +103,10 @@
     "candidate-dei-del-di-fotovoltaici-fuoco-incendio-intervento-mareno-pannelli-piave-": "it-mareno-di-piave-meteor-2026",
     "candidate-000-100-an-dachstuhlbrand-defekt-durch-euro-graz-grazer-schaden-solaranl": "at-graz-st-peter-2026",
     "candidate-bassersdorf-brennt-dachstock-fa-feuer-in-lichterloh-ngt-solaranlage": "ch-bassersdorf-2026",
+    "candidate-brand-het-het-in-in-keer-probleem-rosmalense-systeem-twee-zit-zonnepanel": "nl-rosmalen-pastelblauw-june-2026",
+    "candidate-beschadigt-brand-daken-fors-in-op-twee-woningen-zonnepanelen": "nl-rosmalen-pastelblauw-2026",
+    "candidate-achterhalen-brand-in-meer-niet-oorzaak-te-wormer-zonnepanelen": "nl-wormer-spatterstraat-2026",
+    "candidate-afecta-brasil-campinas-de-en-fotovoltaico-hospital-incendio-sistema-un": "br-campinas-mario-gatti-hospital-2026",
     "index-2026-09-farmers-helped-contain-broadclyst-solar-farm-fire-near-homes": "uk-broadclyst-solar-farm-2026",
     "index-2026-09-eleven-fire-engines-responded-to-solar-panels-burning-from-an-arc-fault": "uk-peterborough-2024"
   },
@@ -286,6 +290,18 @@
     "candidate-水没した太陽光発電設備の感電-火災防止へ-経産省か-緊急要請": "context only: regulatory safety guidance prompted by flooding, not a distinct incident",
     "candidate-dan-de-de-en-en-extinguido-fotovoltaica-incendio-instalacio-jarafuel-la-": "excluded: vegetation fire at a photovoltaic site with reporting explicitly stating no installation damage",
     "candidate-con-de-en-forestales-hidromotor-incendios-lanzador-paneles-para-patentar": "excluded: firefighting-equipment patent article, not an incident",
-    "candidate-bru-champ-clare-dans-de-de-de-de-en-et-garonne-ge-ge-hectare-incendie-le": "excluded pending PV-equipment evidence: vegetation burned within a solar field, but reporting did not establish that PV equipment burned or ignited it"
+    "candidate-bru-champ-clare-dans-de-de-de-de-en-et-garonne-ge-ge-hectare-incendie-le": "excluded pending PV-equipment evidence: vegetation burned within a solar field, but reporting did not establish that PV equipment burned or ignited it",
+    "candidate-arco-bom-ce-de-de-de-deo-flagrado-fogo-halo-itarare-junto-no-ris-solar-s": "excluded: atmospheric optical phenomenon, not a fire incident",
+    "candidate-arco-bom-ce-de-de-de-flagrado-fogo-halo-itarare-junto-no-ris-solar-suces": "duplicate atmospheric-phenomenon coverage; no fire incident occurred",
+    "candidate-brand-het-het-in-in-keer-probleem-rosmalense-systeem-twee-zit-zonnepanel": "promoted the separate June 13 incident to nl-rosmalen-pastelblauw-june-2026",
+    "candidate-brand-dit-een-geeft-op-risico-type-verhoogd-waarom-zonnepanelen": "context only: risk-analysis follow-up to the Rosmalen incidents",
+    "candidate-are-blame-faulty-fires-flares-from-installation-is-on-panels-reportage-r": "context only: aggregate feature about solar-fire trends and installation quality",
+    "candidate-bedrijfsdaken-brandveiligheid-maken-van-verzekeringskwestie-zonnepanelen": "context only: insurance and commercial-roof fire-safety discussion",
+    "candidate-bihar-अफर-आग-इट-णगढ-तफर-मच-लग-लर-सर-सर": "excluded: standalone solar street-light equipment is outside rooftop and utility-scale scope",
+    "candidate-beschadigt-brand-daken-fors-in-op-twee-woningen-zonnepanelen": "duplicate coverage of nl-rosmalen-pastelblauw-2026",
+    "candidate-achterhalen-brand-in-meer-niet-oorzaak-te-wormer-zonnepanelen": "duplicate follow-up to nl-wormer-spatterstraat-2026 confirming the cause remained undetermined",
+    "candidate-आग-एम-जलकर-नल-मग-लर-षण-सम-सर": "excluded: reporting attributes the school fire to cooking negligence and does not establish a PV-system fire or PV ignition",
+    "candidate-rooftop-solar-งค-ฐบาลค-นไฟร-บมาตรฐาน-มอก-มเข-ยมบ-เซลล-เตร-แผงโซลาร-ไฟไหม": "context only: Thai rooftop-solar product-standard announcement",
+    "candidate-afecta-brasil-campinas-de-en-fotovoltaico-hospital-incendio-sistema-un": "promoted to br-campinas-mario-gatti-hospital-2026"
   }
 }
