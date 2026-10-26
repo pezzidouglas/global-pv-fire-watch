@@ -107,6 +107,12 @@
     "candidate-beschadigt-brand-daken-fors-in-op-twee-woningen-zonnepanelen": "nl-rosmalen-pastelblauw-2026",
     "candidate-achterhalen-brand-in-meer-niet-oorzaak-te-wormer-zonnepanelen": "nl-wormer-spatterstraat-2026",
     "candidate-afecta-brasil-campinas-de-en-fotovoltaico-hospital-incendio-sistema-un": "br-campinas-mario-gatti-hospital-2026",
+    "candidate-aan-bij-brand-buiten-hne-iedereen-in-ku-nagel-omvormer-tessenderlo-tijdi": "be-tessenderlo-kuehne-nagel-2026",
+    "candidate-etawah-news-आग-आध-कमर-टम-लग-लर": "in-etawah-khatkhata-baba-colony-2026",
+    "candidate-auf-brand-dem-einer-gela-großen-in-nde-photovoltaikanlage-vogelweide-wel": "at-wels-vogelweide-pv-site-2026",
+    "candidate-10-20-26-an-brand-hohen-konstanz-news-photovoltaikanlage-polizei-sachsch": "de-konstanz-peter-thumb-strasse-2026",
+    "candidate-10-20-2026-an-brand-hohen-konstanz-photovoltaikanlage-sachschaden-verurs": "de-konstanz-peter-thumb-strasse-2026",
+    "candidate-brand-huizen-in-in-op-rosmalen-twee-zonnepanelen": "nl-rosmalen-pastelblauw-2026",
     "index-2026-09-farmers-helped-contain-broadclyst-solar-farm-fire-near-homes": "uk-broadclyst-solar-farm-2026",
     "index-2026-09-eleven-fire-engines-responded-to-solar-panels-burning-from-an-arc-fault": "uk-peterborough-2024"
   },
@@ -302,6 +308,17 @@
     "candidate-achterhalen-brand-in-meer-niet-oorzaak-te-wormer-zonnepanelen": "duplicate follow-up to nl-wormer-spatterstraat-2026 confirming the cause remained undetermined",
     "candidate-आग-एम-जलकर-नल-मग-लर-षण-सम-सर": "excluded: reporting attributes the school fire to cooking negligence and does not establish a PV-system fire or PV ignition",
     "candidate-rooftop-solar-งค-ฐบาลค-นไฟร-บมาตรฐาน-มอก-มเข-ยมบ-เซลล-เตร-แผงโซลาร-ไฟไหม": "context only: Thai rooftop-solar product-standard announcement",
-    "candidate-afecta-brasil-campinas-de-en-fotovoltaico-hospital-incendio-sistema-un": "promoted to br-campinas-mario-gatti-hospital-2026"
+    "candidate-afecta-brasil-campinas-de-en-fotovoltaico-hospital-incendio-sistema-un": "promoted to br-campinas-mario-gatti-hospital-2026",
+    "candidate-aan-bij-brand-buiten-hne-iedereen-in-ku-nagel-omvormer-tessenderlo-tijdi": "promoted to be-tessenderlo-kuehne-nagel-2026 with reported evidence status pending an official technical finding",
+    "candidate-4g-after-cameras-cut-fed-fire-homeowner-hotspot-house-keeps-online-power": "excluded: solar-powered connectivity was used after an unrelated house fire; PV was not involved in the ignition",
+    "candidate-and-as-batteries-black-burn-cemetery-dark-goes-his-idea-jungle-law-mayor": "excluded: editorial headline combining unrelated battery and solar-policy topics, not a distinct PV fire incident",
+    "candidate-kc인증-공식-국내-모듈출력차단장치-백현이앤에스-사전감지-ᄋ": "context only: product-certification announcement for PV fire-detection and shutdown equipment",
+    "candidate-kc인증-공식-국내-모듈출력차단장치-및-백현이앤에스-사전감": "duplicate context coverage of a product-certification announcement, not an incident",
+    "candidate-etawah-news-आग-आध-कमर-टम-लग-लर": "promoted to in-etawah-khatkhata-baba-colony-2026",
+    "candidate-brandveilig-dak-genoeg-groen-kies-met-niet-vegetatiematten-vegetatietray": "context only: technical fire-safety guidance for green roofs with photovoltaic panels",
+    "candidate-auf-brand-dem-einer-gela-großen-in-nde-photovoltaikanlage-vogelweide-wel": "promoted to at-wels-vogelweide-pv-site-2026",
+    "candidate-10-20-26-an-brand-hohen-konstanz-news-photovoltaikanlage-polizei-sachsch": "duplicate coverage of de-konstanz-peter-thumb-strasse-2026",
+    "candidate-10-20-2026-an-brand-hohen-konstanz-photovoltaikanlage-sachschaden-verurs": "promoted to de-konstanz-peter-thumb-strasse-2026",
+    "candidate-brand-huizen-in-in-op-rosmalen-twee-zonnepanelen": "duplicate coverage of nl-rosmalen-pastelblauw-2026"
   }
 }

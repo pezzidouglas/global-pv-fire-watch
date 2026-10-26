@@ -194,5 +194,19 @@
     "windowRelation": "within-window",
     "caveat": "The Polish State Fire Service does not separately count fires caused by PV. These 421 records describe buildings with PV present—312 in 2025 and 109 in Q1 2026—and must not be treated as confirmed PV-origin fires or added to incident-level totals.",
     "yearly": {"2025": 312, "2026-Q1": 109}
+  },
+  {
+    "id": "south-korea-national-assembly-2021-2026-08",
+    "jurisdiction": "South Korea",
+    "period": "2021–Aug 2026",
+    "count": 630,
+    "confirmedPvOrigin": null,
+    "metric": "Reported fires at photovoltaic-generation installations",
+    "sourceClass": "National Assembly audit analysis reported by specialist energy media",
+    "sourceTitle": "Today Energy report on National Assembly member Park Jeong's audit data",
+    "sourceUrl": "https://www.todayenergy.kr/news/articleView.html?idxno=304326",
+    "windowRelation": "within-window",
+    "caveat": "The parliamentary-office analysis reports 630 installation fires and classifies 519 (82.3%) as electrical, but it does not provide incident-level records or a rooftop-versus-utility split. The aggregate is therefore contextual only and is not added to map or incident totals.",
+    "yearly": {"2021": 81, "2022": 99, "2023": 124, "2024": 99, "2025": 125, "2026-Jan-Aug": 102}
   }
 ]
