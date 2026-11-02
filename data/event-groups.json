@@ -114,7 +114,10 @@
     "candidate-10-20-2026-an-brand-hohen-konstanz-photovoltaikanlage-sachschaden-verurs": "de-konstanz-peter-thumb-strasse-2026",
     "candidate-brand-huizen-in-in-op-rosmalen-twee-zonnepanelen": "nl-rosmalen-pastelblauw-2026",
     "index-2026-09-farmers-helped-contain-broadclyst-solar-farm-fire-near-homes": "uk-broadclyst-solar-farm-2026",
-    "index-2026-09-eleven-fire-engines-responded-to-solar-panels-burning-from-an-arc-fault": "uk-peterborough-2024"
+    "index-2026-09-eleven-fire-engines-responded-to-solar-panels-burning-from-an-arc-fault": "uk-peterborough-2024",
+    "candidate-20-di-di-di-fiamme-fotovoltaici-in-incendio-metri-palazzo-pannelli-quadr": "it-milan-via-volta-2026",
+    "candidate-11-an-aufwendiger-brandeinsatz-ndiger-photovoltaikanlage-stu-wohnhaus": "de-konstanz-peter-thumb-strasse-2026",
+    "candidate-an-brand-hohen-in-konstanz-photovoltaikanlage-sachschaden-verursacht": "de-konstanz-peter-thumb-strasse-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
@@ -319,6 +322,16 @@
     "candidate-auf-brand-dem-einer-gela-großen-in-nde-photovoltaikanlage-vogelweide-wel": "promoted to at-wels-vogelweide-pv-site-2026",
     "candidate-10-20-26-an-brand-hohen-konstanz-news-photovoltaikanlage-polizei-sachsch": "duplicate coverage of de-konstanz-peter-thumb-strasse-2026",
     "candidate-10-20-2026-an-brand-hohen-konstanz-photovoltaikanlage-sachschaden-verurs": "promoted to de-konstanz-peter-thumb-strasse-2026",
-    "candidate-brand-huizen-in-in-op-rosmalen-twee-zonnepanelen": "duplicate coverage of nl-rosmalen-pastelblauw-2026"
+    "candidate-brand-huizen-in-in-op-rosmalen-twee-zonnepanelen": "duplicate coverage of nl-rosmalen-pastelblauw-2026",
+    "candidate-20-di-di-di-fiamme-fotovoltaici-in-incendio-metri-palazzo-pannelli-quadr": "promoted to it-milan-via-volta-2026",
+    "candidate-across-dozens-figures-fires-house-in-linked-of-panels-scotland-shocking-": "context only: Scottish Fire and Rescue Service aggregate retained in research-sources.json, not a distinct incident",
+    "candidate-as-attention-draws-empire-fire-hidden-home-in-in-inland-panels-pigeon-pr": "excluded: promotional pigeon-proofing and general fire-risk article, not an incident",
+    "candidate-vendor-ครม-ดต-ดมต-นภ-ประก-ประชาชน-มมาตรฐาน-มเข-เป-โซลาร-ไฟไหม": "context only: Thai rooftop-solar standards, installer and insurance policy coverage, not an incident",
+    "candidate-70-bushfire-by-can-farm-output-reduce-smoke-solar": "excluded: research about bushfire-smoke effects on solar generation, not a PV fire incident",
+    "candidate-70-bushfire-by-can-effects-farms-for-output-prepare-reduce-should-solar-": "duplicate context coverage of bushfire-smoke generation research, not an incident",
+    "candidate-advierte-colliguay-core-de-en-en-expresa-extenso-fotovoltaico-incendios-": "excluded: planning-stage fire-risk concern about a proposed solar project, not an incident",
+    "candidate-fire-on-pvs-regs-risk-roof-solar-the-the-the-understand": "context only: technical PV fire-risk and building-regulation guidance, not an incident",
+    "candidate-11-an-aufwendiger-brandeinsatz-ndiger-photovoltaikanlage-stu-wohnhaus": "duplicate retrospective coverage of de-konstanz-peter-thumb-strasse-2026",
+    "candidate-an-brand-hohen-in-konstanz-photovoltaikanlage-sachschaden-verursacht": "duplicate coverage of de-konstanz-peter-thumb-strasse-2026"
   }
 }

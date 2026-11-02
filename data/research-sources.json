@@ -208,5 +208,19 @@
     "windowRelation": "within-window",
     "caveat": "The parliamentary-office analysis reports 630 installation fires and classifies 519 (82.3%) as electrical, but it does not provide incident-level records or a rooftop-versus-utility split. The aggregate is therefore contextual only and is not added to map or incident totals.",
     "yearly": {"2021": 81, "2022": 99, "2023": 124, "2024": 99, "2025": 125, "2026-Jan-Aug": 102}
+  },
+  {
+    "id": "scotland-sfrs-2016-2026-10",
+    "jurisdiction": "Scotland",
+    "period": "2016–Oct 2026",
+    "count": 56,
+    "confirmedPvOrigin": null,
+    "metric": "Fire-service incidents involving solar equipment",
+    "sourceClass": "News reporting citing Scottish Fire and Rescue Service data",
+    "sourceTitle": "Brit Brief summary of Scottish Fire and Rescue Service figures",
+    "sourceUrl": "https://britbrief.co.uk/environment/renewables/solar-panels-linked-to-56-fires-across-scotland-in-decade.html",
+    "windowRelation": "within-window",
+    "caveat": "The aggregate includes 33 residential fires and six incidents in 2026, but does not publish incident-level cause findings or records. It is contextual only and is not added to map or incident totals.",
+    "yearly": null
   }
 ]
