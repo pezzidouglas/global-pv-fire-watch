@@ -130,7 +130,17 @@
     "candidate-aan-bleskensgraaf-brand-dak-de-in-in-kerkstraat-op-van-woning-zonnepanel": "nl-bleskensgraaf-kerkstraat-2023",
     "candidate-allmannsdorf-aus-brand-ckt-einsatz-feuerwehr-gera-in-in-photovoltaikmodu": "de-konstanz-peter-thumb-strasse-2026",
     "candidate-10-20-2026-an-brand-heute-hohen-konstanz-konstanz-nachrichten-net-photov": "de-konstanz-peter-thumb-strasse-2026",
-    "candidate-by-caused-fire-ipswich-on-panel-primary-roof-school-solar": "uk-ipswich-sidegate-primary-2026"
+    "candidate-by-caused-fire-ipswich-on-panel-primary-roof-school-solar": "uk-ipswich-sidegate-primary-2026",
+    "index-2026-05-brand-in-einem-haus-mit-solardachziegeln-in-gu-tersloh": "de-guetersloh-pv-roof-tiles-2026",
+    "candidate-आग-और-छत-जनह-जल-टम-नह-पर-बच-बन-लग-लग-लर": "in-kota-hiriyakheri-snack-factory-2026",
+    "candidate-apartment-at-evacuation-fire-panel-solar-sparks-tucson": "us-tucson-sixth-street-apartments-2026",
+    "candidate-yts山形テレヒ-ネルか-大手メーカー工場て-太陽光ハ-山形-山形市西部の産業団地-火災-焼ける": "jp-yamagata-shachihata-factory-2026",
+    "candidate-と通報-なと-ケカ-ネルなと-人はなし-太陽光ハ-屋上から黒煙か-山形市-工場火災て-焼ける-見える": "jp-yamagata-shachihata-factory-2026",
+    "candidate-fire-house-in-overheating-oyo-panel-solar-sparks": "ng-oyo-awe-oke-boda-2026",
+    "candidate-30-rdf-กร-ของ-งเทรา-ฉะเช-ตฯ-ปธ-ยหายกว-สภาอ-องจ-าน-เซลล-เผาเคร-เส-โซลาร-โ": "th-chachoengsao-bang-khla-rdf-factory-2026",
+    "candidate-bedrijfspand-brand-brand-en-grote-in-in-vrachtwagen-zeer-zonnepanelen": "nl-tiel-falkom-2026",
+    "candidate-blaze-drayton-firefighters-involving-market-near-panel-scrambled-solar-t": "uk-tern-hill-solar-inverter-2026",
+    "candidate-cloud-field-fire-fire-in-investigates-marshal-solar-st": "us-st-cloud-new-recovery-array-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
@@ -367,6 +377,23 @@
     "candidate-bei-bra-brandursachen-das-hoch-ist-nde-risiko-sind-solaranlagen-und-was-": "context only: general PV fire-risk guidance",
     "candidate-allmannsdorf-aus-brand-ckt-einsatz-feuerwehr-gera-in-in-photovoltaikmodu": "duplicate coverage of de-konstanz-peter-thumb-strasse-2026",
     "candidate-10-20-2026-an-brand-heute-hohen-konstanz-konstanz-nachrichten-net-photov": "duplicate coverage of de-konstanz-peter-thumb-strasse-2026",
-    "candidate-by-caused-fire-ipswich-on-panel-primary-roof-school-solar": "promoted to uk-ipswich-sidegate-primary-2026"
+    "candidate-by-caused-fire-ipswich-on-panel-primary-roof-school-solar": "promoted to uk-ipswich-sidegate-primary-2026",
+    "candidate-blaze-drayton-firefighters-involving-market-near-panel-scrambled-solar-t": "promoted to uk-tern-hill-solar-inverter-2026",
+    "candidate-at-contained-county-department-farm-fire-fire-is-it-now-reported-says-so": "excluded: Twiggs County Fire Department said the solar panels were not damaged; photovoltaic-equipment involvement was not established",
+    "candidate-129-along-at-county-farm-fire-highway-reported-solar-twiggs": "duplicate Twiggs County coverage; excluded because later fire-department reporting said the panels were not damaged",
+    "candidate-bedrijfspand-brand-brand-en-grote-in-in-vrachtwagen-zeer-zonnepanelen": "promoted to nl-tiel-falkom-2026 as an external vehicle fire that ignited rooftop photovoltaic panels",
+    "candidate-14-ambiance-any-cozy-create-fire-in-lanterns-like-looks-real-solar-walma": "excluded: retail article about decorative solar lanterns, not a fire incident",
+    "candidate-fire-house-in-overheating-oyo-panel-solar-sparks": "promoted to ng-oyo-awe-oke-boda-2026",
+    "candidate-yts山形テレヒ-ネルか-大手メーカー工場て-太陽光ハ-山形-山形市西部の産業団地-火災-焼ける": "promoted to jp-yamagata-shachihata-factory-2026",
+    "candidate-bishopville-could-dispatch-farm-firehouse-fund-new-oc-solar-today": "excluded: solar-project funding article, not a fire incident",
+    "candidate-आग-आर-और-और-जप-जल-टर-नल-पट-बक-लर-वर": "excluded: alleged household arson damaged mixed belongings including a solar panel and battery, not an operating rooftop or utility photovoltaic installation",
+    "candidate-electricians-fire-from-house-in-plug-push-solar-sparks-warning": "context only: electrical-safety warning about plug-in solar products, not a distinct fire incident",
+    "candidate-alleges-energy-enphase-failed-fire-followed-inspections-lawsuit-panel-re": "pending: civil allegations involve both photovoltaic microinverters and battery equipment, without an independent origin finding or sufficiently clear event date",
+    "candidate-と通報-なと-ケカ-ネルなと-人はなし-太陽光ハ-屋上から黒煙か-山形市-工場火災て-焼ける-見える": "duplicate corroborating coverage of jp-yamagata-shachihata-factory-2026",
+    "candidate-30-rdf-กร-ของ-งเทรา-ฉะเช-ตฯ-ปธ-ยหายกว-สภาอ-องจ-าน-เซลล-เผาเคร-เส-โซลาร-โ": "promoted to th-chachoengsao-bang-khla-rdf-factory-2026 as an external factory fire that destroyed rooftop solar equipment",
+    "candidate-apartment-at-evacuation-fire-panel-solar-sparks-tucson": "promoted to us-tucson-sixth-street-apartments-2026",
+    "candidate-cloud-field-fire-fire-in-investigates-marshal-solar-st": "duplicate follow-up coverage of us-st-cloud-new-recovery-array-2026",
+    "candidate-आग-और-छत-जनह-जल-टम-नह-पर-बच-बन-लग-लग-लर": "promoted to in-kota-hiriyakheri-snack-factory-2026 as an external building fire that destroyed the rooftop solar system",
+    "candidate-आग-इट-इड-ईड-उत-गढ-दस-पर-रत-लग-लर-समय": "excluded: crane fire occurred while removing standalone solar street lights; no rooftop or utility photovoltaic installation was involved"
   }
 }
