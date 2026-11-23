@@ -140,13 +140,17 @@
     "candidate-30-rdf-กร-ของ-งเทรา-ฉะเช-ตฯ-ปธ-ยหายกว-สภาอ-องจ-าน-เซลล-เผาเคร-เส-โซลาร-โ": "th-chachoengsao-bang-khla-rdf-factory-2026",
     "candidate-bedrijfspand-brand-brand-en-grote-in-in-vrachtwagen-zeer-zonnepanelen": "nl-tiel-falkom-2026",
     "candidate-blaze-drayton-firefighters-involving-market-near-panel-scrambled-solar-t": "uk-tern-hill-solar-inverter-2026",
-    "candidate-cloud-field-fire-fire-in-investigates-marshal-solar-st": "us-st-cloud-new-recovery-array-2026"
+    "candidate-cloud-field-fire-fire-in-investigates-marshal-solar-st": "us-st-cloud-new-recovery-array-2026",
+    "candidate-ber-brandenburg-brennt-dach-dichter-mit-rauchwolke-solaranlage-vor-warnu": "de-werneuchen-freienwalder-strasse-2026",
+    "candidate-brandenburg-brennen-dachstuhl-großbrand-in-in-solaranlage-und-werneuchen": "de-werneuchen-freienwalder-strasse-2026",
+    "index-2026-09-bungalow-destroyed-after-solar-panels-caught-fire": "uk-sidmouth-yardelands-2026"
   },
   "excludedRecords": {
     "index-2025-11-uk-fire-service-tackles-solar-fire-every-two-days": "Aggregate statistics article, not an incident",
     "index-2025-01-el-incendio-en-una-nave-del-puerto-de-gandia-ha-sido-extinguido": "Battery-container incident; conflicts with BESS-only exclusion",
     "index-2026-07-fire-at-spanish-solar-plant-burns-90-hectares": "Puertollano fire began within a PV-plant boundary, but published authorities had not established that PV equipment burned or ignited it",
-    "index-2026-08-more-than-200-homes-damaged-by-solar-panel-fires-in-a-year": "Aggregate UK fire-service statistics article, not a distinct incident"
+    "index-2026-08-more-than-200-homes-damaged-by-solar-panel-fires-in-a-year": "Aggregate UK fire-service statistics article, not a distinct incident",
+    "index-2026-11-walmart-installed-rooftop-solar-panels-on-more-than-240-stores-brought-l": "Retrospective Walmart/Tesla litigation aggregation spanning multiple already-known incidents, not a distinct event"
   },
   "candidateReviews": {
     "candidate-2023-calatrava-ciudad-construyo-de-en-en-en-hinojosas-hinojosas-incendio": "excluded: fact-check reporting says the named solar plant is in another municipality and does not establish PV involvement in the fire",
@@ -394,6 +398,16 @@
     "candidate-apartment-at-evacuation-fire-panel-solar-sparks-tucson": "promoted to us-tucson-sixth-street-apartments-2026",
     "candidate-cloud-field-fire-fire-in-investigates-marshal-solar-st": "duplicate follow-up coverage of us-st-cloud-new-recovery-array-2026",
     "candidate-आग-और-छत-जनह-जल-टम-नह-पर-बच-बन-लग-लग-लर": "promoted to in-kota-hiriyakheri-snack-factory-2026 as an external building fire that destroyed the rooftop solar system",
-    "candidate-आग-इट-इड-ईड-उत-गढ-दस-पर-रत-लग-लर-समय": "excluded: crane fire occurred while removing standalone solar street lights; no rooftop or utility photovoltaic installation was involved"
+    "candidate-आग-इट-इड-ईड-उत-गढ-दस-पर-रत-लग-लर-समय": "excluded: crane fire occurred while removing standalone solar street lights; no rooftop or utility photovoltaic installation was involved",
+    "candidate-ber-brandenburg-brennt-dach-dichter-mit-rauchwolke-solaranlage-vor-warnu": "promoted to de-werneuchen-freienwalder-strasse-2026; PV involvement is confirmed but ignition origin remains under investigation",
+    "candidate-brandenburg-brennen-dachstuhl-großbrand-in-in-solaranlage-und-werneuchen": "duplicate coverage of de-werneuchen-freienwalder-strasse-2026",
+    "candidate-2026-22-and-cpd-fire-pressure-roofs-rooftop-safety-solar-under": "context only: professional-development article about rooftop-solar fire safety",
+    "candidate-aislantes-cargadores-comprometen-contra-incendios-la-placas-proteccio-re": "context only: fire-protection guidance, not a distinct incident",
+    "candidate-farm-finance-firehouse-help-new-project-solar-would": "excluded: solar-project financing article, not a fire incident",
+    "candidate-acres-at-burns-cause-county-farm-fire-solar-through-twiggs-undetermined": "excluded follow-up to the Twiggs County vegetation fire; fire-department reporting said PV panels were not damaged",
+    "candidate-antiguos-cargadores-de-edificios-el-eleva-en-expertos-incendio-instalar-": "context only: fire-safety guidance for older buildings, not a distinct incident",
+    "candidate-aprendizaje-con-de-deteccio-estadi-fotovoltaicas-incendios-noticias-para": "excluded: research coverage of a fire-detection model, not a real-world incident",
+    "candidate-aprendizado-cias-de-detecc-em-estati-fotovoltaicas-ince-ndios-noti-por-p": "duplicate-language research coverage, not a real-world incident",
+    "candidate-amroha-news-आग-आत-उपकरण-जल-नल-लग-लर-शब": "excluded: stored solar panels and electrical inventory burned in a fireworks-ignited warehouse fire, not an operating PV installation"
   }
 }
